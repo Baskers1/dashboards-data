@@ -1,0 +1,32 @@
+/* Template layout (22 Nov 2026): answer first. Order is heading, Right now, town picker,
+   jump links, photo, sections; Larger text sits beside the date instead of in its own row. */
+main>.tabs{grid-column:1/-1;margin-top:-10px}
+header .hrow{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 12px;margin-top:6px}
+header .lt-bar{padding:0}
+/* Grouped town buttons (from the Neath Port Talbot board): a label, the main places,
+   and an optional "more places" fold for towns marked "B" in TABS. */
+.tabs{display:block}
+.tgb{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 6px}
+.tgl{font:600 .78rem system-ui,sans-serif;color:var(--mute);text-transform:uppercase;letter-spacing:.06em}
+details.tg2{font:.9rem system-ui,sans-serif}
+details.tg2>summary{font-weight:600;min-height:44px;display:flex;align-items:center}
+main>.rspan{grid-row:span 2}
+/* Larger text button and the rules it switches on (shared by every area) */
+.lt-btn{font:700 18px/1.2 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;min-height:48px;min-width:48px;padding:10px 20px;border-radius:12px;border:3px solid #141413;background:#141413;color:#fff;cursor:pointer}
+.lt-btn[aria-pressed="true"]{background:#fff;color:#141413}
+.lt-btn:focus-visible{outline:4px solid #1d4ed8;outline-offset:3px}
+.lt-hint{font:16px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;color:inherit}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .lt-btn{background:#f5f4ee;color:#141413;border-color:#f5f4ee}:root:not([data-theme="light"]) .lt-btn[aria-pressed="true"]{background:#141413;color:#f5f4ee}:root:not([data-theme="light"]) .lt-btn:focus-visible{outline-color:#93c5fd}}
+:root[data-theme="dark"] .lt-btn{background:#f5f4ee;color:#141413;border-color:#f5f4ee}
+:root[data-theme="dark"] .lt-btn[aria-pressed="true"]{background:#141413;color:#f5f4ee}
+:root[data-theme="dark"] .lt-btn:focus-visible{outline-color:#93c5fd}
+html.bigtext.bigtext.bigtext body{font-size:22px!important;line-height:1.7!important;overflow-wrap:anywhere}
+html.bigtext.bigtext.bigtext body *:not(svg):not(svg *){line-height:1.7!important;overflow-wrap:anywhere}
+html.bigtext.bigtext.bigtext body *:not(svg):not(svg *):not(h1):not(h2){font-size:max(18px,1em)!important}
+html.bigtext.bigtext.bigtext body :is(h3,h4,h5){font-size:max(22px,1em)!important}
+html.bigtext.bigtext.bigtext button,html.bigtext.bigtext.bigtext [role=button],html.bigtext.bigtext.bigtext [role=tab],html.bigtext.bigtext.bigtext summary,html.bigtext.bigtext.bigtext select,html.bigtext.bigtext.bigtext .chip,html.bigtext.bigtext.bigtext .pill,html.bigtext.bigtext.bigtext .topbtn,html.bigtext.bigtext.bigtext input:not([type=checkbox]):not([type=radio]){min-height:56px!important;box-sizing:border-box}
+html.bigtext.bigtext.bigtext body *:not(button):not(svg):not(svg *):not(input):not(select){min-width:0}
+html.bigtext.bigtext.bigtext body *:not(pre):not(svg):not(svg *):not(button){white-space:normal}
+html.bigtext.bigtext.bigtext .lt-btn{font-size:22px!important}
+html.bigtext.bigtext.bigtext .lt-hint{font-size:18px!important}
+{{CODE:css}}

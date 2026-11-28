@@ -1,0 +1,734 @@
+<title>Neath Port Talbot · What's On</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap">
+<style>
+:root{
+  --ground:#F2F5F4; --surface:#FFFFFF; --sunk:#E8EEED; --ink:#13222F; --ink-2:#4A5B67; --ink-3:#5C6E79;
+  --line:#7E8E90; --accent:#0E6C72; --accent-soft:#D5ECEB; --on-accent:#FFFFFF; --warn:#9A5B00;
+  --c-music:#A83D24; --c-comedy:#8A6208; --c-stage:#86499A; --c-film:#35629F; --c-arts:#127A6E;
+  --c-community:#4A7A2B; --c-family:#AD3F6D; --c-politics:#51667A;
+  --season-spring:#4F8B3B; --season-summer:#C98A12; --season-autumn:#B6511F; --season-winter:#3B6EA5;
+  --display:"Big Shoulders Display","Arial Narrow","Roboto Condensed",Impact,sans-serif;
+  --body:"Atkinson Hyperlegible",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --r:10px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --ground:#0C161E; --surface:#13202B; --sunk:#0F1B25; --ink:#E4ECF0; --ink-2:#A2B3BE; --ink-3:#7C8F9B;
+    --line:#4E7088; --accent:#5DC3BE; --accent-soft:#163A3D; --on-accent:#08201F; --warn:#E3A857;
+    --c-music:#F0866A; --c-comedy:#E2B74A; --c-stage:#C597D6; --c-film:#86ADE4; --c-arts:#5CC6B6;
+    --c-community:#9BC977; --c-family:#EC90B6; --c-politics:#A6B8C7;
+    --season-spring:#8FC96F; --season-summer:#E8B84A; --season-autumn:#E8875A; --season-winter:#7FB0E0;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --ground:#0C161E; --surface:#13202B; --sunk:#0F1B25; --ink:#E4ECF0; --ink-2:#A2B3BE; --ink-3:#7C8F9B;
+  --line:#4E7088; --accent:#5DC3BE; --accent-soft:#163A3D; --on-accent:#08201F; --warn:#E3A857;
+  --c-music:#F0866A; --c-comedy:#E2B74A; --c-stage:#C597D6; --c-film:#86ADE4; --c-arts:#5CC6B6;
+  --c-community:#9BC977; --c-family:#EC90B6; --c-politics:#A6B8C7;
+  --season-spring:#8FC96F; --season-summer:#E8B84A; --season-autumn:#E8875A; --season-winter:#7FB0E0;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{background:var(--ground);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.45;margin:0}
+.wrap{max-width:1240px;margin:0 auto;padding-inline:16px;padding-block:20px 56px}
+a{color:inherit}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
+h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:.01em;line-height:1;margin:0;text-wrap:balance}
+.eyebrow{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);font-weight:700}
+.tab{font-variant-numeric:tabular-nums}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.skip-link{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;z-index:20;background:var(--ink);color:var(--ground);font-weight:700;padding:10px 16px;border-radius:0 0 8px 0}
+.skip-link:focus{position:fixed;top:0;left:0;width:auto;height:auto;margin:0;overflow:visible;clip:auto;white-space:normal}
+
+/* hero banner */
+.hero{position:relative;display:flex;flex-direction:column;justify-content:space-between;min-height:220px;border-radius:var(--r);overflow:hidden;margin-bottom:16px;background-size:cover;background-position:center;transition:background-image .35s ease;color:#fff}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,22,30,.60) 0%,rgba(8,16,22,.88) 100%);pointer-events:none}
+.hero-inner{position:relative;z-index:1;padding:20px 20px 4px}
+.hero-eyebrow{color:#fff;opacity:.85}
+.hero-tag{font-family:var(--display);font-weight:800;font-size:clamp(22px,4vw,34px);text-transform:uppercase;color:#fff}
+.hero-credit{position:relative;z-index:1;padding:4px 20px 10px;font-size:11px;color:rgba(255,255,255,.75)}
+.hero-credit a{color:rgba(255,255,255,.9);text-decoration:underline}
+
+/* masthead */
+.mast{display:grid;gap:14px;padding-bottom:16px;border-bottom:2px solid var(--ink)}
+.mast-top{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px}
+.mast h1{font-size:clamp(40px,7vw,72px);text-transform:uppercase}
+.mast h1 span{color:var(--accent)}
+.towns{font-size:13px;color:var(--ink-2);letter-spacing:.02em}
+.towns b{color:var(--ink);font-weight:700}
+.stamp{font-size:13px;color:var(--ink-2);text-align:right}
+.stamp a{color:var(--accent);font-weight:700;text-decoration:none}
+.stamp a:hover{text-decoration:underline}
+.stamp .k{font-size:12px;color:var(--ink-3);user-select:all;word-break:break-all}
+
+/* tide strip */
+.featured-days{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-bottom:10px}
+.feat-card{all:unset;cursor:pointer;display:block;border:1px solid var(--line);border-radius:10px;padding:12px 14px;background:var(--surface)}
+.feat-card:hover{border-color:var(--accent)}
+.feat-card:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.feat-card.today{border-color:var(--accent);background:color-mix(in srgb, var(--accent) 7%, var(--surface))}
+.feat-card .fc-label{display:block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-3)}
+.feat-card.today .fc-label{color:var(--accent)}
+.feat-card .fc-date{display:block;font-size:19px;font-weight:800;margin:3px 0 4px}
+.feat-card .fc-count{display:block;font-size:13px;color:var(--ink-3)}
+.strip{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(34px,1fr);gap:3px;overflow-x:auto;padding-bottom:4px}
+.strip button:not(.hc-day){all:unset;cursor:pointer;display:grid;grid-template-rows:44px auto auto;align-items:end;justify-items:center;gap:2px;padding:4px 0;border-radius:6px}
+.strip button:not(.hc-day):hover{background:var(--sunk)}
+.strip button:not(.hc-day):focus-visible{outline:2px solid var(--accent)}
+.strip .bar{width:60%;max-width:18px;background:var(--accent);border-radius:3px 3px 0 0;min-height:2px;opacity:.85}
+.strip .wkend .bar{background:var(--c-music)}
+.strip .d{font-size:13px;font-weight:700}
+.strip .w{font-size:10px;color:var(--ink-3);text-transform:uppercase;letter-spacing:.06em}
+.strip .today .d{color:var(--accent)}
+.strip .empty{opacity:.45}
+.strip.strip-cal{display:block;overflow-x:visible}
+.hc-row{position:relative;display:flex;flex-wrap:nowrap;gap:18px;align-items:flex-start;overflow-x:auto;padding-bottom:4px}
+.hc-month{display:grid;gap:4px;flex:0 0 auto}
+.hc-mh{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);text-align:center}
+.hc-wd{display:grid;grid-template-columns:repeat(7,46px);gap:4px;font-size:10px;color:var(--ink-3);text-align:center}
+.hc-grid{display:grid;grid-template-columns:repeat(7,46px);gap:4px}
+.hc-day{all:unset;cursor:pointer;border-radius:6px;border:1px solid var(--line);background:color-mix(in srgb, var(--season-accent,var(--accent)) calc(var(--hcop,0)*100%), var(--surface))}
+.hc-day:hover{border-color:var(--ink)}
+.hc-day:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.hc-today{border-color:var(--ink);border-width:2px}
+.hc-pad{width:46px;height:56px}
+.hc-legend{font-size:12px;color:var(--ink-3);margin:6px 0 0}
+.hc-skey{display:flex;flex-wrap:wrap;gap:4px 14px;margin:4px 0 0;font-size:11px;color:var(--ink-3)}
+.hc-skey span{display:inline-flex;align-items:center;gap:5px}
+.hc-skey i{width:10px;height:10px;border-radius:3px;display:inline-block}
+
+/* controls */
+.controls{display:grid;gap:10px;padding-block:16px;background:var(--ground);border-bottom:1px solid var(--line)}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.seg{display:inline-flex;border:1.5px solid var(--ink);border-radius:999px;overflow:hidden}
+.seg button{all:unset;cursor:pointer;padding:6px 14px;font-weight:700;font-size:14px}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--ground)}
+.seg button:focus-visible{outline:2px solid var(--accent);outline-offset:-3px}
+.search{flex:1 1 220px;min-width:0;max-width:360px;padding:8px 12px;border:1.5px solid var(--line);border-radius:999px;background:var(--surface);color:var(--ink);font:inherit}
+.chip{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:6px;padding:5px 11px;border-radius:999px;border:1.5px solid var(--line);background:var(--surface);font-size:13px;font-weight:700;white-space:nowrap}
+.chip .n{font-weight:400;color:var(--ink-3);font-variant-numeric:tabular-nums}
+.chip .dot{width:9px;height:9px;border-radius:50%;background:var(--cc,var(--ink-3))}
+.chip[aria-pressed="true"]{border-color:var(--cc,var(--ink));background:var(--ink);color:var(--ground)}
+.chip[aria-pressed="true"] .n{color:inherit;opacity:.75}
+.chip:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.chip.ghost{border-style:dashed}
+.lbl{font-size:12px;color:var(--ink-3);font-weight:700;letter-spacing:.08em;text-transform:uppercase;min-width:74px}
+
+.gi{width:1.15em;height:1.15em;flex:none;vertical-align:-.2em;margin-right:.35em;
+    fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.chip .gi{margin-right:0;color:var(--cc,var(--ink-3))}
+.chip[aria-pressed="true"] .gi{color:inherit}
+
+/* category colours */
+[data-g="music"]{--cc:var(--c-music)} [data-g="comedy"]{--cc:var(--c-comedy)} [data-g="stage"]{--cc:var(--c-stage)}
+[data-g="film"]{--cc:var(--c-film)} [data-g="arts"]{--cc:var(--c-arts)} [data-g="community"]{--cc:var(--c-community)}
+[data-g="family"]{--cc:var(--c-family)} [data-g="politics"]{--cc:var(--c-politics)}
+
+/* layout */
+.cols{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:32px;margin-top:22px;align-items:start}
+@media (max-width:960px){.cols{grid-template-columns:minmax(0,1fr)}}
+
+/* agenda */
+.day{margin-bottom:22px}
+.day-h{display:flex;align-items:baseline;gap:10px;padding:8px 0 6px;border-bottom:1px solid var(--line);position:sticky;top:calc(env(safe-area-inset-top,0px) + var(--ctl-h,150px));background:var(--ground);z-index:2}
+.day-h h2{font-size:28px;text-transform:uppercase}
+.day-h .sub{color:var(--ink-3);font-size:13px}
+.day-h .sub b{color:var(--accent)}
+.ev{display:grid;grid-template-columns:54px minmax(0,1fr) auto;gap:12px;padding:10px 0;border-bottom:1px solid var(--line);margin-left:0}
+.evcat{display:flex;flex-direction:column;align-items:center;gap:4px}
+.cat-badge{width:40px;height:40px;border-radius:10px;background:var(--cc,var(--ink-3));color:var(--surface);display:grid;place-items:center;flex:none}
+.cat-badge .gi{width:1.3em;height:1.3em;margin:0}
+.cat-badge.sm{width:30px;height:30px;border-radius:8px}
+.cat-badge.sm .gi{width:1.15em;height:1.15em}
+.ev .t{font-weight:700;font-size:14px;font-variant-numeric:tabular-nums;color:var(--ink-2);padding-top:2px}
+.ev .ti{font-weight:700;font-size:16px;line-height:1.3}
+.ev .ti a{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:2px}
+.ev .ti a:hover{text-decoration:underline}
+.ev .meta{font-size:13.5px;color:var(--ink-2);margin-top:2px}
+.ev .meta .town{font-weight:700;color:var(--ink)}
+.ev .sum{font-size:13.5px;color:var(--ink-3);margin-top:3px;max-width:62ch}
+.tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--cc);margin-right:6px}
+.price{display:inline-block;font-size:12px;font-weight:700;padding:1px 7px;border-radius:999px;background:var(--sunk);color:var(--ink-2);margin-left:6px;vertical-align:1px}
+.star-hl{display:inline-block;font-size:11px;font-weight:700;padding:1px 7px;border-radius:999px;background:var(--accent-soft);color:var(--accent);margin-left:6px;vertical-align:1px}
+.acts{display:flex;flex-direction:column;gap:6px;align-items:flex-end}
+.ib{all:unset;cursor:pointer;font-size:12px;font-weight:700;color:var(--ink-3);padding:3px 8px;border-radius:6px;border:1px solid var(--line);white-space:nowrap;text-align:center}
+.other-link{display:inline-flex;align-items:center;gap:8px;margin-top:10px;padding:9px 16px;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-weight:700;font-size:13.5px;text-decoration:none;border:1.5px solid var(--accent)}
+.other-link:hover{background:var(--accent);color:var(--on-accent)}
+.other-link:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.ib:hover{color:var(--ink);border-color:var(--ink-3)}
+.ib[aria-pressed="true"]{color:var(--on-accent);background:var(--accent);border-color:var(--accent)}
+.ib:focus-visible{outline:2px solid var(--accent)}
+.runs{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px;margin-bottom:24px}
+.runs h2{font-size:22px;text-transform:uppercase;margin-bottom:6px}
+.runs .ev{border-bottom:1px dashed var(--line)}
+.runs .ev:last-child{border-bottom:0}
+.more{all:unset;cursor:pointer;color:var(--accent);font-weight:700;font-size:14px;padding:6px 0}
+.empty-state{padding:28px 18px;border:1.5px dashed var(--line);border-radius:var(--r);color:var(--ink-2);text-align:center}
+.skel{height:58px;border-bottom:1px solid var(--line);background:linear-gradient(90deg,var(--sunk),var(--surface),var(--sunk));background-size:200% 100%;animation:sh 1.4s infinite linear}
+@keyframes sh{to{background-position:-200% 0}}
+@media (prefers-reduced-motion:reduce){.skel{animation:none}}
+
+/* aside panels */
+aside{display:grid;gap:18px}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px}
+.panel h3{font-size:22px;text-transform:uppercase;margin-bottom:8px;display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.panel h3 small{font-family:var(--body);font-size:12px;font-weight:400;color:var(--ink-3);text-transform:none;letter-spacing:0}
+.list{list-style:none;margin:0;padding:0;display:grid}
+.list li{padding:8px 0;border-top:1px solid var(--line);font-size:14px}
+.list li:first-child{border-top:0}
+.list .k{font-size:12px;color:var(--ink-3);font-variant-numeric:tabular-nums}
+.list a{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:2px;font-weight:700}
+.list a:hover{text-decoration:underline}
+.list .s{color:var(--ink-2);font-size:13px}
+.list li.newsli{display:flex;gap:10px;align-items:flex-start}
+.list li.newsli>.newsbody{flex:1;min-width:0}
+.newsicon{width:26px;height:26px;border-radius:7px;background:var(--ink-3);color:var(--surface);display:grid;place-items:center;flex:none;margin-top:1px}
+.newsicon .gi{width:1.05em;height:1.05em;margin:0}
+.tbl td.imgcell{width:40px}
+.rowimg{width:34px;height:34px;border-radius:9px;object-fit:cover;display:block;background:var(--sunk)}
+.rowimg.crest{object-fit:contain;background:var(--surface);border:1px solid var(--line);padding:3px}
+.cin b{display:block}
+.cin .films{color:var(--ink-2);font-size:13px}
+.notes li{font-size:13px;color:var(--ink-2)}
+.srcd{border-top:1px solid var(--line)}
+.srcd summary{cursor:pointer;padding:9px 0;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);list-style-position:inside}
+.srcd summary .n{font-weight:400;color:var(--ink-3);letter-spacing:0}
+.srcd summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.srcd[open] summary{color:var(--ink)}
+.srcd .list{padding-bottom:8px}
+.srcgrp{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);margin:10px 0 2px}
+
+/* season mode */
+.hl-rail{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(210px,240px);gap:12px;overflow-x:auto;padding:4px 2px 12px;scroll-snap-type:x proximity}
+.poster{scroll-snap-align:start;display:grid;grid-template-rows:auto 1fr auto;gap:6px;min-height:196px;padding:14px;border-radius:var(--r);background:var(--surface);border:1px solid var(--line);border-top:8px solid var(--cc);text-decoration:none}
+.poster:hover{border-color:var(--cc)}
+.poster .pd{font-family:var(--display);font-weight:800;font-size:34px;line-height:.9;text-transform:uppercase}
+.poster .pd small{display:block;font-size:15px;color:var(--ink-3);letter-spacing:.04em}
+.poster .pt{font-weight:700;font-size:15.5px;line-height:1.25}
+.poster .pv{font-size:12.5px;color:var(--ink-2)}
+.sec{margin-top:34px}
+.sec-h{display:flex;flex-wrap:wrap;align-items:baseline;gap:12px;border-bottom:2px solid var(--ink);padding-bottom:6px;margin-bottom:14px}
+.sec-h h2{font-size:clamp(34px,5vw,52px);text-transform:uppercase}
+.sec-h .sub{color:var(--ink-3);font-size:14px}
+.mgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:14px}
+.mcol{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:12px 14px;border-top:5px solid var(--cc)}
+.mcol h3{font-size:20px;text-transform:uppercase;display:flex;justify-content:space-between;align-items:baseline}
+.mcol h3 small{font-family:var(--body);font-size:12px;color:var(--ink-3);font-weight:400}
+.mi{display:grid;grid-template-columns:50px minmax(0,1fr) auto;gap:8px;padding:7px 0;border-top:1px solid var(--line);font-size:13.5px;align-items:start}
+.mi:first-of-type{border-top:0}
+.mdcol{display:flex;flex-direction:column;align-items:center;gap:3px}
+.mi .md{font-weight:700;font-variant-numeric:tabular-nums;color:var(--ink-2);font-size:12.5px;line-height:1.25;text-align:center}
+.mi a{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:2px;font-weight:700}
+.mi a:hover{text-decoration:underline}
+.mi .mv{color:var(--ink-3);font-size:12.5px}
+.mi .ib{font-size:13px;padding:1px 6px}
+.twocol{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.tbl{width:100%;border-collapse:collapse;font-size:14px}
+.tbl td,.tbl th{padding:8px 6px;border-top:1px solid var(--line);text-align:left;vertical-align:top}
+.tbl th{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
+.tblwrap{overflow-x:auto}
+.foot{margin-top:40px;padding-top:14px;border-top:1px solid var(--line);font-size:13px;color:var(--ink-3)}
+progress.run-bar{-webkit-appearance:none;appearance:none;display:block;width:100%;max-width:220px;height:6px;border:none;border-radius:999px;overflow:hidden;background:var(--sunk);margin:4px 0 2px;vertical-align:top}
+progress.run-bar::-webkit-progress-bar{background:var(--sunk);border-radius:999px}
+progress.run-bar::-webkit-progress-value{background:var(--accent);border-radius:999px}
+progress.run-bar::-moz-progress-bar{background:var(--accent);border-radius:999px}
+.mi progress.run-bar{max-width:140px}
+@media (max-width:560px){
+  .ev{grid-template-columns:44px minmax(0,1fr);}
+  .ev .acts{grid-column:2;flex-direction:row;justify-content:flex-start}
+  .lbl{min-width:0;width:100%}
+  .stamp{text-align:left}
+}
+.back-top{position:fixed;right:16px;bottom:16px;z-index:15;width:48px;height:48px;border-radius:50%;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);display:flex;align-items:center;justify-content:center;box-shadow:0 2px 10px rgba(0,0,0,.18);cursor:pointer;padding:0}
+.back-top svg{width:22px;height:22px;fill:currentColor}
+.back-top:hover{background:var(--sunk)}
+.back-top:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media (max-width:560px){.back-top{right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px))}}
+</style>
+
+<div class="wrap">
+<a class="skip-link" href="#main">Skip to listings</a>
+<style id="npt-lang">.top-row{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;margin:12px 0}.top-row .lt-bar{margin:0}.lang-seg{display:inline-flex;border:2px solid var(--ink);border-radius:12px;overflow:hidden}.lang-seg button{all:unset;box-sizing:border-box;cursor:pointer;display:inline-flex;align-items:center;min-height:52px;padding:10px 20px;font-weight:700;font-size:1.05rem;color:var(--ink);background:var(--surface)}.lang-seg button[aria-pressed="true"]{background:var(--ink);color:var(--ground)}.lang-seg button:focus-visible{outline:3px solid var(--accent);outline-offset:-4px}</style><div class="top-row"><div class="lt-bar" id="ltBar" role="group" aria-label="Text size"><button type="button" class="lt-btn" id="ltBtn" aria-pressed="false">Larger text</button></div></div>
+<script>
+(function(){var h=document.documentElement,b=document.getElementById("ltBtn");if(!b)return;
+function set(on,save){h.classList.toggle("bigtext",on);b.setAttribute("aria-pressed",on?"true":"false");b.textContent=on?"Normal text":"Larger text";if(save){try{localStorage.setItem("lt-bigtext",on?"1":"0")}catch(e){}}}
+var s=false;try{s=localStorage.getItem("lt-bigtext")==="1"}catch(e){}
+set(s,false);b.addEventListener("click",function(){set(!h.classList.contains("bigtext"),true)});})();
+</script>
+  <section class="hero" id="hero" aria-label="Neath Port Talbot events — featured town">
+    <div class="hero-inner">
+      <div class="eyebrow hero-eyebrow" id="heroEyebrow">Neath Port Talbot</div>
+      <p class="hero-tag" id="heroTag">What's on, wherever you are</p>
+    </div>
+    <div class="hero-credit" id="heroCredit"></div>
+  </section>
+  <header class="mast">
+    <div class="mast-top">
+      <div>
+        <div class="eyebrow" id="kicker"></div>
+        <h1 id="h1"></h1>
+        <a class="other-link" id="otherLink" href="#" target="_blank" rel="noopener" hidden></a>
+        <div class="towns"><b>Neath</b> · <b>Port Talbot</b> · <b>Pontardawe</b> · <b>Margam</b> · <b>Aberavon</b> · <b>Briton Ferry</b> · <b>Skewen</b> · <b>Glynneath</b> · <b>Ystalyfera</b></div>
+      </div>
+      <div class="stamp" id="stamp">Loading listings…</div>
+    </div>
+    <div class="featured-days" id="featuredDays"></div>
+    <div class="strip" id="strip" aria-label="Events per day"></div>
+  </header>
+
+  <section class="controls" id="controls" aria-label="Filters">
+    <div class="row">
+      <div class="seg" id="range" role="group" aria-label="Time window"></div>
+      <label for="q" class="sr-only">Search events</label>
+      <input class="search" id="q" type="search" placeholder="Search acts, venues, towns…">
+      <button class="chip ghost" id="savedOnly" aria-pressed="false">★ Saved <span class="n" id="savedN">0</span></button>
+      <button class="chip ghost" id="clear" hidden>Clear filters</button>
+    </div>
+    <div class="row" id="cats"><span class="lbl">What</span></div>
+    <div class="row" id="townsRow"><span class="lbl">Where</span></div>
+  </section>
+
+  <div id="resultStatus" class="sr-only" role="status" aria-live="polite"></div>
+  <main id="main"></main>
+  <button type="button" id="backTop" class="back-top" hidden>
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 5l-7 7h4v7h6v-7h4z"/></svg>
+    <span class="sr-only">Back to top</span>
+  </button>
+  <footer><p class="foot" id="foot"></p></footer>
+</div>
+
+<script>
+(function(){
+const MODE="near";            // "near" | "season"
+const OTHER_URL="__SEASON_URL_TBC__";
+const TOWNS=["Neath","Port Talbot","Pontardawe","Margam","Aberavon","Briton Ferry","Skewen","Glynneath","Ystalyfera","Neath Port Talbot"];
+const GROUPS=[["music","Music"],["comedy","Comedy"],["stage","Stage & panto"],["arts","Art & exhibitions"],["community","Community & festivals"],["family","Family"],["film","Film"],["sport","Sport"],["politics","Council & politics"]];
+const GNAME=Object.fromEntries(GROUPS);
+const GICON={
+music:'<circle cx="6.5" cy="18" r="2.8"/><circle cx="17.5" cy="15.5" r="2.8"/><path d="M9.3 18V6.2l11-2.6v11.9"/><path d="M9.3 9.4l11-2.6"/>',
+comedy:'<rect x="9" y="2" width="6" height="11.5" rx="3"/><path d="M5 11.2a7 7 0 0 0 14 0"/><path d="M12 18.2V22M8.2 22h7.6"/>',
+stage:'<path d="M4.6 3.6h14.8v6.2c0 5.9-3.3 10.6-7.4 10.6S4.6 15.7 4.6 9.8V3.6z"/><path d="M9.2 9.3h.01M14.8 9.3h.01"/><path d="M9.3 14a3.9 3.9 0 0 0 5.4 0"/>',
+arts:'<rect x="3" y="3.5" width="18" height="17" rx="2.2"/><circle cx="8.6" cy="9.2" r="1.7"/><path d="m21 15.5-4.8-4.8L6 20.5"/>',
+community:'<circle cx="9" cy="7" r="3.6"/><path d="M15.8 21v-1.9A4.2 4.2 0 0 0 11.6 15H6.4A4.2 4.2 0 0 0 2.2 19.1V21"/><path d="M21.8 21v-1.9a4.2 4.2 0 0 0-3.2-4.07"/><path d="M15.8 3.6a4.2 4.2 0 0 1 0 6.8"/>',
+family:'<circle cx="8" cy="5.6" r="3.2"/><path d="M2.6 21v-3.4a5.4 5.4 0 0 1 10.8 0V21"/><circle cx="18" cy="11.4" r="2.3"/><path d="M14.4 21v-3a3.6 3.6 0 0 1 7.2 0v3"/>',
+sport:'<path d="M7.5 3.5h9v5.5a4.5 4.5 0 0 1-9 0z"/><path d="M7.5 5.5h-3V7a3.5 3.5 0 0 0 3.5 3.5M16.5 5.5h3V7a3.5 3.5 0 0 1-3.5 3.5"/><path d="M12 13.5V17M9.5 17h5v3.5h-5z"/>',
+sp_rugby:'<ellipse cx="12" cy="12" rx="9.6" ry="5.6" transform="rotate(-40 12 12)"/><path d="M8.5 15.5l7-7M10.3 11.6l2.1 2.1M12.4 9.5l2.1 2.1M8.2 13.7l2.1 2.1"/>',
+sp_cricket:'<path d="M15 3.2l5.8 5.8-9.5 9.5a2 2 0 0 1-2.8 0l-3-3a2 2 0 0 1 0-2.8z"/><path d="M5.6 15.6 3 18.2 5.8 21l2.6-2.6"/><circle cx="18.6" cy="18.6" r="2.1"/>',
+sp_equestrian:'<path d="M6.6 20.5H4.3C3.5 14.8 3.7 10 5.5 7a7.3 7.3 0 0 1 13 0c1.8 3 2 7.8 1.2 13.5h-2.3c.6-4.6.5-8.3-.9-10.6a4.8 4.8 0 0 0-9 0c-1.4 2.3-1.5 6-.9 10.6z"/><path d="M6.7 11.5h.01M17.3 11.5h.01M6.4 16h.01M17.6 16h.01"/>',
+sp_boxing:'<path d="M6 13.5V8.5a5 5 0 0 1 5-5h3.5A4.5 4.5 0 0 1 19 8v4.5a5.5 5.5 0 0 1-5.5 5.5H8a2 2 0 0 1-2-2z"/><path d="M6 12a2.5 2.5 0 0 1 5 0v2"/><path d="M8 18v2.8h8V18"/>',
+sp_running:'<path d="M3 16.4h11l5.6 1.7a1.6 1.6 0 0 1-.4 3.1H4.2A1.2 1.2 0 0 1 3 20z"/><path d="M3 16.4V8.6l3.2.8 1.6 3.1 4.5 1.7 2.7 2.2"/><path d="M9.6 12.3l1.3-1.7M12 13.4l1.3-1.7"/>',
+sp_swimming:'<path d="M2.5 16.5c1.6 0 1.6 1.3 3.2 1.3s1.6-1.3 3.2-1.3 1.6 1.3 3.2 1.3 1.6-1.3 3.2-1.3 1.6 1.3 3.2 1.3 1.6-1.3 3.2-1.3"/><path d="M2.5 20.5c1.6 0 1.6 1.3 3.2 1.3s1.6-1.3 3.2-1.3 1.6 1.3 3.2 1.3 1.6-1.3 3.2-1.3 1.6 1.3 3.2 1.3 1.6-1.3 3.2-1.3"/><circle cx="16.5" cy="6.5" r="2.2"/><path d="M5 13l4.5-4.5 3 2.5 3-2"/>',
+sp_golf:'<path d="M8 21V3l9 4-9 4"/><ellipse cx="9" cy="20.3" rx="5" ry="1.4"/>',
+sp_cycling:'<circle cx="5.8" cy="16.5" r="3.7"/><circle cx="18.2" cy="16.5" r="3.7"/><path d="M5.8 16.5 9.5 9h6l2.7 7.5M9.5 9l2.5 7.5H5.8M15.5 9l-1-3h2.5"/>',
+sp_fitness:'<path d="M6.5 6.5v11M17.5 6.5v11M3.5 9.5v5M20.5 9.5v5M6.5 12h11"/>',
+sp_football:'<circle cx="12" cy="12" r="9"/><path d="m12 7.2 4.4 3.2-1.7 5.2H9.3l-1.7-5.2z"/><path d="M12 3v4.2M20.6 9.6l-4.2.8M17.9 19.9l-3.2-4.3M6.1 19.9l3.2-4.3M3.4 9.6l4.2.8"/>',
+politics:'<path d="M2.6 21h18.8"/><path d="M4.4 21V10.2M8.6 21V10.2M12 21V10.2M15.4 21V10.2M19.6 21V10.2"/><path d="M2.6 10.2h18.8L12 3.2z"/>',
+film:'<rect x="2.5" y="4" width="19" height="16" rx="2.2"/><path d="M2.5 9.4h19"/><path d="m7.6 4-2 5.4M13.4 4l-2 5.4M19.2 4l-2 5.4"/>',
+planning:'<path d="M4 21V9l8-6 8 6v12"/><path d="M9.5 21v-6h5v6"/>',
+transport:'<path d="M5 21l2.3-10.5h9.4L19 21"/><path d="M6.3 15h11.4"/><circle cx="8.2" cy="18.2" r="1.3"/><circle cx="15.8" cy="18.2" r="1.3"/>',
+finance:'<path d="M4.5 20.5V11M10 20.5V5M15.5 20.5v8M21 20.5H3"/>',
+environment:'<path d="M20 4C10 4 4 10 4 20c10 0 16-6 16-16Z"/><path d="M8 20c0-6 6-12 12-16"/>',
+health:'<circle cx="12" cy="12" r="9"/><path d="M12 7.5v9M7.5 12h9"/>',
+education:'<path d="M12 4 2.5 9l9.5 5 9.5-5L12 4Z"/><path d="M6.2 11.3V17c0 1.2 2.9 2.7 5.8 2.7s5.8-1.5 5.8-2.7v-5.7"/>',
+crime:'<path d="M12 3 4.5 6v6c0 5 3.3 8.3 7.5 9 4.2-.7 7.5-4 7.5-9V6L12 3Z"/><path d="M9 12.3l2 2 4-4.3"/>',
+business:'<rect x="3" y="8" width="18" height="12" rx="2"/><path d="M8 8V6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M3 13h18"/>',
+generic:'<rect x="4.5" y="3" width="15" height="18" rx="1.6"/><path d="M8 8h8M8 12h8M8 16h5"/>'
+};
+const gicon=g=>GICON[g]?'<svg class="gi" viewBox="0 0 24 24" aria-hidden="true" focusable="false">'+GICON[g]+'</svg>':'';
+const SPORT_KW=[["rugby",/rugby|rygbi|\bURC\b|scarlets|ospreys/i],["football",/football|soccer|pêl-droed|futsal|\bA?FC\b|premier league|welsh cup|cymru (?:premier|south|north)|\bardal\b/i],["cricket",/cricket|criced/i],["equestrian",/horse|equestrian|show ?jump|pony|riding|bloodhound/i],["boxing",/boxing|\bbox\b|fight night|kickbox|martial|\bmma\b/i],["running",/\brun\b|running|marathon|parkrun|\b\d+k\b|fun run|\bdash\b|triathlon|duathlon/i],["swimming",/swim|aqua/i],["golf",/golf/i],["cycling",/cycl|bike|sportive/i],["fitness",/fitness|workout|\bgym\b|yoga|pilates|zumba|bootcamp/i]];
+const eicon=e=>{const g=e.group;if(g!=="sport")return gicon(g);const t=[e.category,e.title,e.summary].filter(Boolean).join(" ");const m=SPORT_KW.find(([,r])=>r.test(t));return gicon(m?"sp_"+m[0]:"sport")};
+
+/* ---------- keyword-derived topic icon for news stories ---------- */
+const NEWS_KW=[
+['crime',/\b(police|crime|arrest(?:ed)?|court|theft|stolen|assault|fraud|jail|sentenc|burglar|stabbing|shoplift)/i],
+['health',/\b(nhs|hospital|gp surgery|a&e|ambulance|care home|mental health|surgery closure)/i],
+['education',/\b(school|academy|pupils?|ofsted|college|university|sixth form)/i],
+['transport',/\b(road(?:works)?|traffic|bus(?:es)?|rail(?:way)?|railway station|ferry|harbour|port\b|cycle lane|parking|pothole|airport|manston)/i],
+['environment',/\b(climate|flood(?:ing)?|coastal erosion|wildlife|beach|sewage|pollution|nature reserve|sea ?wall|cliff)/i],
+['finance',/\b(budget|council tax|funding cuts|overspend|deficit|grant funding|financial pressure)/i],
+['business',/\b(business(?:es)?|shop(?:s|ping)?|retailer|jobs?\b|economy|invest(?:ment)?|high street|closing down|opens? its doors)/i],
+['planning',/\b(planning (?:application|permission|row|row over)|development|housing scheme|new homes|flats (?:plan|approved|rejected)|retail park|regenerat)/i],
+['politics',/\b(election|by-election|vote|ballot|mayor|councillors?|\bmp\b|referendum|cabinet reshuffle)/i]
+];
+function newsIcon(x){
+  const t=((x.headline||"")+" "+(x.summary||"")).toLowerCase();
+  for(const[k,re] of NEWS_KW) if(re.test(t)) return k;
+  return "generic";
+}
+
+/* ---------- hero banner photos (CC BY-SA 2.0, credit shown under the banner) ---------- */
+const HERO_IMG={"margam":"heroes/margam.webp","neath":"heroes/neath.webp","aberavon":"heroes/aberavon.webp","pontardawe":"heroes/pontardawe.webp","valleys":"heroes/valleys.webp"};
+const HERO_CREDITS={"margam":"Photo: Margam Castle at Margam Park, by Gareth James, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\" target=\"_blank\" rel=\"noopener\">CC BY-SA 2.0</a>, via <a href=\"https://commons.wikimedia.org/wiki/File:Margam_Castle_at_Margam_Park_-_geograph.org.uk_-_3793309.jpg\" target=\"_blank\" rel=\"noopener\">Geograph via Wikimedia Commons</a>","neath":"Photo: Neath Abbey, by Philip Halling, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\" target=\"_blank\" rel=\"noopener\">CC BY-SA 2.0</a>, via <a href=\"https://commons.wikimedia.org/wiki/File:Neath_Abbey_-_geograph.org.uk_-_6880110.jpg\" target=\"_blank\" rel=\"noopener\">Geograph via Wikimedia Commons</a>","aberavon":"Photo: Aberavon beach, by Helen, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\" target=\"_blank\" rel=\"noopener\">CC BY-SA 2.0</a>, via <a href=\"https://commons.wikimedia.org/wiki/File:Aberavon_beach_-_geograph.org.uk_-_4421086.jpg\" target=\"_blank\" rel=\"noopener\">Geograph via Wikimedia Commons</a>","pontardawe":"Photo: Pontardawe Arts Centre, by Chris Andrews, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\" target=\"_blank\" rel=\"noopener\">CC BY-SA 2.0</a>, via <a href=\"https://commons.wikimedia.org/wiki/File:Pontardawe_Arts_Centre_-_geograph.org.uk_-_4130338.jpg\" target=\"_blank\" rel=\"noopener\">Geograph via Wikimedia Commons</a>","valleys":"Photo: Aberdulais Aqueduct, River Neath, by M J Roscoe, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\" target=\"_blank\" rel=\"noopener\">CC BY-SA 2.0</a>, via <a href=\"https://commons.wikimedia.org/wiki/File:Aberdulais_Aqueduct,_River_Neath_-_geograph.org.uk_-_6981809.jpg\" target=\"_blank\" rel=\"noopener\">Geograph via Wikimedia Commons</a>"};
+const HERO_OF={"Neath":"neath","Port Talbot":"aberavon","Pontardawe":"pontardawe","Margam":"margam","Aberavon":"aberavon","Briton Ferry":"neath","Skewen":"neath","Glynneath":"valleys","Ystalyfera":"pontardawe","Neath Port Talbot":"margam"};
+let _heroShown=null;
+function updateHero(){
+  const one=st.towns.size===1?[...st.towns][0]:null;
+  const k=HERO_OF[one]||"margam";
+  if(_heroShown!==k){_heroShown=k;$("#hero").style.backgroundImage=`url("${HERO_IMG[k]}")`;$("#heroCredit").innerHTML=HERO_CREDITS[k]}
+  $("#heroEyebrow").textContent=one?one:"Neath Port Talbot";
+  $("#heroTag").textContent=one?`What's on in ${one}`:(MODE==="near"?"What's on, wherever you are":"The season ahead, wherever you are");
+}
+const DOW=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"], MON=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+const MONFULL=["January","February","March","April","May","June","July","August","September","October","November","December"];
+
+const $=s=>document.querySelector(s);
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));const safeUrl=u=>{u=String(u??"").trim();return /^https?:\/\//i.test(u)?u:"#"};
+function store(k,v){try{if(v===undefined)return JSON.parse(localStorage.getItem(k)||"null");localStorage.setItem(k,JSON.stringify(v))}catch(e){return null}}
+
+// today in London
+function londonToday(){const p=new Intl.DateTimeFormat("en-GB",{timeZone:"Europe/London",year:"numeric",month:"2-digit",day:"2-digit"}).formatToParts(new Date());const g=t=>p.find(x=>x.type===t).value;return `${g("year")}-${g("month")}-${g("day")}`}
+const TODAY=londonToday();
+const toD=s=>{const [y,m,d]=s.split("-").map(Number);return new Date(Date.UTC(y,m-1,d))};
+const iso=d=>d.toISOString().slice(0,10);
+const addDays=(s,n)=>{const d=toD(s);d.setUTCDate(d.getUTCDate()+n);return iso(d)};
+const fmtDay=s=>{const d=toD(s);return `${DOW[d.getUTCDay()]} ${d.getUTCDate()} ${MON[d.getUTCMonth()]}`};
+const fmtShort=s=>{const d=toD(s);return `${d.getUTCDate()} ${MON[d.getUTCMonth()]}`};
+
+const saved=new Set(store("npt-saved")||[]);
+const st={events:[],news:[],meta:null,loaded:false,err:null,
+  range:MODE==="near"?(store("npt-range")||"14"):"season",
+  q:"",openSrc:new Set(store("npt-src")||[]),cats:new Set(),towns:new Set(),savedOnly:false,showAllRuns:false};
+
+function windowEnd(){ if(MODE==="near") return addDays(TODAY,Number(st.range)-1);
+  const y=Number(TODAY.slice(0,4)); const dec=`${y}-12-31`, min=addDays(TODAY,90); return dec>min?dec:min; }
+function inWindow(e,from,to){const s=e.date,en=e.end_date||e.date;return en>=from&&s<=to}
+function matches(e){
+  if(st.cats.size&&!st.cats.has(e.group))return false;
+  if(st.towns.size&&!st.towns.has(e.town))return false;
+  if(st.savedOnly&&!saved.has(e.id))return false;
+  if(st.q){const h=`${e.title} ${e.venue} ${e.town} ${e.summary||""} ${e.body||""}`.toLowerCase();if(!st.q.split(/\s+/).every(w=>h.includes(w)))return false}
+  return true}
+function venue(e){let v=String(e.venue||"");const t=", "+e.town;if(v.endsWith(t))v=v.slice(0,-t.length);return v}
+function isRun(e){return e.end_date&&e.end_date>e.date}
+function runProgress(e){
+  const total=Math.round((toD(e.end_date)-toD(e.date))/864e5)+1;
+  const clamped=TODAY<e.date?e.date:(TODAY>e.end_date?e.end_date:TODAY);
+  const done=Math.round((toD(clamped)-toD(e.date))/864e5)+1;
+  const pct=Math.max(0,Math.min(100,Math.round(100*done/total)));
+  const label=TODAY<e.date?`Starts ${fmtShort(e.date)}`:TODAY>e.end_date?`Ended ${fmtShort(e.end_date)}`:`Day ${done} of ${total} · ends ${fmtShort(e.end_date)}`;
+  return {pct,label};
+}
+
+function gcal(e){
+  const title=encodeURIComponent(e.title), loc=encodeURIComponent(`${e.venue}, ${e.town}`);
+  let dates;
+  if(e.time&&!isRun(e)){const s=e.date.replace(/-/g,"")+"T"+e.time.replace(":","")+"00";let [h,m]=e.time.split(":").map(Number);let d2=e.date;h+=2;if(h>=24){h-=24;d2=addDays(e.date,1)}
+    dates=`${s}/${d2.replace(/-/g,"")}T${String(h).padStart(2,"0")}${String(m).padStart(2,"0")}00&ctz=Europe/London`}
+  else dates=`${e.date.replace(/-/g,"")}/${addDays(e.end_date||e.date,1).replace(/-/g,"")}`;
+  return `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${dates}&location=${loc}&details=${encodeURIComponent((e.summary||"")+"\n"+(e.url||""))}`}
+
+function evRow(e,opts={}){
+  const runTxt=isRun(e)?`${fmtShort(e.date)} – ${fmtShort(e.end_date)}`:"";
+  const t=opts.run?"":(e.time||"—");
+  return `<div class="ev${opts.run?" run":""}" data-g="${e.group}">
+    <div class="evcat"><div class="cat-badge" aria-hidden="true">${eicon(e)}</div>${opts.run?"":`<div class="t">${esc(t)}</div>`}</div>
+    <div>
+      <div><span class="tag">${esc(GNAME[e.group]||e.category)}</span>${runTxt?`<span class="tag" style="color:var(--ink-3)">${runTxt}</span>`:""}</div>
+      <div class="ti">${e.url?`<a href="${esc(safeUrl(e.url))}" target="_blank" rel="noopener">${esc(e.title)}</a>`:esc(e.title)}${e.price?`<span class="price">${esc(e.price)}</span>`:""}${e.highlight?`<span class="star-hl">Pick</span>`:""}${e.via?`<span class="via">via ${esc(e.via)}</span>`:""}</div>
+      <div class="meta"><span class="town">${esc(e.town)}</span> · ${esc(venue(e))}</div>${e.flag?`<span class="flag">⚠ <a href="${esc(safeUrl(e.flagUrl))}" target="_blank" rel="noopener">${esc(e.flag)}</a></span>`:""}
+      ${opts.run?(p=>`<progress class="run-bar" value="${p.pct}" max="100" aria-label="${esc(e.title)}: ${esc(p.label)}"></progress>`)(runProgress(e)):""}
+      ${e.summary&&!/^Live music listed on Thanet Gigs/.test(e.summary)?`<div class="sum">${esc(e.summary)}</div>`:""}
+    </div>
+    <div class="acts">
+      <button class="ib" data-save="${e.id}" aria-pressed="${saved.has(e.id)}" aria-label="Save ${esc(e.title)}">${saved.has(e.id)?"★ Saved":"☆ Save"}</button>
+      <a class="ib" href="${esc(safeUrl(gcal(e)))}" target="_blank" rel="noopener" aria-label="Add ${esc(e.title)} to Google Calendar">+ Calendar</a>
+    </div>
+  </div>`}
+
+/* ---------- controls ---------- */
+function renderControls(pool){
+  const r=$("#range");
+  if(MODE==="near"){
+    r.innerHTML=[["14","This fortnight"],["28","Next 4 weeks"]].map(([v,l])=>`<button data-range="${v}" aria-pressed="${st.range===v}">${l}</button>`).join("");
+  } else {
+    const months=[...new Set(pool.map(e=>(e.date<TODAY?TODAY:e.date).slice(0,7)))].sort();
+    r.innerHTML=months.map(m=>`<button data-jump="m-${m}" aria-pressed="false">${MON[Number(m.slice(5))-1]}</button>`).join("");
+  }
+  const base=pool.filter(e=>{const c=st.cats;st.cats=new Set();const ok=matches(e);st.cats=c;return ok});
+  const cc={};base.forEach(e=>cc[e.group]=(cc[e.group]||0)+1);
+  $("#cats").innerHTML=`<span class="lbl">What</span>`+GROUPS.map(([g,l])=>`<button class="chip" data-g="${g}" data-cat="${g}" aria-pressed="${st.cats.has(g)}">${gicon(g)}${l} <span class="n">${cc[g]||0}</span></button>`).join("");
+  const tb=pool.filter(e=>{const t=st.towns;st.towns=new Set();const ok=matches(e);st.towns=t;return ok});
+  const tc={};tb.forEach(e=>tc[e.town]=(tc[e.town]||0)+1);
+  $("#townsRow").innerHTML=`<span class="lbl">Where</span>`+TOWNS.map(t=>`<button class="chip" data-town="${t}" aria-pressed="${st.towns.has(t)}">${t==="Neath Port Talbot"?"Everywhere":t} <span class="n">${tc[t]||0}</span></button>`).join("");
+  $("#savedN").textContent=saved.size; $("#savedOnly").setAttribute("aria-pressed",st.savedOnly);
+  $("#clear").hidden=!(st.cats.size||st.towns.size||st.q||st.savedOnly);
+  setCtl();
+}
+function setCtl(){document.documentElement.style.setProperty("--ctl-h",(getComputedStyle($("#controls")).position==="sticky"?$("#controls").offsetHeight:0)+"px")}
+
+/* ---------- strip ---------- */
+function renderStrip(list,from,to){
+  const s=$("#strip");
+  const feat=$("#featuredDays");
+  s.classList.toggle("strip-cal",MODE!=="near");
+  if(feat)feat.style.display=MODE==="near"?"":"none";
+  if(MODE==="near"){
+    const days=[];for(let d=from;d<=to;d=addDays(d,1))days.push(d);
+    const cnt={};list.filter(e=>!isRun(e)).forEach(e=>cnt[e.date]=(cnt[e.date]||0)+1);
+    const max=Math.max(1,...days.map(d=>cnt[d]||0));
+    const featN=Math.min(3,days.length);
+    const featured=days.slice(0,featN),rest=days.slice(featN);
+    if(feat)feat.innerHTML=featured.map((d,i)=>{const dt=toD(d),w=dt.getUTCDay(),n=cnt[d]||0,lbl=d===TODAY?"Today":(days[0]===TODAY&&i===1?"Tomorrow":DOW[w]);
+      return `<button class="feat-card ${d===TODAY?"today":""}" data-jump="d-${d}"><span class="fc-label">${lbl}</span><span class="fc-date">${MON[dt.getUTCMonth()]} ${dt.getUTCDate()}</span><span class="fc-count">${n} event${n===1?"":"s"}</span></button>`}).join("");
+    s.innerHTML=rest.map(d=>{const dt=toD(d),w=dt.getUTCDay(),n=cnt[d]||0;
+      return `<button class="${w===0||w===6?"wkend":""} ${n?"":"empty"}" data-jump="d-${d}" title="${fmtDay(d)}: ${n} event${n===1?"":"s"}" aria-label="${fmtDay(d)}: ${n} event${n===1?"":"s"}"><span class="bar" style="height:${Math.round(40*n/max)+2}px"></span><span class="d">${dt.getUTCDate()}</span><span class="w">${DOW[w].slice(0,2)}</span></button>`}).join("");
+  } else {
+    renderHeatCal(s,list,from,to);
+  }
+}
+
+/* ---------- season calendar heatmap ---------- */
+const SEASON_OF=["winter","winter","spring","spring","spring","summer","summer","summer","autumn","autumn","autumn","winter"];
+function renderHeatCal(s,list,from,to){
+  const cnt={};
+  list.filter(e=>!isRun(e)).forEach(e=>{if(e.date>=from&&e.date<=to)cnt[e.date]=(cnt[e.date]||0)+1});
+  const max=Math.max(1,...Object.values(cnt));
+  const months=[];let cur=from.slice(0,7);const lastM=to.slice(0,7);
+  while(cur<=lastM){months.push(cur);const [y,m]=cur.split("-").map(Number);cur=iso(new Date(Date.UTC(y,m,1))).slice(0,7)}
+  const WD=["M","T","W","T","F","S","S"];
+  const body=months.map(m=>{
+    const [y,mm]=m.split("-").map(Number);
+    const season=SEASON_OF[mm-1];
+    const leadBlank=(toD(`${m}-01`).getUTCDay()+6)%7;
+    const daysInMonth=new Date(Date.UTC(y,mm,0)).getUTCDate();
+    let cells="";
+    for(let i=0;i<leadBlank;i++)cells+=`<i class="hc-pad"></i>`;
+    for(let d=1;d<=daysInMonth;d++){
+      const day=`${m}-${String(d).padStart(2,"0")}`;
+      if(day<from||day>to){cells+=`<i class="hc-pad"></i>`;continue}
+      const n=cnt[day]||0,op=n?Math.min(1,0.18+0.82*n/max):0;
+      cells+=`<button class="hc-day${day===TODAY?" hc-today":""}" style="--hcop:${op}" data-jump="m-${m}" title="${fmtDay(day)}: ${n} event${n===1?"":"s"}" aria-label="${fmtDay(day)}: ${n} event${n===1?"":"s"}"></button>`;
+    }
+    return `<div class="hc-month" style="--season-accent:var(--season-${season})"><div class="hc-mh">${MON[mm-1]}<span class="sr-only"> (${season})</span></div><div class="hc-wd">${WD.map(x=>`<span>${x}</span>`).join("")}</div><div class="hc-grid">${cells}</div></div>`;
+  }).join("");
+  const skey=["spring","summer","autumn","winter"].map(sn=>`<span><i style="background:var(--season-${sn})"></i>${sn[0].toUpperCase()+sn.slice(1)}</span>`).join("");
+  s.innerHTML=`<div class="hc-row">${body}</div><p class="hc-legend">Each square is a day — darker means more on. Click a day to jump to its month. Month colour follows the meteorological season.</p><div class="hc-skey">${skey}</div>`;
+}
+
+/* ---------- aside panels ---------- */
+function panelCinemas(){
+  const m=st.meta;if(!m||!m.cinemas)return"";
+  return `<section class="panel"><h3>Cinemas <small>times change daily</small></h3><ul class="list cin">${m.cinemas.filter(c=>!st.towns.size||st.towns.has(c.town)).map(c=>`<li><a href="${esc(safeUrl(c.url))}" target="_blank" rel="noopener">${esc(c.name)}</a> <span class="k">${esc(c.town)}</span>
+    <div class="films">${(c.now_showing||[]).length?esc(c.now_showing.slice(0,6).join(" · ")):esc(c.note||"See listings")}</div></li>`).join("")}</ul></section>`}
+function panelNews(n=8,topic){
+  let items=st.news||[];if(topic)items=items.filter(x=>x.topic===topic);
+  if(st.towns.size)items=items.filter(x=>st.towns.has(x.area)||["Neath Port Talbot","Wales-wide"].includes(x.area));
+  if(!items.length)return"";
+  return `<section class="panel"><h3>${topic==="politics"?"Local politics":"Local news"} <small>${items.length} stories</small></h3><ul class="list">${items.slice(0,n).map(x=>`<li class="newsli"><div class="newsicon" aria-hidden="true">${gicon(newsIcon(x))}</div><div class="newsbody"><div class="k">${fmtShort(x.date)} · ${esc(x.area)} · ${esc(x.source)}</div><a href="${esc(safeUrl(x.url))}" target="_blank" rel="noopener">${esc(x.headline)}</a><div class="s">${esc(x.summary)}</div></div></li>`).join("")}</ul></section>`}
+function panelCouncil(from,to,n=7){
+  const items=st.events.filter(e=>e.group==="politics"&&inWindow(e,from,to)&&(!st.towns.size||st.towns.has(e.town))).slice(0,n);
+  if(!items.length)return"";
+  return `<section class="panel" data-g="politics"><h3><span>${gicon("politics")}Council diary</span> <small>next ${items.length}</small></h3><ul class="list">${items.map(e=>`<li><div class="k">${fmtDay(e.date)}${e.time?" · "+e.time:""}</div><a href="${esc(safeUrl(e.url))}" target="_blank" rel="noopener">${esc(e.title)}</a><div class="s">${esc(e.summary||"")}</div></li>`).join("")||"<li class='s'>No meetings published for this window.</li>"}</ul></section>`}
+function panelSources(){
+  const m=st.meta;if(!m||!m.sources)return"";
+  const by={};m.sources.forEach(s=>(by[s.type]=by[s.type]||[]).push(s));
+  const order=[["newsletter","Newsletters"],["news","News"],["council","Councils"],["listings","Listings"],["clubs","Clubs, groups & pubs"],["social","Social media"]];
+  return `<section class="panel"><h3>Where this comes from <small>${m.sources.length} sources</small></h3>${order.filter(([k])=>by[k]).map(([k,l])=>`<details class="srcd" data-src="${k}"${st.openSrc.has(k)?" open":""}><summary>${l} <span class="n">${by[k].length}</span></summary><ul class="list">${by[k].map(s=>`<li><a href="${esc(safeUrl(s.url))}" target="_blank" rel="noopener">${esc(s.name)}</a>${s.area?` <span class="k">${esc(s.area)}</span>`:""}<div class="s">${esc(s.note)}</div></li>`).join("")}</ul></details>`).join("")}</section>`}
+function panelNotes(){
+  const m=st.meta;if(!m||!m.gaps)return"";
+  return `<section class="panel"><h3>Coverage notes</h3><ul class="list notes">${m.gaps.map(g=>`<li>${esc(g)}</li>`).join("")}</ul></section>`}
+
+/* ---------- near mode ---------- */
+function renderNear(){
+  const from=TODAY,to=windowEnd();
+  const pool=st.events.filter(e=>inWindow(e,from,to));
+  renderControls(pool);
+  const list=pool.filter(matches);
+  st._visibleCount=list.length;
+  renderStrip(list,from,to);
+  const runs=list.filter(e=>isRun(e)&&e.group!=="politics");
+  const singles=list.filter(e=>!isRun(e)||e.group==="politics");
+  const byDay={};singles.forEach(e=>{const d=e.date<from?from:e.date;(byDay[d]=byDay[d]||[]).push(e)});
+  const days=Object.keys(byDay).sort();
+  const runsShown=st.showAllRuns?runs:runs.slice(0,6);
+  let html=`<div class="cols"><div>`;
+  if(!list.length) html+=`<div class="empty-state">Nothing matches those filters in this window. Try another town or clear the filters.</div>`;
+  if(runs.length) html+=`<section class="runs"><h2>Running through this window <small class="eyebrow">${runs.length}</small></h2>${runsShown.map(e=>evRow(e,{run:1})).join("")}${runs.length>6?`<button class="more" id="moreRuns">${st.showAllRuns?"Show fewer":"Show all "+runs.length}</button>`:""}</section>`;
+  html+=days.map(d=>{const ev=byDay[d].sort((a,b)=>(a.time||"99").localeCompare(b.time||"99"));
+    return `<section class="day" id="d-${d}"><div class="day-h"><h2>${d===TODAY?"Today":fmtDay(d)}</h2><span class="sub">${d===TODAY?fmtDay(d)+" · ":""}<b>${ev.length}</b> on</span></div>${ev.map(e=>evRow(e)).join("")}</section>`}).join("");
+  html+=`</div><aside>${panelCouncil(from,addDays(from,41))}${panelCinemas()}${panelNews(8)}${panelNotes()}${panelSources()}</aside></div>`;
+  $("#main").innerHTML=html;
+}
+
+/* ---------- season mode ---------- */
+const COLS=["music","comedy","stage","arts","community","family","film","sport","politics"];
+function renderSeason(){
+  const from=TODAY,to=windowEnd();
+  const pool=st.events.filter(e=>inWindow(e,from,to));
+  renderControls(pool);
+  const list=pool.filter(matches);
+  st._visibleCount=list.length;
+  renderStrip(list,from,to);
+  const hl=list.filter(e=>e.highlight&&e.group!=="politics"&&e.date>=from).sort((a,b)=>a.date.localeCompare(b.date));
+  let html=`<section class="sec" style="margin-top:22px"><div class="sec-h"><h2>Big nights</h2><span class="sub">${hl.length} picks to book ahead</span></div>
+    ${hl.length?`<div class="hl-rail">${hl.map(e=>{const d=toD(e.date);return `<a class="poster" data-g="${e.group}" href="${esc(safeUrl(e.url))}" target="_blank" rel="noopener"><div class="pd">${DOW[d.getUTCDay()]} ${d.getUTCDate()}<small>${MONFULL[d.getUTCMonth()]}${isRun(e)?" – "+fmtShort(e.end_date):""}</small></div><div class="pt">${esc(e.title)}</div><div class="pv"><span class="tag">${eicon(e)}${esc(GNAME[e.group])}</span><br>${esc(venue(e))}, <b>${esc(e.town)}</b></div></a>`}).join("")}</div>`:`<div class="empty-state">No headline picks match those filters.</div>`}</section>`;
+  const months={};list.forEach(e=>{const m=(e.date<from?from:e.date).slice(0,7);(months[m]=months[m]||[]).push(e)});
+  Object.keys(months).sort().forEach(m=>{
+    const ev=months[m].sort((a,b)=>a.date.localeCompare(b.date)||(a.time||"99").localeCompare(b.time||"99"));
+    const [y,mm]=m.split("-").map(Number);
+    html+=`<section class="sec" id="m-${m}"><div class="sec-h"><h2>${MONFULL[mm-1]}</h2><span class="sub">${ev.length} listings${m===TODAY.slice(0,7)?" · rest of the month":""}</span></div><div class="mgrid">`;
+    const popCount=COLS.filter(g=>ev.some(e=>e.group===g)).length;
+    COLS.forEach(g=>{const it=ev.filter(e=>e.group===g);if(!it.length)return;
+      // Few categories showing (heavy category/town filtering) leaves spare width —
+      // show everything instead of truncating; full grid keeps the original caps.
+      const lim=popCount<=2?it.length:(g==="music"?14:10);
+      html+=`<div class="mcol" data-g="${g}"><h3><span>${gicon(g)}${GNAME[g]}</span> <small>${it.length}</small></h3>${it.slice(0,lim).map(e=>{const d=toD(e.date<from?from:e.date);
+        return `<div class="mi" data-g="${e.group}"><div class="mdcol"><div class="cat-badge sm" aria-hidden="true">${eicon(e)}</div><div class="md">${DOW[d.getUTCDay()]} ${d.getUTCDate()}${isRun(e)?`<br><span style="font-weight:400">to ${fmtShort(e.end_date)}</span>`:""}</div></div><div><a href="${esc(safeUrl(e.url))}" target="_blank" rel="noopener">${esc(e.title)}</a>${e.highlight?` <span class="star-hl">Pick</span>`:""}${e.via?`<span class="via">via ${esc(e.via)}</span>`:""}${e.flag?`<span class="flag">⚠ <a href="${esc(safeUrl(e.flagUrl))}" target="_blank" rel="noopener">${esc(e.flag)}</a></span>`:""}<div class="mv">${esc(venue(e))} · ${esc(e.town)}</div>${isRun(e)?(p=>`<progress class="run-bar" value="${p.pct}" max="100" aria-label="${esc(e.title)}: ${esc(p.label)}"></progress>`)(runProgress(e)):""}</div><div class="acts"><button class="ib" data-save="${e.id}" aria-pressed="${saved.has(e.id)}" aria-label="Save ${esc(e.title)}">${saved.has(e.id)?"★":"☆"}</button><a class="ib" href="${esc(safeUrl(gcal(e)))}" target="_blank" rel="noopener" aria-label="Add ${esc(e.title)} to Google Calendar">+Cal</a></div></div>`}).join("")}
+        ${it.length>lim?`<div class="mv" style="padding-top:6px">+ ${it.length-lim} more — pick a town or search to narrow down</div>`:""}</div>`});
+    html+=`</div></section>`;
+  });
+  // film + politics + sources
+  const m=st.meta||{};
+  const films=(m.film_releases||[]).filter(f=>f.date>=from).sort((a,b)=>a.date.localeCompare(b.date));
+  html+=`<section class="sec"><div class="twocol">${panelNotes()}${panelSources()}</div></section>`;
+  $("#main").innerHTML=html;
+}
+
+function render(){
+  const ae=document.activeElement, fk=ae&&ae.dataset?["cat","town","save","range"].map(k=>ae.dataset[k]?`[data-${k}="${ae.dataset[k]}"]`:"").find(Boolean):null;
+  _render(); if(fk){const el=document.querySelector(fk);if(el)el.focus({preventScroll:true})}
+}
+function _render(){
+  $("#kicker").textContent=MODE==="near"?"Neath Port Talbot · the next few weeks":"Neath Port Talbot · the season ahead";
+  $("#h1").innerHTML=MODE==="near"?"What's <span>On</span>":"Season <span>Ahead</span>";
+  updateHero();
+  if(!st.loaded){
+    $("#main").innerHTML=st.err?`<div class="empty-state" style="margin-top:22px">${esc(st.err)}</div>`:`<div style="margin-top:22px">${'<div class="skel"></div>'.repeat(8)}</div>`;
+    $("#stamp").innerHTML=st.err?"":"Loading listings…";
+    return;
+  }
+  const m=st.meta||{};
+  $("#stamp").innerHTML=`Last refreshed <b>${m.updated?fmtDay(m.updated):"—"}</b>${m.next_refresh?` · next refresh ${fmtDay(m.next_refresh)}`:""}`;
+  const ol=$("#otherLink");
+  if(OTHER_URL&&!OTHER_URL.startsWith("__")){
+    ol.href=OTHER_URL;
+    ol.innerHTML=MODE==="near"?"📅 Planning further ahead? See the Season Ahead dashboard →":"⏰ What's on right now → see the What's On dashboard";
+    ol.hidden=false;
+  } else { ol.hidden=true; }
+  MODE==="near"?renderNear():renderSeason();
+  const n=st._visibleCount||0;
+  $("#resultStatus").textContent=`${n} event${n===1?"":"s"} shown.`;
+  $("#foot").textContent=`${st.events.length} listings gathered from venue sites, the council's what's-on pages and an events aggregator across Neath Port Talbot. Always check with the venue before you travel. Most links open in a new tab.`;
+}
+
+/* ---------- events ---------- */
+document.addEventListener("toggle",ev=>{const d=ev.target;if(!d.dataset||!d.dataset.src)return;d.open?st.openSrc.add(d.dataset.src):st.openSrc.delete(d.dataset.src);store("npt-src",[...st.openSrc])},true);
+document.addEventListener("click",ev=>{
+  const b=ev.target.closest("button,a");if(!b)return;
+  if(b.dataset.range){st.range=b.dataset.range;store("npt-range",st.range);render();return}
+  if(b.dataset.jump){const el=document.getElementById(b.dataset.jump);if(el){const y=el.getBoundingClientRect().top+scrollY-(getComputedStyle($("#controls")).position==="sticky"?$("#controls").offsetHeight:0)-8;scrollTo({top:y,behavior:matchMedia("(prefers-reduced-motion:reduce)").matches?"auto":"smooth"})}return}
+  if(b.dataset.cat){const g=b.dataset.cat;st.cats.has(g)?st.cats.delete(g):st.cats.add(g);render();return}
+  if(b.dataset.town){const t=b.dataset.town;st.towns.has(t)?st.towns.delete(t):st.towns.add(t);render();return}
+  if(b.dataset.save){const id=b.dataset.save;saved.has(id)?saved.delete(id):saved.add(id);store("npt-saved",[...saved]);render();return}
+  if(b.id==="savedOnly"){st.savedOnly=!st.savedOnly;render();return}
+  if(b.id==="clear"){st.cats.clear();st.towns.clear();st.q="";$("#q").value="";st.savedOnly=false;render();return}
+  if(b.id==="moreRuns"){st.showAllRuns=!st.showAllRuns;render();return}
+});
+let qt;$("#q").addEventListener("input",e=>{clearTimeout(qt);qt=setTimeout(()=>{st.q=e.target.value.trim().toLowerCase();render()},150)});
+addEventListener("resize",setCtl);
+
+/* ---------- back to top ---------- */
+(()=>{
+  const btn=document.getElementById("backTop");if(!btn)return;
+  const reduceMotion=matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let ticking=false;
+  const sync=()=>{btn.hidden=scrollY<480;ticking=false};
+  addEventListener("scroll",()=>{if(!ticking){requestAnimationFrame(sync);ticking=true}},{passive:true});
+  btn.addEventListener("click",()=>scrollTo({top:0,behavior:reduceMotion?"auto":"smooth"}));
+})();
+
+/* ---------- data ---------- */
+const DATA={"events":[],"news":[],"meta":{}};
+
+function boot(){
+  if(!DATA){st.err="The listings are being updated. Please try again shortly.";render();return}
+  st.events=(DATA.events||[]).slice().sort((a,b)=>a.date.localeCompare(b.date)||(a.time||"99").localeCompare(b.time||"99"));
+  st.meta=DATA.meta||{};st.news=DATA.news||[];st.loaded=true;render();
+}
+boot();
+})();
+</script>
+
+
+
+
+<style id="a11y60">
+:root{--ink-3:#566672}
+html{-webkit-text-size-adjust:100%}
+body{font-size:1.125rem!important;line-height:1.6!important}
+body :where(p,li,td,th,dd,dt,label,span,small,em,div,a,button,summary,select,input,textarea,figcaption,time,b,i,strong,code){font-size:max(1em,0px)}
+.chip,.seg button,.ib,.more,.strip button,.tab,.open,.kpi,.btn,.mode button,.viewtabs button,.imp li button,button,summary,select,input:not([type=checkbox]):not([type=radio]),textarea,.jump a,.maplink,.walk a,.filter-status button{min-height:48px!important;min-width:44px!important;box-sizing:border-box}
+.chip,.seg button,.ib,.more,.tab,.open,.btn,.mode button,.viewtabs button,.kpi,button.chip,.tabs button,.filters button,.hdtog,.jump a,.maplink,.filter-status button{display:inline-flex!important;align-items:center;justify-content:center;padding:8px 14px!important;font-size:1rem!important}
+.strip button{min-height:56px!important}
+a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--accent,#0b57d0)!important;outline-offset:2px!important}
+:where(.row,.chips,.actions,.tabs,.filters,.ctl-row,.seg,.strip,.lensrow){gap:10px!important}
+.tag,.pill,.eyebrow,.lbl,.stamp,.meta,.count,.sub,.small,.gl,.hours,.hrs,.lg,.wg,.dq,.pl,.legend,.kind,.ctl-label,.ib,.chip,.w,th,footer,.foot,.towns,.mv,.s,.k{font-size:max(1rem,15px)!important}
+.strip .w{font-size:14px!important}
+svg text{font-size:max(14px,1em)}
+.hchart text,#chart text,.tg text{font-size:14px!important}
+.hero-cred,.hero-cred a,.switch a,.asof,.rw-title small,.rw-go,.rw-note,.hint,.group h3,.pet-date,.l,.d,.v,.bar span,.sortlbl,.notes p,.panel.hist div,.sum,.price,.star-hl,small,.films,.list.notes li,.srcd summary,.n,.pv,.pv b,.md,.md span,figcaption,.filter-status,.num,.none,.gs,.day,.day b,.about summary,p.sans,.imp li,.pet-list li{font-size:max(15px,1em)!important}
+.mi a,.mi>div>a,li>a,td>a,.meta a.pill,.foot a,.hero-cred a,.switch a,p.small a,a.skip,a.go,.notes p a,.pb a,.pbody a{display:inline-flex!important;align-items:center;min-height:44px;padding-block:6px;font-size:max(15px,1em)}
+.mi{grid-template-columns:62px minmax(0,1fr) auto!important;gap:10px!important}
+.mi .md,.mi .mv,.mi .ib{font-size:15px!important}
+.strip button{min-width:46px!important}
+.strip .d{font-size:15px!important}
+a.skip{padding-inline:12px}
+td>a,li>a{margin-block:2px}
+.pill{font-size:max(15px,1em)!important;min-height:44px!important;display:inline-flex!important;align-items:center;max-width:100%;white-space:normal}
+span>a,ul>li,.foot li{font-size:max(15px,1em)}
+span>a{display:inline-flex!important;align-items:center;min-height:44px;padding-block:6px}
+:where(.row,.controls,.seg){flex-wrap:wrap!important}
+.mi a,li>a,td>a,.meta a.pill,.foot a,.hero-cred a,.switch a,p.small a,a.skip,a.go,.pbody a,span>a{min-width:44px}
+[style*="font-size:.7"],[style*="font-size:.8"],[style*="font-size:.9"],[style*="font-size: .8"]{font-size:max(15px,1em)!important}
+@media (prefers-color-scheme:light){:root:not([data-theme=dark]) .tag{color:var(--ink)!important}}
+:root[data-theme=light] .tag{color:var(--ink)!important}
+h1,h2,h3{line-height:1.25!important}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+<style id="npt-fix">.hero{background-image:linear-gradient(135deg,#0B4A52,#17355C)}.mast>*,.cols>*,aside,.panel,.twocol>*{min-width:0}.panel,.list li,.mi{overflow-wrap:anywhere}html,body{overflow-x:clip}</style>
+<style id="lt-style">
+:root{--lt-bg:#12263A;--lt-fg:#FFFFFF;--lt-ring:#C77700}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--lt-bg:#F2F6FA;--lt-fg:#0B1620;--lt-ring:#FFD34D}}
+:root[data-theme="dark"]{--lt-bg:#F2F6FA;--lt-fg:#0B1620;--lt-ring:#FFD34D}
+.lt-bar{display:flex;align-items:center;flex-wrap:wrap;gap:8px 14px;margin:12px 0}
+button.lt-btn{display:inline-flex!important;align-items:center;justify-content:center;gap:10px;min-height:52px!important;min-width:48px;padding:10px 22px!important;border-radius:12px;border:3px solid var(--lt-bg)!important;background:var(--lt-bg)!important;color:var(--lt-fg)!important;font-family:inherit;font-weight:700;font-size:1.125rem!important;line-height:1.2!important;cursor:pointer;box-sizing:border-box;text-transform:none;letter-spacing:0}
+button.lt-btn::before{content:"Aa";font-weight:800}
+button.lt-btn[aria-pressed="true"]{background:var(--lt-fg)!important;color:var(--lt-bg)!important}
+button.lt-btn:focus-visible{outline:3px solid var(--lt-ring)!important;outline-offset:3px!important}
+.lt-note{font-size:1rem;opacity:.9}
+html.bigtext body{font-size:22px!important;line-height:1.7!important}
+html.bigtext body :is(p,li,dd,dt,td,th,div,span,a,b,i,strong,em,small,label,summary,time,figcaption,button,select,input,textarea,code,cite,address,sup,sub){font-size:max(18px,1em)!important;line-height:1.7!important}
+html.bigtext body :is(h1,h2,h3,h4){line-height:1.3!important}
+html.bigtext body :is(button,summary,select,input:not([type=checkbox]):not([type=radio]),textarea,.chip,.seg button,.ib,.more,.btn,.tab,.open,.kpi,.strip button,.jump a,.mode button,.viewtabs button,.hdtog,.maplink,.walk a,.filter-status button,.lt-btn){min-height:56px!important;padding-block:10px!important}
+html.bigtext body :is(p,li,td,th,a,span,div,h1,h2,h3,button,summary){overflow-wrap:break-word}
+html.bigtext svg text{font-size:max(16px,1em)}
+html.bigtext .strip{grid-auto-columns:minmax(60px,1fr)!important}
+html.bigtext .strip :is(.d,.w){font-size:18px!important;letter-spacing:0!important}
+html.bigtext .ev .ti{font-size:24px!important}
+html.bigtext .mi :is(.md,.mv,.ib){font-size:18px!important}
+html.bigtext .mi{grid-template-columns:78px minmax(0,1fr)!important}
+html.bigtext .mi .ib{grid-column:2}
+</style>
+
+<style id="soc-style">
+.via{display:inline-block;font-size:12px;font-weight:700;padding:1px 7px;border-radius:999px;border:1.5px solid var(--accent);color:var(--accent);margin-left:6px;vertical-align:1px}
+.flag{display:block;margin-top:4px;font-size:13.5px;font-weight:700;color:var(--warn)}.flag a{color:inherit}
+.soc-lede{font-size:13.5px;color:var(--ink-2);margin:0 0 8px}
+.soc-h{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);margin:12px 0 4px}
+.soc-fig{display:grid;grid-template-columns:minmax(64px,auto) minmax(0,1fr) auto;gap:4px 8px;align-items:center;font-size:13px}
+.soc-fig .bar{height:10px;border-radius:3px;background:var(--accent);min-width:2px}
+.soc-fig .bar.web{background:var(--ink-3)}
+.soc-fig .val{font-variant-numeric:tabular-nums;color:var(--ink-2)}
+.soc-note{font-size:13px;color:var(--ink-2);margin:6px 0 0}
+.dormant{color:var(--warn)}
+</style>
+
+
+
+
+
+

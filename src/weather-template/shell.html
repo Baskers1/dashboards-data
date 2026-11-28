@@ -1,0 +1,24 @@
+<!doctype html><html lang="en-GB"><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>{{PART:00-style.css}}</style></head><body>
+<title>{{TITLE}}</title>
+<style>{{PART:01-style.css}}</style>
+<style id="clockcss">{{PART:02-clockcss.css}}</style>
+<style id="layout">{{PART:08-layout.css}}</style>
+<main>
+<a class="skip jl" href="#w">Skip to weather</a>
+<header>{{LANGBAR}}<h1>{{H1}}</h1><div class="hrow"><div class="sub" id="today"></div><div class="lt-bar" id="ltBar" role="group" aria-label="Text size"><button type="button" class="lt-btn" id="ltBtn" aria-pressed="false">Larger text</button></div></div></header>
+<script>{{PART:03-script.js}}</script>
+<section class="floodtop" id="floodtop" aria-labelledby="fth" hidden></section>
+<p class="verdict" id="verdict" aria-live="polite" hidden></p>
+<p class="age" id="age" hidden></p>
+<section class="glance" id="glance" aria-labelledby="gh"><h2 id="gh" class="vh">Right now</h2></section>
+<div class="tabs" id="tabs" role="tablist" aria-label="Location"></div>
+{{JUMP}}
+<figure class="hero" id="hero"></figure>
+
+{{SECTIONS}}
+</main>
+<script>{{PART:app.js}}</script>
+<script>{{PART:05-script.js}}</script>{{LANGSCRIPT}}
+<style id="viz-css">{{PART:06-viz-css.css}}</style>
+<script id="viz-js">{{PART:07-viz-js.js}}</script>
+</body></html>

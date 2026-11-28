@@ -1,0 +1,6 @@
+{
+ "max_age_hours": 6,
+ "mode": "page_script",
+ "weather_module": "plymouth/weather/refresh_page.py",
+ "seed": "fixtures/plymouth-2026-11-26T0929.json"
+}

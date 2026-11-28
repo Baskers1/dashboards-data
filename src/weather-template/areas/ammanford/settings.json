@@ -1,0 +1,72 @@
+{
+ "title": "Ammanford · Weather",
+ "h1_html": "Ammanford · Weather",
+ "sections": [
+  "weather",
+  "air",
+  "floods",
+  "rivers",
+  "sewage",
+  "walks"
+ ],
+ "parts": [
+  "00-style.css",
+  "01-style.css",
+  "02-clockcss.css",
+  "08-layout.css",
+  "03-script.js",
+  "app.js",
+  "05-script.js",
+  "06-viz-css.css",
+  "07-viz-js.js"
+ ],
+ "static_blocks": [
+  "TABS",
+  "AREAS",
+  "WALKS",
+  "WSETS",
+  "COUNTY",
+  "AIRLL",
+  "SITE",
+  "CYPL"
+ ],
+ "data_blocks": [
+  "LOCS",
+  "AIR",
+  "RIVERS",
+  "FLOODS",
+  "SPILLS",
+  "CYW"
+ ],
+ "null_blocks": [
+  "OUTLOOK"
+ ],
+ "code": {
+  "rivers": "code/rivers.js",
+  "sewage": "code/sewage.js",
+  "vizcore": "code/viz.js",
+  "viz": "code/empty.js",
+  "css": "code/area.css",
+  "lang": "parts/cy.js",
+  "vizcss": "code/viz.css"
+ },
+ "photos": "files",
+ "about": {
+  "rivers": "<details class=\"about\"><summary>About this data</summary><p class=\"small\" style=\"margin:8px 0 0\">Latest readings from Natural Resources Wales river level stations (Open Government Licence v3.0), with NRW's own rising, steady or falling trend. Each station reports on its own scale in metres, so levels cannot be compared between stations. The usual range (shaded band, where known) is the range the level is in 90% of the time, as published by RiverLevels.uk from NRW data. The line builds up from the readings collected each time this page is refreshed. The Amman, Loughor and Tawe rise quickly after heavy rain on the Black Mountain. This is a level reading, not a flood forecast. Check <a href=\"https://flood-warning.naturalresources.wales/?culture=en-GB\" target=\"_blank\" rel=\"noopener\">NRW flood warnings</a> for official warnings and <a href=\"https://rivers-and-seas.naturalresources.wales/\" target=\"_blank\" rel=\"noopener\">NRW river levels</a> for full charts.</p></details>",
+  "floods": "<details class=\"about\"><summary>About this data</summary><p class=\"small\" style=\"margin:8px 0 0\">Flood alerts and warnings published by Natural Resources Wales for the rivers and coast around Ammanford, Llandeilo, the Gwendraeth valley, Llanelli and the Swansea Valley. Alerts and warnings change quickly, so check <a href=\"https://flood-warning.naturalresources.wales/?culture=en-GB\" target=\"_blank\" rel=\"noopener\">NRW flood warnings and alerts</a> or call Floodline on 0345 988 1188 for the current position.</p></details>",
+  "sewage": "<details class=\"about\"><summary>About this data</summary><p class=\"sans\" style=\"margin:0 0 10px\">Dŵr Cymru Welsh Water publishes near-real-time status from the event duration monitors on its storm overflows. This section lists the monitored overflows within 6 km of the place you have chosen.</p>\n<div style=\"display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px\"><a class=\"btn\" style=\"text-decoration:none;background:var(--accent);color:var(--accent-fg);border-color:var(--accent)\" href=\"https://corporate.dwrcymru.com/en/community/environment/storm-overflow-map\" target=\"_blank\" rel=\"noopener\">Welsh Water storm overflow map</a><a class=\"btn\" style=\"text-decoration:none\" href=\"https://corporate.dwrcymru.com/en/community/environment/event-duration-monitoring\" target=\"_blank\" rel=\"noopener\">About event duration monitoring</a></div>\n<ul class=\"sans small\" style=\"margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:2px\">\n<li><b>Discharging:</b> the monitor reports that the overflow is operating now.</li>\n<li><b>Finished:</b> the monitor reported a discharge that has stopped. The list shows when it ended and how long it ran.</li>\n<li><b>Under investigation:</b> Welsh Water has not had data from the monitor recently or knows it is faulty, so its status is unknown.</li>\n</ul>\n<p class=\"small\" style=\"margin:8px 0 0\">Welsh Water says this data is shown as received from the monitors and is not validated, so a reading indicates a discharge rather than confirming one. Times are as published by Welsh Water. The data does not measure water quality or volume, and a record here is not a swim-safety rating.</p>\n</details>",
+  "walks": "<details class=\"about\"><summary>About these walks</summary><p class=\"small\">Walks are listed by distance from the place you have chosen. Distances and times are approximate, and the links go to other websites whose routes may differ a little from the ones described here. Check <a href=\"https://www.traveline.cymru/\" target=\"_blank\" rel=\"noopener\">Traveline Cymru</a> for bus and train times before setting off. The small tiles beside each walk are simple illustrations of its type (waterside or fields and hills), not photographs of the route.</p></details>"
+ },
+ "langbar_html": "<div class=\"langbar\" role=\"group\" aria-label=\"Language / Iaith\" data-notx><button type=\"button\" data-lang=\"en\" lang=\"en\" aria-pressed=\"true\">English</button><button type=\"button\" data-lang=\"cy\" lang=\"cy\" aria-pressed=\"false\">Cymraeg</button></div>",
+ "extra": {
+  "weather": " Forecasts are Open-Meteo model data (CC BY 4.0, modified). The model works on a grid, so neighbouring villages can show identical figures."
+ },
+ "lang_extra": {
+  "Ammanford · Weather": "Rhydaman · Tywydd",
+  "Light drizzle": "Glaw mân ysgafn",
+  "Moderate drizzle": "Glaw mân cymedrol",
+  "Heavy drizzle": "Glaw mân trwm",
+  "Freezing drizzle": "Glaw mân rhewllyd",
+  "Low #": "Isel #"
+ }
+}

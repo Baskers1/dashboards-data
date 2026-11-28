@@ -1,0 +1,1484 @@
+{
+ "fetched_at": "2026-11-23T06:41:57Z",
+ "sources_failed": [],
+ "pages": [
+  {
+   "id": "southhams-consultations",
+   "name": "South Hams District Council: consultations",
+   "url": "https://www.southhams.gov.uk/consultations",
+   "status": 200,
+   "title": "Consultations | South Hams District Council",
+   "text": "Consultations\nFind out about consultations the council is running and how you can have your say.\nOur consultation portal is the place to find all of our active, completed and upcoming consultations, where you can share your views and have your say on what we're doing in your area.\nThe portal is shared between South Hams and West Devon Council, so please select your area from the tiles on the homepage.\nYou can also sign up for newsletters and updates about what's happening near you.\nVisit the Consultation Portal now",
+   "links": [
+    {
+     "text": "Visit the Consultation Portal now",
+     "url": "https://letstalksouthwestdevon.commonplace.is/"
+    }
+   ]
+  },
+  {
+   "id": "southhams-news",
+   "name": "South Hams District Council: news",
+   "url": "https://www.southhams.gov.uk/news",
+   "status": 200,
+   "title": "News | South Hams District Council",
+   "text": "News\nFeatured\nImage\nListen to Cllr Nadine Dommett talk about how we're reducing our carbon emissions\nWe're working hard to lower our carbon emissions in efforts to help make a greener, cleaner South Hams.\n20 November 2026\nImage\nDiscover more on the doorstep at South Hams' markets this Christmas\nFrom food for the festive table to gifts with a story behind them, South Hams’ markets offer plenty of reasons to make a Christmas shopping trip a local one.\n19 November 2026\nImage\nFree support to help tourism businesses grow\nTourism and hospitality businesses across South Hams can access up to 12 hours of free, one-to-one advice to help them attract customers, develop new ideas and make the most of quieter months.\n18 November 2026\nSearch\nCategory\nBusiness and Economy\n(55)\nClimate Change and Biodiversity\n(59)\nCommunity\n(152)\nCost of living\n(6)\nElections and democracy\n(16)\nEnvironment\n(27)\nHealth and wellbeing\n(38)\nHomes and Housing\n(30)\nPlanning and development\n(11)\nWaste and Recycling\n(31)\nDate\n2026\n(103)\n2025\n(105)\n2024\n(80)\n2023\n(37)\n2022\n(2)\nImage\nSouth Hams launches UK-first water quality monitoring pilot\nWe have launched a pioneering water quality monitoring project which will give residents, visitors, community groups and water users access to up-to-date information about the health of local rivers and estuaries.\n18 November 2026\nImage\nCouncil helping residents stay warm and healthy with thermal imaging camera scheme\nFollowing a successful first year in 2025, we're again offering communities across the district the opportunity to use thermal imaging cameras to identify where homes are losing heat, helping residents improve energy efficiency, cut costs, and stay healthier in colder months.\n17 November 2026\nImage\nHave you watched our latest video updates from our councillors?\nWatch our latest updates from Cllr Nicky Hopwood and Cllr Victor Abbott about how we are making a positive impact on our communities.\n12 November 2026\nImage\nLocal Places, Local Faces - meet the people behind the businesses this Christmas\nSouth Hams District Council is encouraging residents and visitors to make local shops, services and hospitality businesses part of their Christmas celebrations.\n10 November 2026\nImage\nCouncil Leader Dan Thomas launches new blog\nCouncil Leader Dan Thomas has launched a new blog, covering the issues that matter to local communities.\n4 November 2026\nImage\nCouncil recognises veteran oak tree at celebration event\nCouncil works to recognise veteran tree at celebration event with local community\n3 November 2026\nImage\nNew community woodland brings 20k trees to Bowcombe Creek\nPlans are moving forward to create a new community woodland at Bowcombe Creek, near Kingsbridge, with 20,000 trees and shrubs due to be planted over the winter.\n29 October 2026\nImage\nCouncil Tax support continues for low-income households\nWe are proposing to continue our Council Tax Reduction Scheme for 2027/28, helping residents on low incomes with paying their Council Tax.\n29 October 2026\nImage\nWe have paved the way for Babcock investment at Sherford\nAlong with Babcock International, we have marked the start of work on a major new Integrated Logistics Hub at Sherford with a groundbreaking event.\n23 October 2026\nImage\nCouncil action delivers major reductions in carbon emissions\nWe're taking practical steps to cut carbon emissions from our vehicles and buildings, as part of our work to create a cleaner and greener South Hams.\n19 October 2026",
+   "links": [
+    {
+     "text": "Listen to Cllr Nadine Dommett talk about how we're reducing our carbon emissions",
+     "url": "https://www.southhams.gov.uk/news/2026/listen-cllr-nadine-dommett-talk-about-how-were-reducing-our-carbon-emissions"
+    },
+    {
+     "text": "Discover more on the doorstep at South Hams' markets this Christmas",
+     "url": "https://www.southhams.gov.uk/news/2026/discover-more-doorstep-south-hams-markets-christmas"
+    },
+    {
+     "text": "Free support to help tourism businesses grow",
+     "url": "https://www.southhams.gov.uk/news/2026/free-support-help-tourism-businesses-grow"
+    },
+    {
+     "text": "Business and Economy (55)",
+     "url": "https://www.southhams.gov.uk/news/search?f%5B0%5D=category%3A20"
+    },
+    {
+     "text": "Climate Change and Biodiversity (59)",
+     "url": "https://www.southhams.gov.uk/news/search?f%5B0%5D=category%3A18"
+    },
+    {
+     "text": "Community (152)",
+     "url": "https://www.southhams.gov.uk/news/search?f%5B0%5D=category%3A19"
+    },
+    {
+     "text": "Cost of living (6)",
+     "url": "https://www.southhams.gov.uk/news/search?f%5B0%5D=category%3A23"
+    },
+    {
+     "text": "Elections and democracy (16)",
+     "url": "https://www.southhams.gov.uk/news/search?f%5B0%5D=category%3A26"
+    },
+    {
+     "text": "Environment (27)",
+     "url": "https://www.southhams.gov.uk/news/search?f%5B0%5D=category%3A24"
+    },
+    {
+     "text": "Health and wellbeing (38)",
+     "url": "https://www.southhams.gov.uk/news/search?f%5B0%5D=category%3A27"
+    },
+    {
+     "text": "Homes and Housing (30)",
+     "url": "https://www.southhams.gov.uk/news/search?f%5B0%5D=category%3A22"
+    },
+    {
+     "text": "Planning and development (11)",
+     "url": "https://www.southhams.gov.uk/news/search?f%5B0%5D=category%3A25"
+    },
+    {
+     "text": "Waste and Recycling (31)",
+     "url": "https://www.southhams.gov.uk/news/search?f%5B0%5D=category%3A17"
+    },
+    {
+     "text": "2026 (103)",
+     "url": "https://www.southhams.gov.uk/news/search?f%5B0%5D=date%3A2026"
+    },
+    {
+     "text": "2025 (105)",
+     "url": "https://www.southhams.gov.uk/news/search?f%5B0%5D=date%3A2025"
+    },
+    {
+     "text": "2024 (80)",
+     "url": "https://www.southhams.gov.uk/news/search?f%5B0%5D=date%3A2024"
+    },
+    {
+     "text": "2023 (37)",
+     "url": "https://www.southhams.gov.uk/news/search?f%5B0%5D=date%3A2023"
+    },
+    {
+     "text": "2022 (2)",
+     "url": "https://www.southhams.gov.uk/news/search?f%5B0%5D=date%3A2022"
+    },
+    {
+     "text": "South Hams launches UK-first water quality monitoring pilot",
+     "url": "https://www.southhams.gov.uk/news/2026/south-hams-launches-uk-first-water-quality-monitoring-pilot"
+    },
+    {
+     "text": "Council helping residents stay warm and healthy with thermal imaging camera scheme",
+     "url": "https://www.southhams.gov.uk/news/2026/council-helping-residents-stay-warm-and-healthy-thermal-imaging-camera-scheme"
+    },
+    {
+     "text": "Have you watched our latest video updates from our councillors?",
+     "url": "https://www.southhams.gov.uk/news/2026/have-you-watched-our-latest-video-updates-our-councillors"
+    },
+    {
+     "text": "Local Places, Local Faces - meet the people behind the businesses this Christmas",
+     "url": "https://www.southhams.gov.uk/news/2026/local-places-local-faces-meet-people-behind-businesses-christmas"
+    },
+    {
+     "text": "Council Leader Dan Thomas launches new blog",
+     "url": "https://www.southhams.gov.uk/news/2026/council-leader-dan-thomas-launches-new-blog"
+    },
+    {
+     "text": "Council recognises veteran oak tree at celebration event",
+     "url": "https://www.southhams.gov.uk/news/2026/council-recognises-veteran-oak-tree-celebration-event"
+    },
+    {
+     "text": "New community woodland brings 20k trees to Bowcombe Creek",
+     "url": "https://www.southhams.gov.uk/news/2026/new-community-woodland-brings-20k-trees-bowcombe-creek"
+    },
+    {
+     "text": "Council Tax support continues for low-income households",
+     "url": "https://www.southhams.gov.uk/news/2026/council-tax-support-continues-low-income-households"
+    },
+    {
+     "text": "We have paved the way for Babcock investment at Sherford",
+     "url": "https://www.southhams.gov.uk/news/2026/we-have-paved-way-babcock-investment-sherford"
+    },
+    {
+     "text": "Council action delivers major reductions in carbon emissions",
+     "url": "https://www.southhams.gov.uk/news/2026/council-action-delivers-major-reductions-carbon-emissions"
+    }
+   ]
+  },
+  {
+   "id": "ivybridge-have-your-say",
+   "name": "Ivybridge Town Council: have your say",
+   "url": "https://www.ivybridge.gov.uk/our-community/have-your-say/",
+   "status": 200,
+   "title": "Have Your Say | Ivybridge Town Council",
+   "text": "Skip to main content\nAccessibility information\n-\nShaping Ivybridge Together\nAt Ivybridge Town Council, we believe every voice matters. We’re proud to represent a diverse and growing community, and we’re committed to doing so fairly, transparently, and inclusively.\nWhy Your Feedback Matters\nWe want to ensure that the decisions we make reflect the real needs, ideas, and concerns of the people who live and work here. That means:\nCreating more ways for you to share your views\nListening actively to diverse perspectives\nMaking space for ongoing dialogue, not just one-off consultations\nOur Commitment to You\nWe’re working hard to increase opportunities for insight and engagement, not just around big projects, but in the everyday decisions that shape our town’s future. Whether you have a suggestion, a question, or a concern, your input helps us serve the town better.\nWays to Get Involved\nYou can now share your views quickly and easily through the contact form below. Any surveys we are running will also be posted to this page, and shared on our social media platforms. Print copies will be available in the town or from the Town Hall.\nUse this space to:\nSuggest ideas to improve our community\nComment on current issues or proposals\nRaise concerns or ask questions\nTogether, let’s build an Ivybridge that works for everyone.\nClimate & Ecological Emergency Survey\nResults: Community Survey of The Watermark January 2026\nThese files may not be suitable for users of assistive technology and are in the following formats :\n.pdf\n.\nRequest an accessible format\n.\nYour Voice Matters\nPlease complete the form to submit your views, concerns or suggestions to us.",
+   "links": [
+    {
+     "text": "Skip to main content",
+     "url": "https://www.ivybridge.gov.uk/our-community/have-your-say/#maincontent"
+    },
+    {
+     "text": "Accessibility information",
+     "url": "https://www.ivybridge.gov.uk/accessibility/"
+    },
+    {
+     "text": "Climate & Ecological Emergency Survey",
+     "url": "https://www.ivybridge.gov.uk/climate-emergency/"
+    },
+    {
+     "text": "Results: Community Survey of The Watermark January 2026",
+     "url": "https://www.ivybridge.gov.uk/wp-content/uploads/sites/114/2026/02/Community-Survey-of-The-Watermark.pdf"
+    },
+    {
+     "text": "Request an accessible format",
+     "url": "https://www.ivybridge.gov.uk/contact/"
+    }
+   ]
+  },
+  {
+   "id": "ivybridge-news",
+   "name": "Ivybridge Town Council: news",
+   "url": "https://www.ivybridge.gov.uk/news/",
+   "status": 200,
+   "title": "News | Ivybridge Town Council",
+   "text": "Skip to main content\nAccessibility information\n-\nMayor Announces Ivybridge Community Food as Charity of the Year\n5th August, 2026\nIvybridge Town Council re-elects Town Mayor and Deputy Mayor\n19th June, 2026\nSouth Hams District Council’s New Community Asset Transfer Policy\n2nd April, 2026\nResponse to Local Government Reorganisation Consultation\n27th March, 2026\n2026/2027 Council Tax Update\n2nd February, 2026\nTender Opportunity\n17th December, 2025\nTown Set To Sparkle For Ivybridge Christmas Festival\n7th November, 2025\nNew Mayor and Deputy Mayor for Ivybridge\n28th May, 2025\nIvybridge Caring receive cheque from outgoing Mayor\n28th May, 2025\nIvybridge Festival 2025\n26th May, 2025\nEnhancing MacAndrews Field\n15th May, 2025\nDevon County Council Elections\n22nd April, 2025\nPage 1\nPage 2\nNext Page",
+   "links": [
+    {
+     "text": "Skip to main content",
+     "url": "https://www.ivybridge.gov.uk/news/#maincontent"
+    },
+    {
+     "text": "Accessibility information",
+     "url": "https://www.ivybridge.gov.uk/accessibility/"
+    },
+    {
+     "text": "Mayor Announces Ivybridge Community Food as Charity of the Year 5th August, 2026",
+     "url": "https://www.ivybridge.gov.uk/2026/08/mayor-announces-ivybridge-community-food-as-charity-of-the-year/"
+    },
+    {
+     "text": "Ivybridge Town Council re-elects Town Mayor and Deputy Mayor 19th June, 2026",
+     "url": "https://www.ivybridge.gov.uk/2026/06/ivybridge-town-council-re-elects-town-mayor-and-deputy-mayor/"
+    },
+    {
+     "text": "South Hams District Council’s New Community Asset Transfer Policy 2nd April, 2026",
+     "url": "https://www.ivybridge.gov.uk/2026/04/south-hams-district-councils-new-community-asset-transfer-policy/"
+    },
+    {
+     "text": "Response to Local Government Reorganisation Consultation 27th March, 2026",
+     "url": "https://www.ivybridge.gov.uk/2026/03/response-to-local-government-reorganisation-consultation/"
+    },
+    {
+     "text": "2026/2027 Council Tax Update 2nd February, 2026",
+     "url": "https://www.ivybridge.gov.uk/2026/02/2026-council-tax-update/"
+    },
+    {
+     "text": "Tender Opportunity 17th December, 2025",
+     "url": "https://www.ivybridge.gov.uk/2025/12/tender-opportunity/"
+    },
+    {
+     "text": "Town Set To Sparkle For Ivybridge Christmas Festival 7th November, 2025",
+     "url": "https://www.ivybridge.gov.uk/2025/11/town-set-to-sparkle-for-ivybridge-christmas-festival/"
+    },
+    {
+     "text": "New Mayor and Deputy Mayor for Ivybridge 28th May, 2025",
+     "url": "https://www.ivybridge.gov.uk/2025/05/new-mayor-and-deputy-mayor-for-ivybridge/"
+    },
+    {
+     "text": "Ivybridge Caring receive cheque from outgoing Mayor 28th May, 2025",
+     "url": "https://www.ivybridge.gov.uk/2025/05/ivybridge-caring-receive-cheque-from-outgoing-mayor/"
+    },
+    {
+     "text": "Ivybridge Festival 2025 26th May, 2025",
+     "url": "https://www.ivybridge.gov.uk/2025/05/ivybridge-festival-2025/"
+    },
+    {
+     "text": "Enhancing MacAndrews Field 15th May, 2025",
+     "url": "https://www.ivybridge.gov.uk/2025/05/enhancing-macandrews-field/"
+    },
+    {
+     "text": "Devon County Council Elections 22nd April, 2025",
+     "url": "https://www.ivybridge.gov.uk/2025/04/devon-county-council-elections/"
+    },
+    {
+     "text": "Page 1",
+     "url": "https://www.ivybridge.gov.uk/news/"
+    },
+    {
+     "text": "Page 2",
+     "url": "https://www.ivybridge.gov.uk/news/page/2/"
+    }
+   ]
+  },
+  {
+   "id": "ivybridge-minutes",
+   "name": "Ivybridge Town Council: minutes and agendas",
+   "url": "https://www.ivybridge.gov.uk/the-council/minutes-agendas/",
+   "status": 200,
+   "title": "Minutes and Agendas | Ivybridge Town Council",
+   "text": "Skip to main content\nAccessibility information\n-\nActive Committees\nRead More\nFull Council\nRead More\nAssets & Public Realm Committee\nRead More\nCommunity Engagement Committee\nRead More\nPlanning Committee\nRead More\nGovernance Committee\nRead More\nPersonnel Committee\nCommittees Archive\nInformation relating to meetings dating back to April 2023 are listed on our website. All meetings prior to this are held in archives. If you would like to view or access any information relating to archived meetings, please contact us at\n[email protected]\nRead More\nAnnual Town Meeting\nRead More\nParks and Open Spaces Committee\nRead More\nPersonnel Committee\nRead More\nPlanning and Infrastructure Committee\nRead More\nPolicy and Resources Committee\nRead More\nThe Watermark Committee",
+   "links": [
+    {
+     "text": "Skip to main content",
+     "url": "https://www.ivybridge.gov.uk/the-council/minutes-agendas/#maincontent"
+    },
+    {
+     "text": "Accessibility information",
+     "url": "https://www.ivybridge.gov.uk/accessibility/"
+    },
+    {
+     "text": "Read More Full Council",
+     "url": "https://ivybridge.gov.uk/the-council/minutes-agendas/full-council-meeting/"
+    },
+    {
+     "text": "Read More Assets & Public Realm Committee",
+     "url": "https://www.ivybridge.gov.uk/the-council/minutes-agendas/assets-public-realm-committee-meeting/"
+    },
+    {
+     "text": "Read More Community Engagement Committee",
+     "url": "https://ivybridge.gov.uk/the-council/minutes-agendas/community-engagement-committee-meetings/"
+    },
+    {
+     "text": "Read More Planning Committee",
+     "url": "https://www.ivybridge.gov.uk/the-council/minutes-agendas/planning-committee-meetings/"
+    },
+    {
+     "text": "Read More Governance Committee",
+     "url": "https://ivybridge.gov.uk/the-council/minutes-agendas/governance-committee-meetings/"
+    },
+    {
+     "text": "Read More Personnel Committee",
+     "url": "https://ivybridge.gov.uk/the-council/minutes-agendas/personnel-committee-meetings/"
+    },
+    {
+     "text": "[email protected]",
+     "url": "https://www.ivybridge.gov.uk/cdn-cgi/l/email-protection"
+    },
+    {
+     "text": "Read More Annual Town Meeting",
+     "url": "https://ivybridge.gov.uk/the-council/minutes-agendas/annual-town-meeting/"
+    },
+    {
+     "text": "Read More Parks and Open Spaces Committee",
+     "url": "https://ivybridge.gov.uk/the-council/minutes-agendas/parks-and-open-spaces-committee-meetings/"
+    },
+    {
+     "text": "Read More Planning and Infrastructure Committee",
+     "url": "https://ivybridge.gov.uk/the-council/minutes-agendas/planning-and-infrastructure-committee-meetings/"
+    },
+    {
+     "text": "Read More Policy and Resources Committee",
+     "url": "https://ivybridge.gov.uk/the-council/minutes-agendas/policy-and-resources-committee-meetings/"
+    },
+    {
+     "text": "Read More The Watermark Committee",
+     "url": "https://ivybridge.gov.uk/the-council/minutes-agendas/the-watermark-committee-meetings/"
+    }
+   ]
+  },
+  {
+   "id": "ivybridge-community",
+   "name": "Ivybridge Town Council: community",
+   "url": "https://www.ivybridge.gov.uk/community/",
+   "status": 200,
+   "title": "Community Noticeboard | Ivybridge Town Council",
+   "text": "Skip to main content\nAccessibility information\n-\nParkinson’s Support Group\nParkinson’s Support Group\nFridays 10.15 – 11.45am\n£5 per session\nClick here for more info\nRogue Debby CIC\nA non-profit, peer support organisation with a focus on Mental Health and Chronic Health conditions.\nSessions available at The Watermark.\nGet in touch via their website\nroguedebby.co.uk\nor\nfacebook page\nfor more information.\nIvybridge Cognitive Stimulation Therapy Group\nEvery Thursday 1.30pm – 3.30pm\nSt Johns Church Hall, Blachford Road, PL21 0AD\nA Cognitive Stimulation Therapy group for people with dementia and memory problems. This small social group provides engaging activities to work the brain and improve confidence and connection.\nCST is an evidence-based group therapy, recommended by the NHS which can help to delay cognitive decline.\nFirst session is free and for more information please contact Kathrine Bailey on 07899 993134 or email\n[email protected]\nSinging Mamas & Songbirds\nWe learn beautiful simple songs from around the world.\nAll songs taught by ear – no music & no experience needed. All women welcome plus babies, toddlers & bigger little ones too!\nAn hour of singing then cuppa, cake & chat.\n5th Ivybridge Rainbows\nFor more information contact Jenny on 01752 894265 or email\n[email protected]\nThe South Hams Community Orchestra\nAn orchestra for enthusiastic amateurs meeting weekly during term time.\nFor further information and contact details please visit our website shco.co.uk\nIvybridge Bowls Club\nMeet outdoors every week April – September.\nPractice takes place on Monday mornings and Wednesday evenings.\nIvybridge Bowls Club participates in the Plymouth and District Bowls League and Ladies League. Open to all with coaching and bowls available\nFor more information please contact John Messham\n[email protected]\n1st Ivybridge Guides\nTimings and location can vary depending on the activity.\nPlease contact Leah Parsons for more information on\n[email protected]\nCitizens Advice\nOur Ivybridge outreach drop-in sessions are operating from the Watermark every Monday 09:30am – 12:30pm (excluding bank holidays).\nIf you would prefer to book an appointment, please email:\n[email protected]\nAlternatively:\nAdviceline: 0808 278 79 48\nTextphone: 0800 144 8884\nWhatsapp: 07497 758779\nLego Club\nEvery Saturday from 10:30am – 12:30pm\nAll ages welcome (under 8s must be supervised). If you like Lego, come along!\nFor more info, call Ivybridge Library on 01752 893140.\nNo need to book. Suggested donation 50p per child\n3rd Ivybridge Brownies\nFor more information please email\n[email protected]\nIvybridge Community Food\nTuesdays at St Johns Church, Blachford Road\nCommunity Cafe 12pm – 2pm\nIvybridge Community Food 12.30pm – 1:30pm\nPlus in the evening from 6.30pm-7.3pm but you need to pre pay.\nCafe donation – pay what you can\nPage 1\nPage 2\nNext Page",
+   "links": [
+    {
+     "text": "Skip to main content",
+     "url": "https://www.ivybridge.gov.uk/community/#maincontent"
+    },
+    {
+     "text": "Accessibility information",
+     "url": "https://www.ivybridge.gov.uk/accessibility/"
+    },
+    {
+     "text": "Parkinson’s Support Group Parkinson’s Support Group Fridays 10.15 – 11.45am £5 per session Click here for more info",
+     "url": "https://www.ivybridge.gov.uk/wp-content/uploads/sites/114/2026/02/141125-1.jpg"
+    },
+    {
+     "text": "Rogue Debby CIC A non-profit, peer support organisation with a focus on Mental Health and Chronic Health conditions. Sessions available at The Watermark. Get in touch via their website roguedebby.co.u",
+     "url": "https://roguedebby.co.uk/"
+    },
+    {
+     "text": "facebook page",
+     "url": "https://www.facebook.com/roguedebbyCIC"
+    },
+    {
+     "text": "[email protected]",
+     "url": "https://www.ivybridge.gov.uk/cdn-cgi/l/email-protection#e08b81948892898e85a0838f8e968592938194898f8e978f928b93ce838fce958b"
+    },
+    {
+     "text": "Singing Mamas & Songbirds We learn beautiful simple songs from around the world. All songs taught by ear – no music & no experience needed. All women welcome plus babies, toddlers & bigger little ones",
+     "url": "https://www.tothewoodsforestschool.com/singing-groups"
+    },
+    {
+     "text": "[email protected]",
+     "url": "https://www.ivybridge.gov.uk/cdn-cgi/l/email-protection#49203f302b3b202d2e2c3b2820272b263e3a7c3d2109263c3d25262622672a2624"
+    },
+    {
+     "text": "The South Hams Community Orchestra An orchestra for enthusiastic amateurs meeting weekly during term time. For further information and contact details please visit our website shco.co.uk",
+     "url": "https://shco.co.uk/"
+    },
+    {
+     "text": "Ivybridge Bowls Club Meet outdoors every week April – September. Practice takes place on Monday mornings and Wednesday evenings. Ivybridge Bowls Club participates in the Plymouth and District Bowls Le",
+     "url": "https://www.bowlsdevon.co.uk/clubs-s8/ivybridge/"
+    },
+    {
+     "text": "[email protected]",
+     "url": "https://www.ivybridge.gov.uk/cdn-cgi/l/email-protection#bbd1d4d3d5d6dec8c8d3dad6fbd3d4cfd6dad2d795d8d4d6"
+    },
+    {
+     "text": "[email protected]",
+     "url": "https://www.ivybridge.gov.uk/cdn-cgi/l/email-protection#d0b9a6a9b2a2b9b4b7b5b7a5b9b4b5a390b8bfa4bdb1b9bcfeb3bfbd"
+    },
+    {
+     "text": "Citizens Advice Our Ivybridge outreach drop-in sessions are operating from the Watermark every Monday 09:30am – 12:30pm (excluding bank holidays). If you would prefer to book an appointment, please em",
+     "url": "https://www.citizensadvice.org.uk/about-us/contact-us/local-citizens-advice/0014K000009ESeUQAW/"
+    },
+    {
+     "text": "Lego Club Every Saturday from 10:30am – 12:30pm All ages welcome (under 8s must be supervised). If you like Lego, come along! For more info, call Ivybridge Library on 01752 893140. No need to book. Su",
+     "url": "https://discover.librariesunlimited.org.uk/-/ivybridge-library"
+    },
+    {
+     "text": "[email protected]",
+     "url": "https://www.ivybridge.gov.uk/cdn-cgi/l/email-protection#1023627479666972627974777572627f677e79756350777d71797c3e737f7d"
+    },
+    {
+     "text": "Ivybridge Community Food Tuesdays at St Johns Church, Blachford Road Community Cafe 12pm – 2pm Ivybridge Community Food 12.30pm – 1:30pm Plus in the evening from 6.30pm-7.3pm but you need to pre pay. ",
+     "url": "https://www.facebook.com/profile.php?id=61552840363224"
+    },
+    {
+     "text": "Page 1",
+     "url": "https://www.ivybridge.gov.uk/community/"
+    },
+    {
+     "text": "Page 2",
+     "url": "https://www.ivybridge.gov.uk/community/page/2/"
+    }
+   ]
+  },
+  {
+   "id": "dartmoor-news",
+   "name": "Dartmoor National Park Authority: news",
+   "url": "https://www.dartmoor.gov.uk/about-us/news-and-media/news",
+   "status": 200,
+   "title": "News | Dartmoor",
+   "text": "About Us\nNews\nLatest news\n05/11/2026 -\nActivities raise funds for Dartmoor in anniversary year 🥳\n12/10/2026 -\nDartmoor National Park: Have a Say on Future Priorities\n05/10/2026 -\nDartmoor Partnership Plan - next steps agreed\n28/09/2026 -\nFond farewell to long-serving Authority Member\n21/09/2026 -\nIntroducing the new Dartmoor Challenge Badge\n12/08/2026 -\nMeldon Wildlife Festival\n29/07/2026 -\nDartmoor Marshals return to support Rangers\n24/07/2026 -\nAward winning accessibility work brings all-terrain mobility scooters to Dartmoor\n13/07/2026 -\nNews: Local Plan Review - Have Your Say\n09/07/2026 -\nHistory Hunters heads to The Box\n03/07/2026 -\nAppointments made at annual meeting\n29/05/2026 -\nThe Two Moors Way celebrates 50 years\n18/05/2026 -\nCelebrating Dartmoor’s diamond anniversary\n08/01/2026 -\nFarming in Protected Landscapes (FiPL) programme extended\n18/12/2025 -\nDNPA Appoints Tom Surrey as New Chief Executive\n28/11/2025 -\nVisitor centres honoured at tourism awards\n31/10/2025 -\nPrincetown Visitor Centre closure\n12/08/2025 -\nHelp prevent wildfires on Dartmoor\n08/08/2025 -\nWildlife Festival returns to Meldon on 19 August\n04/08/2025 -\nShape Dartmoor's future by telling us your priorities\n29/07/2025 -\nDartmoor Marshals on patrol across National Park\n17/07/2025 -\nDartmoor's chief executive to stand down\n10/07/2025 -\nHistory Hunters heads to Exeter's RAMM\n27/06/2025 -\nLeadership change for Dartmoor National Park Authority\n09/06/2025 -\nExhibition: Dartmoor through the 1920s\n21/05/2025 -\nBackpack/wild camping - Supreme Court\n19/05/2025 -\nDartmoor's future in focus: new board to steer partnership plan review\n08/05/2025 -\nHigh fire risk: advice issued for Dartmoor this weekend\n24/03/2025 -\nThe secret lives of Dartmoor’s tors: a new exhibition\n19/02/2025 -\nPioneering tree planting trial aims to boost flood resilience and restore nature\nKeep in touch\nSign up to receive information about what's happening in the park\nSign up",
+   "links": [
+    {
+     "text": "About Us",
+     "url": "https://www.dartmoor.gov.uk/about-us"
+    },
+    {
+     "text": "Activities raise funds for Dartmoor in anniversary year 🥳",
+     "url": "https://us12.campaign-archive.com/?u=21b2c661e1dffa9d75479d410&id=97815e19bc"
+    },
+    {
+     "text": "Dartmoor National Park: Have a Say on Future Priorities",
+     "url": "https://us12.campaign-archive.com/?u=21b2c661e1dffa9d75479d410&id=9fe493f167"
+    },
+    {
+     "text": "Dartmoor Partnership Plan - next steps agreed",
+     "url": "https://us12.campaign-archive.com/?u=21b2c661e1dffa9d75479d410&id=fce39e11c8"
+    },
+    {
+     "text": "Fond farewell to long-serving Authority Member",
+     "url": "https://us12.campaign-archive.com/?u=21b2c661e1dffa9d75479d410&id=975a87a9e6"
+    },
+    {
+     "text": "Introducing the new Dartmoor Challenge Badge",
+     "url": "https://us12.campaign-archive.com/?u=21b2c661e1dffa9d75479d410&id=11a1a8de0a"
+    },
+    {
+     "text": "Meldon Wildlife Festival",
+     "url": "https://us12.campaign-archive.com/?u=21b2c661e1dffa9d75479d410&id=a7189eed46"
+    },
+    {
+     "text": "Dartmoor Marshals return to support Rangers",
+     "url": "https://us12.campaign-archive.com/?u=21b2c661e1dffa9d75479d410&id=c86013b1fd"
+    },
+    {
+     "text": "Award winning accessibility work brings all-terrain mobility scooters to Dartmoor",
+     "url": "https://us12.campaign-archive.com/?u=21b2c661e1dffa9d75479d410&id=c49519c79f"
+    },
+    {
+     "text": "News: Local Plan Review - Have Your Say",
+     "url": "https://us12.campaign-archive.com/?u=21b2c661e1dffa9d75479d410&id=c1c1589b1b"
+    },
+    {
+     "text": "History Hunters heads to The Box",
+     "url": "https://us12.campaign-archive.com/?u=21b2c661e1dffa9d75479d410&id=e76d531fa3"
+    },
+    {
+     "text": "Appointments made at annual meeting",
+     "url": "https://us12.campaign-archive.com/?u=21b2c661e1dffa9d75479d410&id=a65c1b51c6"
+    },
+    {
+     "text": "The Two Moors Way celebrates 50 years",
+     "url": "https://us12.campaign-archive.com/?u=21b2c661e1dffa9d75479d410&id=b198fa0433"
+    },
+    {
+     "text": "Celebrating Dartmoor’s diamond anniversary",
+     "url": "https://us12.campaign-archive.com/?u=21b2c661e1dffa9d75479d410&id=345e997839"
+    },
+    {
+     "text": "Farming in Protected Landscapes (FiPL) programme extended",
+     "url": "https://us12.campaign-archive.com/?u=21b2c661e1dffa9d75479d410&id=afcc97d46e"
+    },
+    {
+     "text": "DNPA Appoints Tom Surrey as New Chief Executive",
+     "url": "https://us12.campaign-archive.com/?u=21b2c661e1dffa9d75479d410&id=573bc5110b"
+    },
+    {
+     "text": "Visitor centres honoured at tourism awards",
+     "url": "https://us12.campaign-archive.com/?u=21b2c661e1dffa9d75479d410&id=06cf4401f3"
+    },
+    {
+     "text": "Princetown Visitor Centre closure",
+     "url": "https://us12.campaign-archive.com/?u=21b2c661e1dffa9d75479d410&id=57a5d92799"
+    },
+    {
+     "text": "Help prevent wildfires on Dartmoor",
+     "url": "https://us12.campaign-archive.com/?u=21b2c661e1dffa9d75479d410&id=dc785f5677"
+    },
+    {
+     "text": "Wildlife Festival returns to Meldon on 19 August",
+     "url": "https://us12.campaign-archive.com/?u=21b2c661e1dffa9d75479d410&id=cab486aaa0"
+    },
+    {
+     "text": "Shape Dartmoor's future by telling us your priorities",
+     "url": "https://us12.campaign-archive.com/?u=21b2c661e1dffa9d75479d410&id=29202cbb8c"
+    },
+    {
+     "text": "Dartmoor Marshals on patrol across National Park",
+     "url": "https://us12.campaign-archive.com/?u=21b2c661e1dffa9d75479d410&id=8f21b1ea57"
+    },
+    {
+     "text": "Dartmoor's chief executive to stand down",
+     "url": "https://us12.campaign-archive.com/?u=21b2c661e1dffa9d75479d410&id=e90114f22f"
+    },
+    {
+     "text": "History Hunters heads to Exeter's RAMM",
+     "url": "https://us12.campaign-archive.com/?u=21b2c661e1dffa9d75479d410&id=bc4f7463fc"
+    },
+    {
+     "text": "Leadership change for Dartmoor National Park Authority",
+     "url": "https://us12.campaign-archive.com/?u=21b2c661e1dffa9d75479d410&id=514a744b8b"
+    },
+    {
+     "text": "Exhibition: Dartmoor through the 1920s",
+     "url": "https://us12.campaign-archive.com/?u=21b2c661e1dffa9d75479d410&id=856c497939"
+    },
+    {
+     "text": "Backpack/wild camping - Supreme Court",
+     "url": "https://us12.campaign-archive.com/?u=21b2c661e1dffa9d75479d410&id=eac63da810"
+    },
+    {
+     "text": "Dartmoor's future in focus: new board to steer partnership plan review",
+     "url": "https://us12.campaign-archive.com/?u=21b2c661e1dffa9d75479d410&id=29bda3c898"
+    },
+    {
+     "text": "High fire risk: advice issued for Dartmoor this weekend",
+     "url": "https://us12.campaign-archive.com/?u=21b2c661e1dffa9d75479d410&id=a17f442317"
+    },
+    {
+     "text": "The secret lives of Dartmoor’s tors: a new exhibition",
+     "url": "https://us12.campaign-archive.com/?u=21b2c661e1dffa9d75479d410&id=80e1ddc2cb"
+    },
+    {
+     "text": "Pioneering tree planting trial aims to boost flood resilience and restore nature",
+     "url": "https://us12.campaign-archive.com/?u=21b2c661e1dffa9d75479d410&id=c892a299b4"
+    },
+    {
+     "text": "Sign up",
+     "url": "https://www.dartmoor.gov.uk/about-us/news-and-media/keep-in-touch"
+    }
+   ]
+  },
+  {
+   "id": "dartmoor-partnership-plan",
+   "name": "Dartmoor Partnership Plan consultation",
+   "url": "https://www.yourdartmoor.org/partnership-plan-review/partnership-plan-consultation",
+   "status": 200,
+   "title": "Your Dartmoor - Partnership Plan Consultation",
+   "text": "Skip to Main Content\nDraft Dartmoor Partnership Plan 2027-2032 – Public Consultation Open Now\nHave your say on the future of Dartmoor National Park\nWe’re consulting on the draft\nDartmoor Partnership Plan 2027–2032\n, developed with partners to set out priorities for the future of Dartmoor.\nConsultation open: 12\nth\nOctober – 22\nnd\nNovember 2026\nRead the draft Plan\nhere\nRead the Draft Dartmoor Partnership Plan before completing the questionnaire.\nRead the draft Plan summary\nhere\nRead a summary of the draft Dartmoor Partnership Plan before completing the questionnaire\nTake part in the consultation\nhere\nPrefer to respond another way?\nPaper copies are available to view at Parke, Haytor Visitor Centre and Postbridge Visitor Centre.\nHelp shape the final Plan\nThe draft Plan has been developed through extensive engagement with communities, partners and stakeholders across Dartmoor. Now we want to hear from you.\nWe’d like your views on the draft Plan and its proposed priorities, including whether they reflect what matters for Dartmoor and whether there is anything we have missed.\nAbout the Partnership Plan\nThe Dartmoor Partnership Plan is a shared Plan for the future of Dartmoor, developed and delivered with partners.\nIt helps turn the Vision for Dartmoor into action, setting out priorities for the next 5 years.\nThe Plan focuses on seven themes:\nBetter Response to Climate Change\nBetter for the Next Generation\nBetter for Nature & Natural Beauty\nBetter for Cultural Heritage\nBetter for Farming & Forestry\nBetter for People\nBetter for Business & Communities\nWhat happens next?\nWe’ll consider responses to the consultation alongside feedback from partners and stakeholders. Your feedback will help shape the final\nDartmoor Partnership Plan 2027–2032\n.\nConsultation closes 22\nnd\nNovember 2026.\nSupporting Evidence\nThe following supporting documents have been prepared to inform the consultation on the draft Dartmoor Partnership Plan 2027–2032:\nStrategic Environmental Assessment (SEA) Environmental Report\n– assesses the likely significant environmental effects of the draft Plan and considers how potential adverse effects could be avoided, reduced or mitigated.\nHabitats Regulations Assessment (HRA)\n– considers the potential effects of the draft Plan on internationally important wildlife sites and whether it could affect their conservation objectives.\nNon-Technical Summary (NTS)\n– provides an accessible overview of the Strategic Environmental Assessment, summarising its key findings and conclusions in plain language.\nWe welcome your comments on these reports as part of the Partnership Plan consultation, which runs from\n12th October to 22nd November 2026\n.\nContact us\nIf you have any questions about the consultation or need help accessing the questionnaire, please contact partnershipplan@dartmoor.gov.uk\nHome\nAbout the National Park\nThe Vision\nDeveloping the Plan\nThe Plan\nDelivering\nPartnership Plan Review\nContact\nReview Assessments & Background Papers\nClimate Change Risk and Vulnerability\nA Better Response to Climate Change\nBetter for Businesses\nBetter for Communities\nBetter for Cultural Heritage\nBetter for Farming\nBetter for Forestry\nBetter for Nature\nBetter for People\nPublic Opinion Survey Report\nDartmoor Climate Risk Assessment\nState of the Park Report\nStakeholder Workshops Consultation Report\nPartnership Plan Consultation\nDraft Plan Summary",
+   "links": [
+    {
+     "text": "Skip to Main Content",
+     "url": "https://www.yourdartmoor.org/partnership-plan-review/partnership-plan-consultation#content"
+    },
+    {
+     "text": "here",
+     "url": "https://www.yourdartmoor.org/__data/assets/pdf_file/0026/239705/Draft-Partnership-Plan-Outcomes-and-Targets-Public-Facing-Consultation-Draft-Final-.pdf"
+    },
+    {
+     "text": "here",
+     "url": "https://www.yourdartmoor.org/__data/assets/pdf_file/0024/248154/Dartmoor-Partnership-Plan-Consultation-Draft-DFS.pdf"
+    },
+    {
+     "text": "here",
+     "url": "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=COpSpZLIZUuIMaXw4-RVIzkwU9JJFRBGvj2Kog5RY19UMTA2MlRZMU5GWEpOSE9QVTBHTzZFQ0JVWi4u"
+    },
+    {
+     "text": "Strategic Environmental Assessment (SEA) Environmental Report",
+     "url": "https://www.yourdartmoor.org/__data/assets/pdf_file/0025/239830/260928_DNPPP_SA-Report.pdf"
+    },
+    {
+     "text": "Habitats Regulations Assessment (HRA)",
+     "url": "https://www.yourdartmoor.org/__data/assets/pdf_file/0026/239831/260928_DNPPP_HRA-Report_Final.pdf"
+    },
+    {
+     "text": "Non-Technical Summary (NTS)",
+     "url": "https://www.yourdartmoor.org/__data/assets/pdf_file/0027/239832/261005_DNPPP-SEA-Report-NTS_Final.pdf"
+    },
+    {
+     "text": "Home",
+     "url": "https://www.yourdartmoor.org/home"
+    },
+    {
+     "text": "About the National Park",
+     "url": "https://www.yourdartmoor.org/about"
+    },
+    {
+     "text": "The Vision",
+     "url": "https://www.yourdartmoor.org/the-vision"
+    },
+    {
+     "text": "Developing the Plan",
+     "url": "https://www.yourdartmoor.org/developing"
+    },
+    {
+     "text": "The Plan",
+     "url": "https://www.yourdartmoor.org/the-plan"
+    },
+    {
+     "text": "Delivering",
+     "url": "https://www.yourdartmoor.org/delivering"
+    },
+    {
+     "text": "Partnership Plan Review",
+     "url": "https://www.yourdartmoor.org/partnership-plan-review"
+    },
+    {
+     "text": "Contact",
+     "url": "https://www.yourdartmoor.org/contact"
+    },
+    {
+     "text": "Review Assessments & Background Papers",
+     "url": "https://www.yourdartmoor.org/partnership-plan-review/review-docs"
+    },
+    {
+     "text": "Climate Change Risk and Vulnerability",
+     "url": "https://www.yourdartmoor.org/__data/assets/pdf_file/0037/188992/Dartmoor-National-Park-Climate-Change-Risk-and-Vulnerability-Assessment.pdf"
+    },
+    {
+     "text": "A Better Response to Climate Change",
+     "url": "https://www.yourdartmoor.org/__data/assets/pdf_file/0038/188993/Dartmoor-Partnership-Plan-Review-Background-Paper-A-Better-Response-to-Climate-Change.pdf"
+    },
+    {
+     "text": "Better for Businesses",
+     "url": "https://www.yourdartmoor.org/__data/assets/pdf_file/0039/188994/Dartmoor-Partnership-Plan-Review-Background-Paper-Better-for-Businesses.pdf"
+    },
+    {
+     "text": "Better for Communities",
+     "url": "https://www.yourdartmoor.org/__data/assets/pdf_file/0040/188995/Dartmoor-Partnership-Plan-Review-Background-Paper-Better-for-Communities.pdf"
+    },
+    {
+     "text": "Better for Cultural Heritage",
+     "url": "https://www.yourdartmoor.org/__data/assets/pdf_file/0041/188996/Dartmoor-Partnership-Plan-Review-Background-Paper-Better-for-Cultural-Heritage.pdf"
+    },
+    {
+     "text": "Better for Farming",
+     "url": "https://www.yourdartmoor.org/__data/assets/pdf_file/0042/188997/Dartmoor-Partnership-Plan-Review-Background-Paper-Better-for-Farming.pdf"
+    },
+    {
+     "text": "Better for Forestry",
+     "url": "https://www.yourdartmoor.org/__data/assets/pdf_file/0043/188998/Dartmoor-Partnership-Plan-Review-Background-Paper-Better-for-Forestry.pdf"
+    },
+    {
+     "text": "Better for Nature",
+     "url": "https://www.yourdartmoor.org/__data/assets/pdf_file/0044/188999/Dartmoor-Partnership-Plan-Review-Background-Paper-Better-for-Nature.pdf"
+    },
+    {
+     "text": "Better for People",
+     "url": "https://www.yourdartmoor.org/__data/assets/pdf_file/0018/189000/Dartmoor-Partnership-Plan-Review-Background-Paper-Better-for-People.pdf"
+    },
+    {
+     "text": "Public Opinion Survey Report",
+     "url": "https://www.yourdartmoor.org/__data/assets/pdf_file/0033/189528/Public-Opinion-Survey-Report-2025-.pdf"
+    },
+    {
+     "text": "Dartmoor Climate Risk Assessment",
+     "url": "https://www.yourdartmoor.org/__data/assets/pdf_file/0032/189932/Dartmoor-Climate-Risk-Assessment-Summary-Report.pdf"
+    },
+    {
+     "text": "State of the Park Report",
+     "url": "https://www.yourdartmoor.org/__data/assets/pdf_file/0033/192894/State-of-the-Park-Report.pdf"
+    },
+    {
+     "text": "Stakeholder Workshops Consultation Report",
+     "url": "https://www.yourdartmoor.org/__data/assets/pdf_file/0029/216749/Partnership-Plan-Stakeholder-Engagement-Report.pdf"
+    },
+    {
+     "text": "Partnership Plan Consultation",
+     "url": "https://www.yourdartmoor.org/partnership-plan-review/partnership-plan-consultation"
+    }
+   ]
+  },
+  {
+   "id": "plymouth-epetitions",
+   "name": "Plymouth City Council: current and completed e-petitions",
+   "url": "https://democracy.plymouth.gov.uk/mgEPetitionListDisplay.aspx?RPID=626299703&HPID=626299703&VM=2",
+   "status": 200,
+   "title": "Active and Completed ePetitions - Modern Council",
+   "text": "Skip to main content\nSection menu\nCouncillors and Committees\nWhat's New\nSearch\nCommittee Meetings\nOther Meetings\nDecisions\nExecutive Notices\nCouncillors\nCommittees\nOutside bodies\nCalendar\nePetitions\nLibrary\nOfficer Decisions\nScrutiny\nActive and Completed ePetitions\nSubmit a new Plymouth City Council - ePetition\nSubscribe to RSS feed\nShow for date range:\nEarlier\n-\nLater\nePetitions\nTitle\nRespondents\nDeadline to sign by\nReverse the decision to introduce parking charges at the George Junction Park and Ride\n138\n24/11/2026\nRestore Post Office and Banking Services in Tamerton Foliot and Southway\n0\n28/02/2027\nDevils point slab\n0\nFinished\nDevils Point Slab\n4\nFinished",
+   "links": [
+    {
+     "text": "Skip to main content",
+     "url": "https://democracy.plymouth.gov.uk/mgEPetitionListDisplay.aspx?RPID=626299703&HPID=626299703&VM=2#mgMainContent"
+    },
+    {
+     "text": "Councillors and Committees",
+     "url": "https://democracy.plymouth.gov.uk/uuCoverPage.aspx?bcr=1"
+    },
+    {
+     "text": "What's New",
+     "url": "https://democracy.plymouth.gov.uk/mgWhatsNew.aspx?bcr=1"
+    },
+    {
+     "text": "Search",
+     "url": "https://democracy.plymouth.gov.uk/ieDocSearch.aspx?bcr=1"
+    },
+    {
+     "text": "Committee Meetings",
+     "url": "https://democracy.plymouth.gov.uk/ieDocHome.aspx?bcr=1"
+    },
+    {
+     "text": "Other Meetings",
+     "url": "https://democracy.plymouth.gov.uk/ieDocHome.aspx?Categories=12772"
+    },
+    {
+     "text": "Decisions",
+     "url": "https://democracy.plymouth.gov.uk/mgDelegatedDecisions.aspx?bcr=1&DM=0&DS=2&K=0&DR=&V=0"
+    },
+    {
+     "text": "Executive Notices",
+     "url": "https://democracy.plymouth.gov.uk/mgPlansHome.aspx?bcr=1"
+    },
+    {
+     "text": "Councillors",
+     "url": "https://democracy.plymouth.gov.uk/mgMemberIndex.aspx?bcr=1"
+    },
+    {
+     "text": "Committees",
+     "url": "https://democracy.plymouth.gov.uk/mgListCommittees.aspx?bcr=1"
+    },
+    {
+     "text": "Outside bodies",
+     "url": "https://democracy.plymouth.gov.uk/mgListOutsideBodies.aspx?bcr=1"
+    },
+    {
+     "text": "Calendar",
+     "url": "https://democracy.plymouth.gov.uk/mgCalendarMonthView.aspx?GL=1&bcr=1"
+    },
+    {
+     "text": "ePetitions",
+     "url": "https://democracy.plymouth.gov.uk/mgEPetitionListDisplay.aspx?bcr=1"
+    },
+    {
+     "text": "Library",
+     "url": "https://democracy.plymouth.gov.uk/ecCatDisplay.aspx?bcr=1&sch=doc"
+    },
+    {
+     "text": "Officer Decisions",
+     "url": "https://democracy.plymouth.gov.uk/mgListOfficerDecisions.aspx?bcr=1"
+    },
+    {
+     "text": "Scrutiny",
+     "url": "https://web.plymouth.gov.uk/homepage/councilanddemocracy/modgov/scrutiny.htm"
+    },
+    {
+     "text": "Submit a new Plymouth City Council - ePetition",
+     "url": "https://democracy.plymouth.gov.uk/mgEPetitionSubmit.aspx?RPID=626951071&HPID=626951071"
+    },
+    {
+     "text": "Subscribe to RSS feed",
+     "url": "https://democracy.plymouth.gov.uk/mgRss.aspx?f=2"
+    },
+    {
+     "text": "Earlier",
+     "url": "https://democracy.plymouth.gov.uk/mgEPetitionListDisplay.aspx?XXR=0&VM=2&DR=29%2f09%2f2026-27%2f10%2f2026"
+    },
+    {
+     "text": "Later",
+     "url": "https://democracy.plymouth.gov.uk/mgEPetitionListDisplay.aspx?XXR=0&VM=2&DR=24%2f11%2f2026-22%2f12%2f2026"
+    },
+    {
+     "text": "Reverse the decision to introduce parking charges at the George Junction Park and Ride",
+     "url": "https://democracy.plymouth.gov.uk/mgEPetitionDisplay.aspx?ID=500000039&RPID=626951071&HPID=626951071"
+    },
+    {
+     "text": "Restore Post Office and Banking Services in Tamerton Foliot and Southway",
+     "url": "https://democracy.plymouth.gov.uk/mgEPetitionDisplay.aspx?ID=500000042&RPID=626951071&HPID=626951071"
+    },
+    {
+     "text": "Devils point slab",
+     "url": "https://democracy.plymouth.gov.uk/mgEPetitionDisplay.aspx?ID=500000040&RPID=626951071&HPID=626951071"
+    },
+    {
+     "text": "Devils Point Slab",
+     "url": "https://democracy.plymouth.gov.uk/mgEPetitionDisplay.aspx?ID=500000041&RPID=626951071&HPID=626951071"
+    }
+   ]
+  },
+  {
+   "id": "plymouth-city-council",
+   "name": "Plymouth City Council: City Council meetings",
+   "url": "https://democracy.plymouth.gov.uk/mgCommitteeDetails.aspx?ID=276",
+   "status": 200,
+   "title": "Committee details - City Council - Modern Council",
+   "text": "Skip to main content\nSection menu\nCouncillors and Committees\nWhat's New\nSearch\nCommittee Meetings\nOther Meetings\nDecisions\nExecutive Notices\nCouncillors\nCommittees\nOutside bodies\nCalendar\nePetitions\nLibrary\nOfficer Decisions\nScrutiny\nCommittee details\nCity Council\nBrowse meetings and agendas for this committee\nView contact details for the members of this committee\nView attendance statistics\nView declarations of interest\nSubscribe to RSS feed\nMembership\nCouncillor Sarah Allen\nCouncillor Lewis Allison\nCouncillor Saahi Aroori\nCouncillor Jaime Bannerman\nCouncillor Terri Beer\nCouncillor Tess Blight\nCouncillor Tom Briars-Delve\nCouncillor Mark Coker\nCouncillor Nicola Cooke\nCouncillor Sally Cresswell\nCouncillor Andrew Crumplin\nCouncillor Chris Cuddihee\nCouncillor Sue Dann\nCouncillor Jon Dingle\nCouncillor Byran Driver\nCouncillor Tudor Evans OBE\nCouncillor Anne Freeman\nCouncillor Lindsay Gilmour\nCouncillor Jeremy Goslin\nCouncillor Mark Hadfield\nCouncillor Paul Hagan\nCouncillor Shaun Hooper\nCouncillor Helen Kelly\nCouncillor Jemima Laing\nCouncillor Maria Lawson\nCouncillor Andrea Loveridge\nCouncillor Mark Lowry\nCouncillor Dr John Mahony\nCouncillor Josh McCarty\nCouncillor Lauren McLay\nCouncillor Paul McNamara\nCouncillor Keith Moore\nCouncillor Ray Morton\nCouncillor Pauline Murphy\nCouncillor Carol Ney\nCouncillor Patrick Nicholson\nCouncillor Sally Nicholson\nCouncillor Will Noble\nCouncillor Chris Penberthy\nCouncillor Angela Penrose\n(Vice-Chair)\nCouncillor Steve Ricketts\nCouncillor Paul Rielly\nCouncillor Andy Rose\nCouncillor Ben Rowe\nCouncillor Jackie Sansom\nCouncillor Chris Sharpe\nCouncillor Alison Simpson\nCouncillor Angie Smith\nCouncillor Matt Smith\nCouncillor Kevin Sproston\n(Chair)\nCouncillor Daniel Steel\nCouncillor John Stephens\nCouncillor Grace Stickland\nCouncillor Kate Taylor\nCouncillor Vanessa Tyler\nCouncillor Ms Kathy Watkin\nCouncillor Chris Wood\nContact information\nSupport officer:\nJamie Sheldon. Email:\ndemocraticservices@plymouth.gov.uk\nPostal address:\nDemocratic Services\nFloor 3 (West) Ballard House\nWest Hoe Road\nPlymouth\nPL1 3BJ\nEmail:\ndemocraticservices@plymouth.gov.uk\nWeb site:\nhttp://www.plymouth.gov.uk",
+   "links": [
+    {
+     "text": "Skip to main content",
+     "url": "https://democracy.plymouth.gov.uk/mgCommitteeDetails.aspx?ID=276#mgMainContent"
+    },
+    {
+     "text": "Councillors and Committees",
+     "url": "https://democracy.plymouth.gov.uk/uuCoverPage.aspx?bcr=1"
+    },
+    {
+     "text": "What's New",
+     "url": "https://democracy.plymouth.gov.uk/mgWhatsNew.aspx?bcr=1"
+    },
+    {
+     "text": "Search",
+     "url": "https://democracy.plymouth.gov.uk/ieDocSearch.aspx?bcr=1"
+    },
+    {
+     "text": "Committee Meetings",
+     "url": "https://democracy.plymouth.gov.uk/ieDocHome.aspx?bcr=1"
+    },
+    {
+     "text": "Other Meetings",
+     "url": "https://democracy.plymouth.gov.uk/ieDocHome.aspx?Categories=12772"
+    },
+    {
+     "text": "Decisions",
+     "url": "https://democracy.plymouth.gov.uk/mgDelegatedDecisions.aspx?bcr=1&DM=0&DS=2&K=0&DR=&V=0"
+    },
+    {
+     "text": "Executive Notices",
+     "url": "https://democracy.plymouth.gov.uk/mgPlansHome.aspx?bcr=1"
+    },
+    {
+     "text": "Councillors",
+     "url": "https://democracy.plymouth.gov.uk/mgMemberIndex.aspx?bcr=1"
+    },
+    {
+     "text": "Committees",
+     "url": "https://democracy.plymouth.gov.uk/mgListCommittees.aspx?bcr=1"
+    },
+    {
+     "text": "Outside bodies",
+     "url": "https://democracy.plymouth.gov.uk/mgListOutsideBodies.aspx?bcr=1"
+    },
+    {
+     "text": "Calendar",
+     "url": "https://democracy.plymouth.gov.uk/mgCalendarMonthView.aspx?GL=1&bcr=1"
+    },
+    {
+     "text": "ePetitions",
+     "url": "https://democracy.plymouth.gov.uk/mgEPetitionListDisplay.aspx?bcr=1"
+    },
+    {
+     "text": "Library",
+     "url": "https://democracy.plymouth.gov.uk/ecCatDisplay.aspx?bcr=1&sch=doc"
+    },
+    {
+     "text": "Officer Decisions",
+     "url": "https://democracy.plymouth.gov.uk/mgListOfficerDecisions.aspx?bcr=1"
+    },
+    {
+     "text": "Scrutiny",
+     "url": "https://web.plymouth.gov.uk/homepage/councilanddemocracy/modgov/scrutiny.htm"
+    },
+    {
+     "text": "Browse meetings and agendas for this committee",
+     "url": "https://democracy.plymouth.gov.uk/ieListMeetings.aspx?CommitteeId=276"
+    },
+    {
+     "text": "View contact details for the members of this committee",
+     "url": "https://democracy.plymouth.gov.uk/mgCommitteeMailingList.aspx?ID=276"
+    },
+    {
+     "text": "View attendance statistics",
+     "url": "https://democracy.plymouth.gov.uk/mgAttendanceSummary.aspx?RPID=276"
+    },
+    {
+     "text": "View declarations of interest",
+     "url": "https://democracy.plymouth.gov.uk/mgListDeclarationsOfInterest.aspx?RPID=276"
+    },
+    {
+     "text": "Subscribe to RSS feed",
+     "url": "https://democracy.plymouth.gov.uk/mgRss.aspx?XXR=0&CID=276"
+    },
+    {
+     "text": "Councillor Sarah Allen",
+     "url": "https://democracy.plymouth.gov.uk/mgUserInfo.aspx?UID=2434"
+    },
+    {
+     "text": "Councillor Lewis Allison",
+     "url": "https://democracy.plymouth.gov.uk/mgUserInfo.aspx?UID=2727"
+    },
+    {
+     "text": "Councillor Saahi Aroori",
+     "url": "https://democracy.plymouth.gov.uk/mgUserInfo.aspx?UID=2845"
+    },
+    {
+     "text": "Councillor Jaime Bannerman",
+     "url": "https://democracy.plymouth.gov.uk/mgUserInfo.aspx?UID=2721"
+    },
+    {
+     "text": "Councillor Terri Beer",
+     "url": "https://democracy.plymouth.gov.uk/mgUserInfo.aspx?UID=1038"
+    },
+    {
+     "text": "Councillor Tess Blight",
+     "url": "https://democracy.plymouth.gov.uk/mgUserInfo.aspx?UID=2668"
+    },
+    {
+     "text": "Councillor Tom Briars-Delve",
+     "url": "https://democracy.plymouth.gov.uk/mgUserInfo.aspx?UID=2582"
+    },
+    {
+     "text": "Councillor Mark Coker",
+     "url": "https://democracy.plymouth.gov.uk/mgUserInfo.aspx?UID=1071"
+    },
+    {
+     "text": "Councillor Nicola Cooke",
+     "url": "https://democracy.plymouth.gov.uk/mgUserInfo.aspx?UID=2831"
+    },
+    {
+     "text": "Councillor Sally Cresswell",
+     "url": "https://democracy.plymouth.gov.uk/mgUserInfo.aspx?UID=2540"
+    },
+    {
+     "text": "Councillor Andrew Crumplin",
+     "url": "https://democracy.plymouth.gov.uk/mgUserInfo.aspx?UID=2838"
+    },
+    {
+     "text": "Councillor Chris Cuddihee",
+     "url": "https://democracy.plymouth.gov.uk/mgUserInfo.aspx?UID=2728"
+    },
+    {
+     "text": "Councillor Sue Dann",
+     "url": "https://democracy.plymouth.gov.uk/mgUserInfo.aspx?UID=212"
+    },
+    {
+     "text": "Councillor Jon Dingle",
+     "url": "https://democracy.plymouth.gov.uk/mgUserInfo.aspx?UID=2664"
+    },
+    {
+     "text": "Councillor Byran Driver",
+     "url": "https://democracy.plymouth.gov.uk/mgUserInfo.aspx?UID=2846"
+    },
+    {
+     "text": "Councillor Tudor Evans OBE",
+     "url": "https://democracy.plymouth.gov.uk/mgUserInfo.aspx?UID=39"
+    },
+    {
+     "text": "Councillor Anne Freeman",
+     "url": "https://democracy.plymouth.gov.uk/mgUserInfo.aspx?UID=2718"
+    },
+    {
+     "text": "Councillor Lindsay Gilmour",
+     "url": "https://democracy.plymouth.gov.uk/mgUserInfo.aspx?UID=2666"
+    },
+    {
+     "text": "Councillor Jeremy Goslin",
+     "url": "https://democracy.plymouth.gov.uk/mgUserInfo.aspx?UID=2361"
+    },
+    {
+     "text": "Councillor Mark Hadfield",
+     "url": "https://democracy.plymouth.gov.uk/mgUserInfo.aspx?UID=2843"
+    },
+    {
+     "text": "Councillor Paul Hagan",
+     "url": "https://democracy.plymouth.gov.uk/mgUserInfo.aspx?UID=2835"
+    },
+    {
+     "text": "Councillor Shaun Hooper",
+     "url": "https://democracy.plymouth.gov.uk/mgUserInfo.aspx?UID=2837"
+    },
+    {
+     "text": "Councillor Helen Kelly",
+     "url": "https://democracy.plymouth.gov.uk/mgUserInfo.aspx?UID=2832"
+    },
+    {
+     "text": "Councillor Jemima Laing",
+     "url": "https://democracy.plymouth.gov.uk/mgUserInfo.aspx?UID=2385"
+    },
+    {
+     "text": "Councillor Maria Lawson",
+     "url": "https://democracy.plymouth.gov.uk/mgUserInfo.aspx?UID=2723"
+    },
+    {
+     "text": "Councillor Andrea Loveridge",
+     "url": "https://democracy.plymouth.gov.uk/mgUserInfo.aspx?UID=2191"
+    },
+    {
+     "text": "Councillor Mark Lowry",
+     "url": "https://democracy.plymouth.gov.uk/mgUserInfo.aspx?UID=1070"
+    },
+    {
+     "text": "Councillor Dr John Mahony",
+     "url": "https://democracy.plymouth.gov.uk/mgUserInfo.aspx?UID=78"
+    },
+    {
+     "text": "Councillor Josh McCarty",
+     "url": "https://democracy.plymouth.gov.uk/mgUserInfo.aspx?UID=2726"
+    },
+    {
+     "text": "Councillor Lauren McLay",
+     "url": "https://democracy.plymouth.gov.uk/mgUserInfo.aspx?UID=2618"
+    },
+    {
+     "text": "Councillor Paul McNamara",
+     "url": "https://democracy.plymouth.gov.uk/mgUserInfo.aspx?UID=2674"
+    },
+    {
+     "text": "Councillor Keith Moore",
+     "url": "https://democracy.plymouth.gov.uk/mgUserInfo.aspx?UID=2667"
+    },
+    {
+     "text": "Councillor Ray Morton",
+     "url": "https://democracy.plymouth.gov.uk/mgUserInfo.aspx?UID=2720"
+    },
+    {
+     "text": "Councillor Pauline Murphy",
+     "url": "https://democracy.plymouth.gov.uk/mgUserInfo.aspx?UID=1568"
+    },
+    {
+     "text": "Councillor Carol Ney",
+     "url": "https://democracy.plymouth.gov.uk/mgUserInfo.aspx?UID=2725"
+    },
+    {
+     "text": "Councillor Patrick Nicholson",
+     "url": "https://democracy.plymouth.gov.uk/mgUserInfo.aspx?UID=47"
+    },
+    {
+     "text": "Councillor Sally Nicholson",
+     "url": "https://democracy.plymouth.gov.uk/mgUserInfo.aspx?UID=2722"
+    },
+    {
+     "text": "Councillor Will Noble",
+     "url": "https://democracy.plymouth.gov.uk/mgUserInfo.aspx?UID=2619"
+    },
+    {
+     "text": "Councillor Chris Penberthy",
+     "url": "https://democracy.plymouth.gov.uk/mgUserInfo.aspx?UID=1647"
+    },
+    {
+     "text": "Councillor Angela Penrose",
+     "url": "https://democracy.plymouth.gov.uk/mgUserInfo.aspx?UID=2663"
+    },
+    {
+     "text": "Councillor Steve Ricketts",
+     "url": "https://democracy.plymouth.gov.uk/mgUserInfo.aspx?UID=1023"
+    },
+    {
+     "text": "Councillor Paul Rielly",
+     "url": "https://democracy.plymouth.gov.uk/mgUserInfo.aspx?UID=2833"
+    },
+    {
+     "text": "Councillor Andy Rose",
+     "url": "https://democracy.plymouth.gov.uk/mgUserInfo.aspx?UID=2844"
+    },
+    {
+     "text": "Councillor Ben Rowe",
+     "url": "https://democracy.plymouth.gov.uk/mgUserInfo.aspx?UID=2836"
+    },
+    {
+     "text": "Councillor Jackie Sansom",
+     "url": "https://democracy.plymouth.gov.uk/mgUserInfo.aspx?UID=2842"
+    },
+    {
+     "text": "Councillor Chris Sharpe",
+     "url": "https://democracy.plymouth.gov.uk/mgUserInfo.aspx?UID=2834"
+    },
+    {
+     "text": "Councillor Alison Simpson",
+     "url": "https://democracy.plymouth.gov.uk/mgUserInfo.aspx?UID=2716"
+    },
+    {
+     "text": "Councillor Angie Smith",
+     "url": "https://democracy.plymouth.gov.uk/mgUserInfo.aspx?UID=2839"
+    },
+    {
+     "text": "Councillor Matt Smith",
+     "url": "https://democracy.plymouth.gov.uk/mgUserInfo.aspx?UID=2717"
+    },
+    {
+     "text": "Councillor Kevin Sproston",
+     "url": "https://democracy.plymouth.gov.uk/mgUserInfo.aspx?UID=2662"
+    },
+    {
+     "text": "Councillor Daniel Steel",
+     "url": "https://democracy.plymouth.gov.uk/mgUserInfo.aspx?UID=2724"
+    },
+    {
+     "text": "Councillor John Stephens",
+     "url": "https://democracy.plymouth.gov.uk/mgUserInfo.aspx?UID=2665"
+    },
+    {
+     "text": "Councillor Grace Stickland",
+     "url": "https://democracy.plymouth.gov.uk/mgUserInfo.aspx?UID=2841"
+    },
+    {
+     "text": "Councillor Kate Taylor",
+     "url": "https://democracy.plymouth.gov.uk/mgUserInfo.aspx?UID=1367"
+    },
+    {
+     "text": "Councillor Vanessa Tyler",
+     "url": "https://democracy.plymouth.gov.uk/mgUserInfo.aspx?UID=2840"
+    },
+    {
+     "text": "Councillor Ms Kathy Watkin",
+     "url": "https://democracy.plymouth.gov.uk/mgUserInfo.aspx?UID=2432"
+    },
+    {
+     "text": "Councillor Chris Wood",
+     "url": "https://democracy.plymouth.gov.uk/mgUserInfo.aspx?UID=2719"
+    },
+    {
+     "text": "http://www.plymouth.gov.uk",
+     "url": "http://www.plymouth.gov.uk"
+    }
+   ]
+  },
+  {
+   "id": "pod-community-groups",
+   "name": "Plymouth Online Directory: community groups in Plymouth",
+   "url": "https://plymouthonlinedirectory.co.uk/article/331/Community-groups-in-Plymouth",
+   "status": 200,
+   "title": "Community groups in Plymouth - Plymouth Online Directory",
+   "text": "Community groups in Plymouth\nA community group is normally run by people who live in your local community, and they try to help, support, or provide entertainment.\nCommunity groups can be a great way to meet new people and make friends.\nTo find out more about how they can help you, please contact them using the phone number, email, or website address they have provided.\nAdult Day Centre\nAge UK Plymouth runs a welcoming day care service designed for people aged 50 and over in the local area.\nBorrow Don't Buy - Plymouth's Library of Things\nBorrow Don't Buy is Plymouth's very own Library of Things (LoT). We are a community interest company with the mission of giving you affordable access to the things you need - whilst simultaneously benefitting the Earth.\nClaremont Street Neighbourhood Watch\nJoin the Claremont Street Neighbourhood Watch in Plymouth. Receive local updates, attend community meetings, and help create a safer, friendlier place to live together.\nCourtlands School Parent Support Group\nWe are a support group for parents and meet every Wednesday from 10am to 11.30am. During this time we often have a guest speaker to talk to the group. There is even coffee!\nDevon and Cornwall Furniture Reuse Project\nThe Devon and Cornwall Furniture Reuse Project is a local charity doing big things, we work hard with local people, councils and social housing entities to supply much needed furniture and appliances to people getting back on their feet.\nDevon and Cornwall Tamil Sangam\nDevon and Cornwall Tamil Sangam is a community group that helps people in Plymouth connect through language, culture, and shared experiences. It supports individuals and families by promoting Tamil identity and building strong local connections.\nDisability Football Plymouth Argyle\nAs part of the Every Player Counts programme funded by Wembley National Stadium Trust, we provide courses and programmes for a wide range of disabilities. Through the project, we aim to improve accessibility, barriers to participation and provide fun, progressive and some competitive programmes for people with disabilities.\nDown's Syndrome - Plymouth and Area Support Group\nWe are a national organisation, committed to improving quality of life for people who have Down's syndrome, promoting their right to be included on a full and equal basis with others.\nDyspraxia Foundation\nDyspraxia is a lifelong condition affecting gross and fine motor coordination in adults and children. Many may experience difficulties with organisational skills, memory, processing speed and, in some cases, speech. The Dyspraxia Foundation is committed to making the teaching and medical professions more aware of dyspraxia; and to spread understanding of how those who have the condition can be helped. The Foundation seeks every opportunity to increase understanding of Dyspraxia.\nEat that Frog\nEat That Frog supports people to identify and overcome their barriers to live a more fulfilled life. Whether you're a teenager or an adult, it's never too late to learn. We provide safe and fun learning environments, tailored around you.\nEducation Otherwise Association\nEducation Otherwise is an organisation run by volunteers which provides support and information for families whose children are being educated outside school or for those who are considering home education their children.\nEmmanuel Church\nEmmanuel Church runs or hosts several community outreach projects including a choir, social responsibility group, Friends of Emmanuel, the Emmanuel Fellowship and a soup run. To get involved or find out current events, look at the website or telephone them directly.\nFun and Freedom Club - Friends and Families of Special Children\nOffering young carers a chance to make new friends in a similar situation, it offers lots of fun with weekend clubs, days out and trips away.\nHighbury Social Club at Plymouth Highbury Trust\nThe Highbury Social Club is an evening club for people with varying degrees of learning disabilities. The club is run twice a week, on Tuesday and Friday evenings between the hours of 6.15pm and 8.30pm.\nHope Baptist Church\nHope Baptist Church is a vibrant family church at the heart of Peverell. We hold a range of activities for families, young people and children.\nPrevious\npage\n1\n2\n3\n4\n5\nPage\n1\n2\n3\n4\n5\nof 5\nToggle hidden pages\nNext\npage\nShare this page\nPrint",
+   "links": [
+    {
+     "text": "Adult Day Centre",
+     "url": "https://plymouthonlinedirectory.co.uk/thingstodo/councilactivities/adultdaycentre"
+    },
+    {
+     "text": "Borrow Don't Buy - Plymouth's Library of Things",
+     "url": "https://plymouthonlinedirectory.co.uk/community/groups/borrowdontbuy"
+    },
+    {
+     "text": "Claremont Street Neighbourhood Watch",
+     "url": "https://plymouthonlinedirectory.co.uk/community/groups/claremontstreetneighbourhoodwatch"
+    },
+    {
+     "text": "Courtlands School Parent Support Group",
+     "url": "https://plymouthonlinedirectory.co.uk/community/groups/courtlandsschoolparentsupportgroup"
+    },
+    {
+     "text": "Devon and Cornwall Furniture Reuse Project",
+     "url": "https://plymouthonlinedirectory.co.uk/community/charities/devoncornwallfurniturereuseproject"
+    },
+    {
+     "text": "Devon and Cornwall Tamil Sangam",
+     "url": "https://plymouthonlinedirectory.co.uk/community/groups/tamil"
+    },
+    {
+     "text": "Disability Football Plymouth Argyle",
+     "url": "https://plymouthonlinedirectory.co.uk/thingsthingstodo/sportleisure/disabilityfootballplymouthargyle"
+    },
+    {
+     "text": "Down's Syndrome - Plymouth and Area Support Group",
+     "url": "https://plymouthonlinedirectory.co.uk/community/groups/downssyndrome"
+    },
+    {
+     "text": "Dyspraxia Foundation",
+     "url": "https://plymouthonlinedirectory.co.uk/misc/dyspraxiafoundation"
+    },
+    {
+     "text": "Eat that Frog",
+     "url": "https://plymouthonlinedirectory.co.uk/community/groups/eatthatfrog"
+    },
+    {
+     "text": "Education Otherwise Association",
+     "url": "https://plymouthonlinedirectory.co.uk/childrenandfamilies/homeeducation/educationotherwise"
+    },
+    {
+     "text": "Emmanuel Church",
+     "url": "https://plymouthonlinedirectory.co.uk/general/emmanuelchurch"
+    },
+    {
+     "text": "Fun and Freedom Club - Friends and Families of Special Children",
+     "url": "https://plymouthonlinedirectory.co.uk/community/groups/funandfreedomclub"
+    },
+    {
+     "text": "Highbury Social Club at Plymouth Highbury Trust",
+     "url": "https://plymouthonlinedirectory.co.uk/community/groups/highburysocialclub"
+    },
+    {
+     "text": "Hope Baptist Church",
+     "url": "https://plymouthonlinedirectory.co.uk/community/groups/hopebaptistchurch"
+    },
+    {
+     "text": "2",
+     "url": "https://plymouthonlinedirectory.co.uk/community/groups?p=2"
+    },
+    {
+     "text": "3",
+     "url": "https://plymouthonlinedirectory.co.uk/community/groups?p=3"
+    },
+    {
+     "text": "4",
+     "url": "https://plymouthonlinedirectory.co.uk/community/groups?p=4"
+    },
+    {
+     "text": "5",
+     "url": "https://plymouthonlinedirectory.co.uk/community/groups?p=5"
+    },
+    {
+     "text": "Next page",
+     "url": "https://plymouthonlinedirectory.co.uk/community/groups?p=2&direction=next"
+    }
+   ]
+  },
+  {
+   "id": "plymouth-whats-new",
+   "name": "Plymouth City Council: democracy what's new (RSS)",
+   "url": "https://democracy.plymouth.gov.uk/mgRss.aspx",
+   "status": 200,
+   "title": "PCC - What's new",
+   "text": "Meeting scheduled: Monday 23 November 2026 2.00 pm, City Council https://democracy.plymouth.gov.uk/ieListDocuments.aspx?MId=11737&EVT=105\nAgenda published: Meeting of Monday 30 November 2026 10.00 am, Licensing Committee https://democracy.plymouth.gov.uk/ieListDocuments.aspx?MId=11870&EVT=101&DT=A\nDecision sheet published: Meeting of Friday 20 November 2026, Delegated Decisions https://democracy.plymouth.gov.uk/ieListDocuments.aspx?MId=11923&EVT=101&DT=D\nMeeting held: Friday 20 November 2026 10.30 am, Devon and Cornwall Police and Crime Panel https://democracy.plymouth.gov.uk/ieListDocuments.aspx?MId=11798&EVT=105\nMeeting held: Friday 20 November 2026, Delegated Decisions https://democracy.plymouth.gov.uk/ieListDocuments.aspx?MId=11923&EVT=105\nePetition: Restore Post Office and Banking Services in Tamerton Foliot and Southway (Nov 20 2026 - Feb 28 2027) https://democracy.plymouth.gov.uk/mgIssueHistoryHome.aspx?IId=118543&EVT=54\nAgenda published: Meeting of Thursday 26 November 2026 10.00 am, Taxi Licensing Committee https://democracy.plymouth.gov.uk/ieListDocuments.aspx?MId=11700&EVT=101&DT=A",
+   "links": [
+    {
+     "text": "Meeting scheduled: Monday 23 November 2026 2.00 pm, City Council",
+     "url": "https://democracy.plymouth.gov.uk/ieListDocuments.aspx?MId=11737&EVT=105"
+    },
+    {
+     "text": "Agenda published: Meeting of Monday 30 November 2026 10.00 am, Licensing Committee",
+     "url": "https://democracy.plymouth.gov.uk/ieListDocuments.aspx?MId=11870&EVT=101&DT=A"
+    },
+    {
+     "text": "Decision sheet published: Meeting of Friday 20 November 2026, Delegated Decisions",
+     "url": "https://democracy.plymouth.gov.uk/ieListDocuments.aspx?MId=11923&EVT=101&DT=D"
+    },
+    {
+     "text": "Meeting held: Friday 20 November 2026 10.30 am, Devon and Cornwall Police and Crime Panel",
+     "url": "https://democracy.plymouth.gov.uk/ieListDocuments.aspx?MId=11798&EVT=105"
+    },
+    {
+     "text": "Meeting held: Friday 20 November 2026, Delegated Decisions",
+     "url": "https://democracy.plymouth.gov.uk/ieListDocuments.aspx?MId=11923&EVT=105"
+    },
+    {
+     "text": "ePetition: Restore Post Office and Banking Services in Tamerton Foliot and Southway (Nov 20 2026 - Feb 28 2027)",
+     "url": "https://democracy.plymouth.gov.uk/mgIssueHistoryHome.aspx?IId=118543&EVT=54"
+    },
+    {
+     "text": "Agenda published: Meeting of Thursday 26 November 2026 10.00 am, Taxi Licensing Committee",
+     "url": "https://democracy.plymouth.gov.uk/ieListDocuments.aspx?MId=11700&EVT=101&DT=A"
+    }
+   ]
+  },
+  {
+   "id": "totnes-tc-news",
+   "name": "Totnes Town Council: news",
+   "url": "https://www.totnestowncouncil.gov.uk/whats-on/news/",
+   "status": 200,
+   "title": "News - Totnes Town Council",
+   "text": "Home\nWhat’s On\nNews\nLatest News\nTotnes Means Business – Event Highlights\nThe first Totnes Means Business event brought people together to share ideas about how Totnes can thrive.\nFri 20th November 2026\nLooking after our local areas\nFrom green initiatives to working collaboratively, the Council has been busy looking after the town’s local areas.\nTue 17th November 2026\nJoin the incredible team of volunteers at the historic Guildhall\nJoin the dedicated team of volunteers who help keep the Guildhall open to the public.\nThu 12th November 2026\nChristmas events in Totnes\nVisit Totnes this December for lots of festive fun with events for all the family to enjoy.\nTue 10th November 2026\nThe countdown is on for the Christmas Lights Switch On\nThe 2026 Totnes Christmas Lights Switch On is taking place on Tuesday 24th November from 3pm.\nTue 3rd November 2026\nRemembrance Day 2026\nOn Remembrance Sunday, the Mayor of Totnes will be laying a wreath on behalf of the town.\nMon 2nd November 2026\nNews Categories\nCouncil Business\nGeneral News\nHelp & Advice\nTotnes Means Business – Event Highlights\nFri 20th November 2026\nLooking after our local areas\nTue 17th November 2026\nJoin the incredible team of volunteers at the historic Guildhall\nThu 12th November 2026\nTotnes Means Business – Event Highlights\nFri 20th November 2026\nLooking after our local areas\nTue 17th November 2026\nJoin the incredible team of volunteers at the historic Guildhall\nThu 12th November 2026\nTotnes Means Business – Event Highlights\nFri 20th November 2026\nLooking after our local areas\nTue 17th November 2026\nJoin the incredible team of volunteers at the historic Guildhall\nThu 12th November 2026",
+   "links": [
+    {
+     "text": "Home",
+     "url": "https://www.totnestowncouncil.gov.uk"
+    },
+    {
+     "text": "What’s On",
+     "url": "https://www.totnestowncouncil.gov.uk/whats-on/"
+    },
+    {
+     "text": "Totnes Means Business – Event Highlights The first Totnes Means Business event brought people together to share ideas about how Totnes can thrive. Fri 20th November 2026",
+     "url": "https://www.totnestowncouncil.gov.uk/totnes-means-business-event/"
+    },
+    {
+     "text": "Looking after our local areas From green initiatives to working collaboratively, the Council has been busy looking after the town’s local areas. Tue 17th November 2026",
+     "url": "https://www.totnestowncouncil.gov.uk/looking-after-our-local-areas/"
+    },
+    {
+     "text": "Join the incredible team of volunteers at the historic Guildhall Join the dedicated team of volunteers who help keep the Guildhall open to the public. Thu 12th November 2026",
+     "url": "https://www.totnestowncouncil.gov.uk/join-the-volunteers-at-the-historic-guildhall/"
+    },
+    {
+     "text": "Christmas events in Totnes Visit Totnes this December for lots of festive fun with events for all the family to enjoy. Tue 10th November 2026",
+     "url": "https://www.totnestowncouncil.gov.uk/christmas-events-in-totnes/"
+    },
+    {
+     "text": "The countdown is on for the Christmas Lights Switch On The 2026 Totnes Christmas Lights Switch On is taking place on Tuesday 24th November from 3pm. Tue 3rd November 2026",
+     "url": "https://www.totnestowncouncil.gov.uk/christmas-lights-switch-on-2/"
+    },
+    {
+     "text": "Remembrance Day 2026 On Remembrance Sunday, the Mayor of Totnes will be laying a wreath on behalf of the town. Mon 2nd November 2026",
+     "url": "https://www.totnestowncouncil.gov.uk/remembrance-day-2026/"
+    },
+    {
+     "text": "Council Business",
+     "url": "https://www.totnestowncouncil.gov.uk/category/council-business/"
+    },
+    {
+     "text": "General News",
+     "url": "https://www.totnestowncouncil.gov.uk/category/general-news/"
+    },
+    {
+     "text": "Help & Advice",
+     "url": "https://www.totnestowncouncil.gov.uk/category/help-advice/"
+    }
+   ]
+  },
+  {
+   "id": "totnes-tc-meetings",
+   "name": "Totnes Town Council: meetings",
+   "url": "https://www.totnestowncouncil.gov.uk/whats-on/meetings/",
+   "status": 200,
+   "title": "Meetings - Totnes Town Council",
+   "text": "Home\nWhat’s On\nMeetings\nUpcoming Meetings\nTown Matters Committee (23 Nov 2026)\n23 Nov 2026\nFull Council (7 Dec 2026)\n7 Dec 2026\nCouncil Matters Committee (14 Dec 2026)\n14 Dec 2026\nRecent Meetings\nPlanning Committee (16 Nov 2026)\n16 Nov 2026\nCouncil Matters Committee (9 Nov 2026)\n9 Nov 2026\nFull Council (2 Nov 2026)\n2 Nov 2026\nMeeting Calendar\nNovember 2026\nMon 2nd November\nFull Council (2 Nov 2026)\nMon 9th November\nCouncil Matters Committee (9 Nov 2026)\nMon 16th November\nPlanning Committee (16 Nov 2026)\nMon 23rd November\nTown Matters Committee (23 Nov 2026)\nDecember 2026\nMon 7th December\nFull Council (7 Dec 2026)\nMon 14th December\nCouncil Matters Committee (14 Dec 2026)\nMon 21st December\nPlanning Committee (21 Dec 2026)\nJanuary 2027\nMon 4th January\nFull Council (4 Jan 2027)\nMon 11th January\nCouncil Matters Committee (11 Jan 2027)\nMon 18th January\nPlanning Committee (18 Jan 2027)\nMon 25th January\nTown Matters Committee (25 Jan 2027)\nWed 27th January\nTraffic and Transport Forum AGM (27 Jan 27)\nDisplaying items from\nSun 1st November 2026\nto\nSun 31st January 2027\nDate\nEarlier\nLater\nPublished\nThu 18th June 2020\nLast Updated\nSun 21st June 2020\nReport\nReport Accessibility Issue",
+   "links": [
+    {
+     "text": "Home",
+     "url": "https://www.totnestowncouncil.gov.uk"
+    },
+    {
+     "text": "What’s On",
+     "url": "https://www.totnestowncouncil.gov.uk/whats-on/"
+    },
+    {
+     "text": "Town Matters Committee (23 Nov 2026) 23 Nov 2026",
+     "url": "https://www.totnestowncouncil.gov.uk/event/town-matters-committee-23-nov-2026/?er=WyIyMDI2LTExLTIzIDE4OjMwOjAwIiwiMjAyNi0xMS0yMyAyMDowMDowMCJd"
+    },
+    {
+     "text": "Full Council (7 Dec 2026) 7 Dec 2026",
+     "url": "https://www.totnestowncouncil.gov.uk/event/full-council-7-dec-2026/?er=WyIyMDI2LTEyLTA3IDE4OjMwOjAwIiwiMjAyNi0xMi0wNyAyMDozMDowMCJd"
+    },
+    {
+     "text": "Council Matters Committee (14 Dec 2026) 14 Dec 2026",
+     "url": "https://www.totnestowncouncil.gov.uk/event/council-matters-committee-14-dec-2026/?er=WyIyMDI2LTEyLTE0IDE4OjMwOjAwIiwiMjAyNi0xMi0xNCAyMDowMDowMCJd"
+    },
+    {
+     "text": "Planning Committee (16 Nov 2026) 16 Nov 2026",
+     "url": "https://www.totnestowncouncil.gov.uk/event/planning-committee-16-nov-2026/?er=WyIyMDI2LTExLTE2IDE4OjMwOjAwIiwiMjAyNi0xMS0xNiAyMDowMDowMCJd"
+    },
+    {
+     "text": "Council Matters Committee (9 Nov 2026) 9 Nov 2026",
+     "url": "https://www.totnestowncouncil.gov.uk/event/council-matters-committee-9-nov-2026/?er=WyIyMDI2LTExLTA5IDE4OjMwOjAwIiwiMjAyNi0xMS0wOSAyMDowMDowMCJd"
+    },
+    {
+     "text": "Full Council (2 Nov 2026) 2 Nov 2026",
+     "url": "https://www.totnestowncouncil.gov.uk/event/full-council-2-nov-2026/?er=WyIyMDI2LTExLTAyIDE4OjMwOjAwIiwiMjAyNi0xMS0wMiAyMDozMDowMCJd"
+    },
+    {
+     "text": "Planning Committee (21 Dec 2026)",
+     "url": "https://www.totnestowncouncil.gov.uk/event/planning-committee-21-dec-2026/?er=WyIyMDI2LTEyLTIxIDE4OjMwOjAwIiwiMjAyNi0xMi0yMSAyMDowMDowMCJd"
+    },
+    {
+     "text": "Full Council (4 Jan 2027)",
+     "url": "https://www.totnestowncouncil.gov.uk/event/full-council-4-jan-2027/?er=WyIyMDI3LTAxLTA0IDE4OjMwOjAwIiwiMjAyNy0wMS0wNCAyMDozMDowMCJd"
+    },
+    {
+     "text": "Council Matters Committee (11 Jan 2027)",
+     "url": "https://www.totnestowncouncil.gov.uk/event/council-matters-committee-11-jan-2027/?er=WyIyMDI3LTAxLTExIDE4OjMwOjAwIiwiMjAyNy0wMS0xMSAyMDowMDowMCJd"
+    },
+    {
+     "text": "Planning Committee (18 Jan 2027)",
+     "url": "https://www.totnestowncouncil.gov.uk/event/planning-committee-18-jan-2027/?er=WyIyMDI3LTAxLTE4IDE4OjMwOjAwIiwiMjAyNy0wMS0xOCAyMDowMDowMCJd"
+    },
+    {
+     "text": "Town Matters Committee (25 Jan 2027)",
+     "url": "https://www.totnestowncouncil.gov.uk/event/town-matters-committee-25-jan-2027/?er=WyIyMDI3LTAxLTI1IDE4OjMwOjAwIiwiMjAyNy0wMS0yNSAyMDowMDowMCJd"
+    },
+    {
+     "text": "Traffic and Transport Forum AGM (27 Jan 27)",
+     "url": "https://www.totnestowncouncil.gov.uk/event/traffic-and-transport-forum-agm-27-jan-27/?er=WyIyMDI3LTAxLTI3IDE4OjMwOjAwIiwiMjAyNy0wMS0yNyAyMDowMDowMCJd"
+    },
+    {
+     "text": "Earlier",
+     "url": "https://www.totnestowncouncil.gov.uk/whats-on/meetings?em=2026-08-01#block_5eef7a3385954"
+    },
+    {
+     "text": "Later",
+     "url": "https://www.totnestowncouncil.gov.uk/whats-on/meetings?em=2027-02-01#block_5eef7a3385954"
+    },
+    {
+     "text": "Report Accessibility Issue",
+     "url": "https://www.totnestowncouncil.gov.uk/report-accessibility-issue/?report_post_id=116&report_post_title=Meetings"
+    }
+   ]
+  },
+  {
+   "id": "totnes-tc-grants",
+   "name": "Totnes Town Council: community grants",
+   "url": "https://www.totnestowncouncil.gov.uk/your-community/community-grants/",
+   "status": 200,
+   "title": "Totnes Town Council Community Grants - Totnes Town Council",
+   "text": "Home\nYour Community\nTotnes Town Council Community Grants\nFollowing an independent Community Audit, Totnes Town Council (TTC) is updating its community funding model to better support local organisations and projects. Funding will be available through\nsmall grants\nto support smaller-scale, time-limited community projects and initiatives; and\ncore funding\nto help provide essential services in the town.\nYou can apply for a small grant of up to £1,000 at any time. These community grants can support small initiatives and pilot projects, local events, environmental improvements, and community activities that benefit Totnes residents.\nThe 2026/27 grant allocations and contact email addresses are as follows:\nCommunity Working Group: £5,000 –\nclerk@totnestowncouncil.gov.uk\nNote: this budget has now been allocated and applications are now closed, see below for details.\nEconomy Working Group (Event Sponsorship): £2,500 –\neconomy@totnestowncouncil.gov.uk\nEconomy Working Group (Business Support): £2,500 –\neconomy@totnestowncouncil.gov.uk\nEnvironment & Public Realm Working Group: £5,000 –\nadministrator@totnestowncouncil.gov.uk\nPlease cc all applications to\nreception@totnestowncouncil.gov.uk\nFor full details on eligibility, terms and conditions, and how to apply, please read the Community Funding Policy and complete the application form below. Applications will initially be reviewed by the relevant Totnes Town Council Working Group.\nSmall Grants Application Form 2026 – MS Word\n82.44KB\n·\nMon 27th April 2026\nSmall Grants Application Form 2026 – PDF\n332.79KB\n·\nMon 27th April 2026\nCommunity Funding Policy 2026 – PDF\n436.19KB\n·\nWed 10th June 2026\nThe simple form above asks for details on how the funds will be spent and the policy which includes details of eligibility and all supporting documents that need to be submitted. Projects that help meet the objectives set out in the Town Council’s 2024-29 Strategy will be prioritised. The grants are funded by a portion of the Council Tax that is collected from Totnes residents. Councillors allocate the available funding at the Council Matters Committee and successful applicants will be informed after this date.\nPlease note, the next Working Group dates where any initial applications could be considered are:\nEconomy – 3rd November\nEnvironment – 18th November\nThis will mean\nMid-September is the earliest date any application can be agreed.\nAfter that it is likely to be September and we expect that to be a significant over subscription for these smaller funding pots. Further conversations about larger grants and strategic funding will be had in due course via committee and we will update as soon as possible.\nCommunity Working Group Grants\n– Due to the exceptionally high level of demand, the Community Working Group has agreed to close the Community element of the Grants programme to further applications at this time. This decision was taken because the available budget has been significantly oversubscribed, with the final decision on allocation being taken on 13\nth\nJuly by the Council Matters Committee.\nWe are incredibly grateful for the volume and quality of applications received. It is encouraging to see so many organisations, groups and individuals delivering valuable work for our community. Unfortunately, the level of demand has far exceeded the funds available, and members are tasked with difficult decisions on the applications received already.\nHowever, there is still grant funding available through both the Environment and Public Realm Working Group and the Economy Working Group for projects that align with the priorities of those programmes.\nFor details of previous grant awards made, see the document below:\nTotnes Town Council Community Grant Awards since 2022\n283.78KB\n·\nFri 2nd January 2026\nExternal funding opportunities can be found on our website here – we try to keep it as current and comprehensive as possible:\nhttps://www.totnestowncouncil.gov.uk/your-community/funding-opportunities/\nPublished\nThu 18th June 2020\nLast Updated\nMon 19th October 2026\nReport\nReport Accessibility Issue",
+   "links": [
+    {
+     "text": "Home",
+     "url": "https://www.totnestowncouncil.gov.uk"
+    },
+    {
+     "text": "Your Community",
+     "url": "https://www.totnestowncouncil.gov.uk/your-community/"
+    },
+    {
+     "text": "Small Grants Application Form 2026 – MS Word 82.44KB · Mon 27th April 2026",
+     "url": "https://www.totnestowncouncil.gov.uk/wp-content/uploads/2026/04/Community-Funding-Policy-–-Small-Grants-Application-Form-1.docx"
+    },
+    {
+     "text": "Small Grants Application Form 2026 – PDF 332.79KB · Mon 27th April 2026",
+     "url": "https://www.totnestowncouncil.gov.uk/wp-content/uploads/2026/04/Community-Funding-Policy-–-Small-Grants-Application-Form-1.pdf"
+    },
+    {
+     "text": "Community Funding Policy 2026 – PDF 436.19KB · Wed 10th June 2026",
+     "url": "https://www.totnestowncouncil.gov.uk/wp-content/uploads/2026/06/Community-Funding-Policy-April-2026.pdf"
+    },
+    {
+     "text": "Totnes Town Council Community Grant Awards since 2022 283.78KB · Fri 2nd January 2026",
+     "url": "https://www.totnestowncouncil.gov.uk/wp-content/uploads/2026/01/TTC-Community-Grant-Awards-Since-2022.pdf"
+    },
+    {
+     "text": "https://www.totnestowncouncil.gov.uk/your-community/funding-opportunities/",
+     "url": "https://www.totnestowncouncil.gov.uk/your-community/funding-opportunities/"
+    },
+    {
+     "text": "Report Accessibility Issue",
+     "url": "https://www.totnestowncouncil.gov.uk/report-accessibility-issue/?report_post_id=91&report_post_title=Totnes%20Town%20Council%20Community%20Grants"
+    }
+   ]
+  },
+  {
+   "id": "transition-town-totnes-events",
+   "name": "Transition Town Totnes: events",
+   "url": "https://www.transitiontowntotnes.org/events",
+   "status": 200,
+   "title": "Events | Transition Town Totnes",
+   "text": "Upcoming events\nin and around Totnes.\nUpcoming events\nin and around Totnes.\nTransition Town Totnes is a community-led charity working to strengthen our local economy, reduce our environmental impact, and build resilience as we adapt to a changing climate. We're a grassroots organisation, run by local volunteers alongside a small staff team, and anyone is welcome to get involved.\nFor more events at the Climate Hub, visit their event page\nhere\n.",
+   "links": [
+    {
+     "text": "here",
+     "url": "https://totnesclimatehub.info/events"
+    }
+   ]
+  },
+  {
+   "id": "totnes-caring-news",
+   "name": "Totnes Caring: news",
+   "url": "https://www.totnescaring.org.uk/category/news/",
+   "status": 200,
+   "title": "News – Totnes Caring",
+   "text": "Skip to content\njoe.barrett@image-space.com\nNews\nMarch 25, 2022\nApril 27, 2022\nEaster Table Top Sale\nWednesday April 13th 10am-12 noon at St John’s church Totnes with stalls & tombolas’, enjoy hot drinks & homemade cakes\nPart of St John’s community cafe\nTotnes caring will also be with us.\njoe.barrett@image-space.com\nNews\nFebruary 15, 2022\nJanuary 8, 2024\nAll of our groups have now restarted, following Christmas and New Year and a pause due to the emergence of Omicron.\nArt Group\n: Monday at Rushbrook. 10am – 12 noon and 13.30 – 15.30.\nLunch Club:\nMondays at the Social Club on Station Road from around 12.15-13.45pm.\nMemory Café\n: Thursday afternoons at Totnes Boating Association 2pm-4pm.\nNew Directions:\nwill start running again on Tuesday 15\nth\nFebruary, with a small group of existing clients. it takes place in the afternoon at the Social Club on Station Road. Lunch first, followed by activities.\nDementia Carer’s Support Group\n: Carers Online – first Wednesday of the month at 2 pm, Carer’s Face to Face – second Wednesday of the month at 12.30pm (cared for person very welcome). Online Singalongs – third Tuesdays of the month at 3pm\nLive Music Now:\noccasional live music Zoom meetings run in partnership with national charity Live Music Now\nTo find out more about the groups, including how to join in, please contact Totnes Caring on 01803 865684\njoe.barrett@image-space.com\nNews\nNovember 4, 2021\nApril 27, 2022\nTotnes Caring is Recruiting Home Helps\nWould you like a worthwhile job based in Totnes?\nA role in which you can helps others and make a real difference?\nIf so, Totnes Caring is currently looking to recruit another home help. Hours are negotiable, but usually about 20-25 per week.\nTotnes Caring is a local charity offering help and assistance to older, disabled and vulnerable people living in Totnes and surrounding areas. In particular we offer support to help people live independently at home for as long as possible and not be isolated from the community.\nApplicants need to be reliable, personable, caring and hard working to join our busy home help team. Good interpersonal, organisational and communication skills are needed with the ability to work unsupervised. No personal care involved. No weekend or evening work involved.\nThe home help role involves :\nCleaning and tidying clients home\nMaking beds and changing bed linen\nAssisting with laundry and ironing where necessary\nShopping for housebound clients\nSupport will be provided by Liz, the Home Help Coordinator.\nPrevious experience in a similar role would be beneficial, but is not essential as full training will be provided.\nSalary: £9.45 per hour plus mileage.\nPlease apply by emailing Liz Loader liz@totnescaring.org.uk and include your CV.\nIf you’d like to find out more please contact Liz on the above email or on 01803 865684.\nIf you you would like to apply or would like more information, please contact:\nContact us on\n01803 865684\nfor more information. or email\ninfo@totnescaring.org.uk\nWe hope to hear from you very soon.\njoe.barrett@image-space.com\nNews\nMarch 6, 2020\nNovember 10, 2021\nWould you like to volunteer as a driver for Totnes Caring.\nDrivers are urgently needed to take clients to Memory Cafe, Lunch Club and medical appointments.\nFriday is an especially busy day with coordinating drives to appointments, lunch club and Memory Café. If you enjoy driving and would like to help we’d love to hear from you.\nIt’s a way to make a real difference to our local community. It enables the elderly to remain as independent as possible and provides much needed companionship and socialisation. You get to meet new people & will make new friendships and be part of our team of our amazing volunteers.\nPlease contact:\nhttps://www.totnescaring.org.uk/\ntel 01803 865684\nLatest News and Events Round Up\nFundraising News\nNewsletters\nBusiness Club – just £99 per year!\nWills and Legacies\nThe People Behind Totnes Caring\nOur Trustees\nContact Totnes Caring",
+   "links": [
+    {
+     "text": "Skip to content",
+     "url": "https://www.totnescaring.org.uk/category/news/#main"
+    },
+    {
+     "text": "joe.barrett@image-space.com",
+     "url": "https://www.totnescaring.org.uk/author/joe-barrettimage-space-com/"
+    },
+    {
+     "text": "News",
+     "url": "https://www.totnescaring.org.uk/category/news/"
+    },
+    {
+     "text": "March 25, 2022April 27, 2022",
+     "url": "https://www.totnescaring.org.uk/easter-table-top-sale/"
+    },
+    {
+     "text": "February 15, 2022January 8, 2024",
+     "url": "https://www.totnescaring.org.uk/totnes-caring-groups-restarted/"
+    },
+    {
+     "text": "November 4, 2021April 27, 2022",
+     "url": "https://www.totnescaring.org.uk/totnes-caring-has-the-following-vacancies/"
+    },
+    {
+     "text": "March 6, 2020November 10, 2021",
+     "url": "https://www.totnescaring.org.uk/volunteer-drivers-needed/"
+    },
+    {
+     "text": "https://www.totnescaring.org.uk/",
+     "url": "https://www.totnescaring.org.uk/"
+    },
+    {
+     "text": "Latest News and Events Round Up",
+     "url": "https://www.totnescaring.org.uk/about-us/latest-news-and-events-round-up/"
+    },
+    {
+     "text": "Fundraising News",
+     "url": "https://www.totnescaring.org.uk/fundraising-news/"
+    },
+    {
+     "text": "Newsletters",
+     "url": "https://www.totnescaring.org.uk/newsletters/"
+    },
+    {
+     "text": "Business Club – just £99 per year!",
+     "url": "https://www.totnescaring.org.uk/business-network/"
+    },
+    {
+     "text": "Wills and Legacies",
+     "url": "https://www.totnescaring.org.uk/our-coverage/"
+    },
+    {
+     "text": "The People Behind Totnes Caring",
+     "url": "https://www.totnescaring.org.uk/staff/"
+    },
+    {
+     "text": "Our Trustees",
+     "url": "https://www.totnescaring.org.uk/our-trustees/"
+    },
+    {
+     "text": "Contact Totnes Caring",
+     "url": "https://www.totnescaring.org.uk/contact-totnes-caring/"
+    }
+   ]
+  }
+ ]
+}

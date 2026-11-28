@@ -1,0 +1,68 @@
+{
+ "title": "Plymouth & Ivybridge · Weather",
+ "h1_html": "Plymouth &amp; Ivybridge · Weather",
+ "sections": [
+  "weather",
+  "floods",
+  "air",
+  "tides",
+  "bathing",
+  "sewage",
+  "walks"
+ ],
+ "parts": [
+  "00-style.css",
+  "01-style.css",
+  "02-clockcss.css",
+  "08-layout.css",
+  "03-script.js",
+  "app.js",
+  "05-script.js",
+  "06-viz-css.css",
+  "07-viz-js.js"
+ ],
+ "static_blocks": [
+  "TABS",
+  "AREAS",
+  "WALKS",
+  "WSETS",
+  "COUNTY",
+  "AIRLL",
+  "SITE",
+  "TOWNS",
+  "GAUGES",
+  "BWD",
+  "SEV",
+  "STC"
+ ],
+ "data_blocks": [
+  "LOCS",
+  "AIR",
+  "SPILLS",
+  "FLOODS",
+  "TIDES",
+  "TIDEX"
+ ],
+ "null_blocks": [
+  "RIVERS",
+  "OUTLOOK",
+  "RELEASES"
+ ],
+ "code": {
+  "rivers": "code/rivers.js",
+  "sewage": "code/sewage.js",
+  "vizcore": "code/viz.js",
+  "viz": "code/empty.js",
+  "vizcss": "code/viz.css",
+  "css": "code/area.css",
+  "extra": "code/coast.js"
+ },
+ "photos": "files",
+ "about": {
+  "floods": "<details class=\"about\"><summary>About this data</summary><div class=\"small\" id=\"floodabout\"></div></details>",
+  "sewage": "<div id=\"rels\"></div>\n<details class=\"about\"><summary>About this data and live map</summary><p class=\"sans\" style=\"margin:0 0 10px\">Surfers Against Sewage run a near-real-time map of sewage discharge alerts for about 850 UK swim spots. Check it for Plymouth Hoe, Bovisand and Wembury before anyone paddles or swims.</p>\n<div style=\"display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px\"><a class=\"btn\" style=\"text-decoration:none;background:var(--accent);color:var(--accent-fg);border-color:var(--accent)\" href=\"https://www.sas.org.uk/sewage-map/\" target=\"_blank\" rel=\"noopener\">Open the live sewage map</a><a class=\"btn\" style=\"text-decoration:none\" href=\"https://datahq.sas.org.uk/sewage-data-hq/\" target=\"_blank\" rel=\"noopener\">What the alerts mean</a><a class=\"btn\" style=\"text-decoration:none\" href=\"https://sewagedata.co.uk\" target=\"_blank\" rel=\"noopener\">Storm overflow map (sewagedata.co.uk)</a></div>\n<ul class=\"sans small\" style=\"margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:2px\">\n<li><b>No alert:</b> data is coming in and there is no sign of reduced water quality.</li>\n<li><b>Sewage alert:</b> a confirmed discharge, which stays active for 48 hours after it stops.</li>\n<li><b>Pollution risk forecast:</b> bathing discouraged; bathing season only.</li>\n<li><b>Pollution incident:</b> confirmed event such as a burst pipe or oil spill; bathing not advised.</li>\n<li><b>Out of season:</b> no bathing-water data outside the season, which ended on 30 September.</li>\n</ul>\n<p class=\"small\" style=\"margin:8px 0 0\">This page can't show Surfers Against Sewage's live data itself: they don't publish a data feed or reuse licence, and the map can't be embedded here. Alert wording is summarised from Surfers Against Sewage's Data HQ page.</p>\n</details>"
+ },
+ "extra": {
+  "weather": " Source: Open-Meteo.com (CC BY 4.0)."
+ }
+}

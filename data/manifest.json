@@ -1,0 +1,77 @@
+{
+ "pushed_at": "2026-11-28T19:23:36+00:00",
+ "files": {
+  "ammanford.json": {
+   "bytes": 2220381,
+   "sha256": "6b19f8558fec0b3ffb6669e8b877cad1f01b42141216b47d2361cd6123d857af",
+   "fetched_at": "2026-11-28T18:17:10.357242+00:00",
+   "mac_mtime": "2026-11-28T18:17:10+00:00"
+  },
+  "east-kent-civic.json": {
+   "bytes": 195971,
+   "sha256": "1ff4000a44a84a621520e2c2813bc20a16305758302d98330152e82a2dcfd607",
+   "fetched_at": "2026-11-23T06:47:19Z",
+   "mac_mtime": "2026-11-23T06:47:19+00:00"
+  },
+  "east-kent.json": {
+   "bytes": 809893,
+   "sha256": "89116573678be4e115926c2f2617dbe4ab3e8109fb94bb7f92beb0756bc44827",
+   "fetched_at": "2026-11-28T19:23:28.995220+00:00",
+   "mac_mtime": "2026-11-28T19:23:29+00:00"
+  },
+  "neath-port-talbot-civic.json": {
+   "bytes": 120949,
+   "sha256": "c0d914e8e5795372f07a5d6a57451fabad8f164cbbb6f83c3c42dbcd8ae143b9",
+   "fetched_at": "2026-11-23T06:44:52Z",
+   "mac_mtime": "2026-11-23T06:44:52+00:00"
+  },
+  "neath-port-talbot-events.json": {
+   "bytes": 219924,
+   "sha256": "3e2a609589f7b4ca9369acca20ebc7a9ea40cce484bfd63473281a758027a65c",
+   "fetched_at": null,
+   "mac_mtime": "2026-11-28T07:01:10+00:00"
+  },
+  "neath-port-talbot.json": {
+   "bytes": 623461,
+   "sha256": "4628d94d4105c6976f2c392f0daca21d54b77a40a1ec004fd046ed863d481e74",
+   "fetched_at": "2026-11-28T18:04:11.818615+00:00",
+   "mac_mtime": "2026-11-28T18:04:11+00:00"
+  },
+  "plymouth-civic.json": {
+   "bytes": 91302,
+   "sha256": "bb1a546914f117608e3c1ef4256ffd7d71ba21fe0a8de82717fd25e35e5634ef",
+   "fetched_at": "2026-11-23T06:41:57Z",
+   "mac_mtime": "2026-11-23T06:41:57+00:00"
+  },
+  "plymouth-ivybridge.json": {
+   "bytes": 618114,
+   "sha256": "0b0bbdb6f0ccf005eb205159b3d88583e6d456c5980e94ba97a705565b6e3be1",
+   "fetched_at": "2026-11-28T18:28:46.640786+00:00",
+   "mac_mtime": "2026-11-28T18:28:46+00:00"
+  },
+  "tayside-civic.json": {
+   "bytes": 191717,
+   "sha256": "d881865501b291f1f260d493329eb74474520fc18683eb2fa32e287e7425cf88",
+   "fetched_at": "2026-11-23T06:51:44Z",
+   "mac_mtime": "2026-11-23T06:51:45+00:00"
+  },
+  "tayside.json": {
+   "bytes": 222236,
+   "sha256": "68e26247db81f4ab06a89cd535826ba1a93abd4a0cb02cb1d38f7b29543a4ad9",
+   "fetched_at": "2026-11-28T18:43:17.024454+00:00",
+   "mac_mtime": "2026-11-28T18:43:17+00:00"
+  },
+  "west-herts-civic.json": {
+   "bytes": 188083,
+   "sha256": "453cc83085c7f2c86b0b1631e642757639cf4bba9801e1e0636274545e24eab1",
+   "fetched_at": "2026-11-23T06:55:19Z",
+   "mac_mtime": "2026-11-23T06:55:19+00:00"
+  },
+  "west-herts.json": {
+   "bytes": 755589,
+   "sha256": "aa4b8b1c8b8a8f96f4795fa30183ade2429ff0cb7061e0c937a49a119a424432",
+   "fetched_at": "2026-11-28T18:31:57.228293+00:00",
+   "mac_mtime": "2026-11-28T18:31:57+00:00"
+  }
+ }
+}

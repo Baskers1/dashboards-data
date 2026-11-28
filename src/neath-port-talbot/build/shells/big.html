@@ -1,0 +1,248 @@
+<title>Neath Port Talbot · What's On (big buttons)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap">
+<style>
+/* One committed look: high-contrast light page, designed for easy reading. */
+:root{
+  color-scheme:light;
+  --ground:#FBF8F1; --card:#FFFFFF; --ink:#141A1F; --ink-2:#3A444C; --line:#CFC8B8;
+  --accent:#0B5D63; --soft:#E4F0EF; --free:#1E6B2E;
+  --base:20px;
+}
+:root.big{--base:24px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--ground:#11181D;--card:#1A242B;--ink:#E9EEF1;--ink-2:#B4C0C7;--line:#3A4A53;--accent:#5CC0C8;--soft:#173238;--free:#8FD09F}:root:not([data-theme="light"]) .old{background:#3A2614;border-color:#E39A4B}:root:not([data-theme="light"]) .big-btn[aria-pressed="true"],:root:not([data-theme="light"]) .go,:root:not([data-theme="light"]) .totop{color:#06222A}:root:not([data-theme="light"]) .big-btn{border-color:#6B7780}:root:not([data-theme="light"]) .book{background:#3A3010;color:#F2D27A}}
+:root[data-theme="dark"]{color-scheme:dark;--ground:#11181D;--card:#1A242B;--ink:#E9EEF1;--ink-2:#B4C0C7;--line:#3A4A53;--accent:#5CC0C8;--soft:#173238;--free:#8FD09F}
+:root[data-theme="dark"] .old{background:#3A2614;border-color:#E39A4B}
+:root[data-theme="dark"] .big-btn[aria-pressed="true"],:root[data-theme="dark"] .go,:root[data-theme="dark"] .totop{color:#06222A}
+:root[data-theme="dark"] .big-btn{border-color:#6B7780}
+:root[data-theme="dark"] .book{background:#3A3010;color:#F2D27A}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{font-size:var(--base)}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:"Atkinson Hyperlegible",Verdana,"Segoe UI",Arial,sans-serif;font-size:1rem;line-height:1.5}
+.wrap{max-width:760px;margin:0 auto;padding-inline:16px;padding-block:16px 90px}
+a{color:var(--accent)}
+:focus-visible{outline:4px solid #E0A100;outline-offset:3px}
+h1{font-size:2rem;line-height:1.15;margin:0 0 .25rem}
+h2{font-size:1.45rem;line-height:1.2;margin:0}
+.topbar{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-start;gap:.6rem;margin-bottom:.5rem}.topbar .bar{margin:0}
+.lede{font-size:1rem;color:var(--ink-2);margin:0}
+.upd{margin-top:.5rem;font-size:.9rem;color:var(--ink-2)}
+.old{margin-top:.75rem;padding:.75rem 1rem;border:3px solid #B25E00;border-radius:12px;background:#FFF3E0;font-weight:700}
+.bar{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:.5rem}
+.big-btn{appearance:none;border:3px solid #7E878D;background:var(--card);color:var(--ink);font:inherit;font-weight:700;font-size:1rem;min-height:56px;padding:.5rem 1.1rem;border-radius:14px;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.big-btn[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff;box-shadow:0 0 0 3px #F2C14E}
+.big-btn[aria-pressed="true"]::before{content:"✓ ";font-weight:700}
+.step{margin-top:1.4rem}
+.step h2{font-size:1.15rem;margin-bottom:.2rem}
+.step .hint{color:var(--ink-2);font-size:.9rem;margin:0}
+.tabs .big-btn{flex:1 1 180px}
+.small .big-btn{min-height:52px;font-size:.9rem;padding:.35rem .9rem;border-width:2px}
+.showing{margin-top:1.4rem;padding:.8rem 1rem;border-left:8px solid var(--accent);background:var(--soft);border-radius:10px;font-weight:700;font-size:1.05rem}
+.day{margin-top:2rem}
+.day h2{padding-bottom:.35rem;border-bottom:3px solid var(--ink)}
+.card{background:var(--card);border:2px solid var(--line);border-radius:14px;padding:1rem 1.1rem;margin-top:.9rem}
+.when{font-size:1.05rem;font-weight:700;color:var(--accent)}
+.what{font-size:1.2rem;font-weight:700;line-height:1.3;margin:.15rem 0 .35rem}
+.row{margin:.15rem 0;color:var(--ink-2)}
+.row b{color:var(--ink)}
+.kind{display:inline-block;font-size:.8rem;font-weight:700;background:var(--soft);color:var(--accent);padding:.1rem .6rem;border-radius:999px;margin-bottom:.35rem}
+.gi{width:1.15em;height:1.15em;flex:none;vertical-align:-.2em;margin-right:.35em;
+    fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.book{display:inline-block;font-size:.8rem;font-weight:700;background:#FFF0C7;color:#5E4300;padding:.1rem .6rem;border-radius:999px;margin:0 0 .35rem .3rem}
+.free{color:var(--free);font-weight:700}
+.go{display:inline-flex;align-items:center;margin-top:.7rem;font-weight:700;font-size:1rem;padding:.55rem 1.1rem;color:#fff;background:var(--accent);border-radius:12px;text-decoration:none;min-height:52px}
+.copy-link{appearance:none;background:none;border:0;font:inherit;font-size:.85rem;color:var(--ink-2);text-decoration:underline;cursor:pointer;padding:.6rem .3rem;margin-left:.4rem;min-height:44px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+details.cal{margin-top:.7rem}
+.calbtn{list-style:none;display:inline-flex;align-items:center;min-height:52px;padding:.45rem 1rem;border:2px solid var(--accent);border-radius:12px;color:var(--accent);font-weight:700;cursor:pointer}
+.calbtn::-webkit-details-marker{display:none}
+.calbtn::after{content:"▾";margin-left:.4rem}
+details.cal[open] .calbtn::after{content:"▴"}
+.calmenu{display:flex;flex-direction:column;gap:.5rem;margin-top:.5rem}
+.calopt{display:inline-flex;align-items:center;min-height:52px;padding:.45rem 1rem;border:2px solid #7E878D;border-radius:12px;color:var(--ink);font-weight:700;text-decoration:none;background:var(--card)}
+.addr{font-size:.85rem;word-break:break-all;color:var(--ink-2);margin:.4rem 0 0}
+.runs{margin-top:1.75rem;background:var(--soft);border-radius:14px;padding:1rem 1.1rem}
+.runs .card{margin-top:.7rem}
+.more{appearance:none;background:var(--card);color:var(--accent);font:inherit;cursor:pointer;margin-top:.8rem;font-weight:700;font-size:1rem;padding:.55rem 1rem;border:2px solid var(--accent);border-radius:12px;min-height:52px}
+.empty{margin-top:1.5rem;padding:1.25rem;border:3px dashed var(--line);border-radius:14px;text-align:center}
+.foot{margin-top:2.5rem;padding-top:1rem;border-top:2px solid var(--line);font-size:.9rem;color:var(--ink-2)}
+.totop{position:fixed;right:14px;bottom:14px;appearance:none;font:inherit;font-weight:700;font-size:.9rem;min-height:56px;padding:.5rem 1rem;border-radius:999px;border:0;background:var(--accent);color:#fff;box-shadow:0 4px 14px rgba(0,0,0,.2);cursor:pointer}
+.via{display:inline-block;font-size:.8rem;font-weight:700;border:2px solid var(--accent);color:var(--accent);padding:.05rem .6rem;border-radius:999px;margin:0 0 .35rem .3rem}
+.flag{margin:.5rem 0;padding:.6rem .8rem;border:3px solid #B25E00;border-radius:10px;font-weight:700}
+</style>
+
+<div class="wrap">
+  <div class="topbar"><button class="big-btn" id="textBtn" aria-pressed="false">Make the writing bigger</button></div>
+  <header>
+    <h1>What's on near you</h1>
+    <p class="lede">Concerts, shows, films, markets and community events in Neath, Port Talbot, Pontardawe and around Neath Port Talbot.</p>
+    <p class="upd" id="upd"></p>
+    <p class="old" id="old" hidden></p>
+  </header>
+
+  <section class="step" aria-labelledby="townLbl">
+    <h2 id="townLbl">1. Where are you?</h2>
+    <p class="hint">Choose a town, or leave it on "Everywhere".</p>
+    <div class="bar small" id="towns" role="group" aria-labelledby="townLbl"></div>
+  </section>
+
+  <section class="step" aria-labelledby="whenLbl">
+    <h2 id="whenLbl">2. When?</h2>
+    <div class="bar tabs" role="group" aria-labelledby="whenLbl">
+      <button class="big-btn" data-tab="this" aria-pressed="true">This week</button>
+      <button class="big-btn" data-tab="next" aria-pressed="false">Next week</button>
+      <button class="big-btn" data-tab="big" aria-pressed="false">Big dates to book</button>
+    </div>
+  </section>
+
+  <section class="step" aria-labelledby="kindLbl">
+    <h2 id="kindLbl">3. What would you like to see?</h2>
+    <div class="bar small" id="kinds" role="group" aria-labelledby="kindLbl"></div>
+    <div class="bar small" style="margin-top:.7rem"><button class="big-btn" id="freeBtn" aria-pressed="false">Free events only</button></div>
+  </section>
+
+  <p class="showing" id="showing" aria-live="polite"></p>
+
+  <main id="main"></main>
+
+  <p class="foot">Always check with the venue before you set off, as times and prices can change.</p>
+</div>
+<button class="totop" id="totop" type="button" hidden>↑ Back to top</button>
+
+<script>
+(function(){
+const DATA={"updated":"2000-01-01","events":[]};
+
+const TOWNS=["Neath","Port Talbot","Pontardawe","Margam","Aberavon","Briton Ferry","Skewen","Glynneath","Ystalyfera"];
+const KIND={music:"Music",comedy:"Comedy",stage:"Theatre & shows",arts:"Exhibition & art",community:"Community",family:"Family",film:"Films",sport:"Sport"};
+const GICON={
+music:'<circle cx="6.5" cy="18" r="2.8"/><circle cx="17.5" cy="15.5" r="2.8"/><path d="M9.3 18V6.2l11-2.6v11.9"/><path d="M9.3 9.4l11-2.6"/>',
+comedy:'<rect x="9" y="2" width="6" height="11.5" rx="3"/><path d="M5 11.2a7 7 0 0 0 14 0"/><path d="M12 18.2V22M8.2 22h7.6"/>',
+stage:'<path d="M4.6 3.6h14.8v6.2c0 5.9-3.3 10.6-7.4 10.6S4.6 15.7 4.6 9.8V3.6z"/><path d="M9.2 9.3h.01M14.8 9.3h.01"/><path d="M9.3 14a3.9 3.9 0 0 0 5.4 0"/>',
+arts:'<rect x="3" y="3.5" width="18" height="17" rx="2.2"/><circle cx="8.6" cy="9.2" r="1.7"/><path d="m21 15.5-4.8-4.8L6 20.5"/>',
+community:'<circle cx="9" cy="7" r="3.6"/><path d="M15.8 21v-1.9A4.2 4.2 0 0 0 11.6 15H6.4A4.2 4.2 0 0 0 2.2 19.1V21"/><path d="M21.8 21v-1.9a4.2 4.2 0 0 0-3.2-4.07"/><path d="M15.8 3.6a4.2 4.2 0 0 1 0 6.8"/>',
+family:'<circle cx="8" cy="5.6" r="3.2"/><path d="M2.6 21v-3.4a5.4 5.4 0 0 1 10.8 0V21"/><circle cx="18" cy="11.4" r="2.3"/><path d="M14.4 21v-3a3.6 3.6 0 0 1 7.2 0v3"/>',
+film:'<rect x="2.5" y="4" width="19" height="16" rx="2.2"/><path d="M2.5 9.4h19"/><path d="m7.6 4-2 5.4M13.4 4l-2 5.4M19.2 4l-2 5.4"/>',
+sport:'<path d="M7.5 3.5h9v5.5a4.5 4.5 0 0 1-9 0z"/><path d="M7.5 5.5h-3V7a3.5 3.5 0 0 0 3.5 3.5M16.5 5.5h3V7a3.5 3.5 0 0 1-3.5 3.5"/><path d="M12 13.5V17M9.5 17h5v3.5h-5z"/>',
+sp_rugby:'<ellipse cx="12" cy="12" rx="9.6" ry="5.6" transform="rotate(-40 12 12)"/><path d="M8.5 15.5l7-7M10.3 11.6l2.1 2.1M12.4 9.5l2.1 2.1M8.2 13.7l2.1 2.1"/>',
+sp_cricket:'<path d="M15 3.2l5.8 5.8-9.5 9.5a2 2 0 0 1-2.8 0l-3-3a2 2 0 0 1 0-2.8z"/><path d="M5.6 15.6 3 18.2 5.8 21l2.6-2.6"/><circle cx="18.6" cy="18.6" r="2.1"/>',
+sp_equestrian:'<path d="M6.6 20.5H4.3C3.5 14.8 3.7 10 5.5 7a7.3 7.3 0 0 1 13 0c1.8 3 2 7.8 1.2 13.5h-2.3c.6-4.6.5-8.3-.9-10.6a4.8 4.8 0 0 0-9 0c-1.4 2.3-1.5 6-.9 10.6z"/><path d="M6.7 11.5h.01M17.3 11.5h.01M6.4 16h.01M17.6 16h.01"/>',
+sp_boxing:'<path d="M6 13.5V8.5a5 5 0 0 1 5-5h3.5A4.5 4.5 0 0 1 19 8v4.5a5.5 5.5 0 0 1-5.5 5.5H8a2 2 0 0 1-2-2z"/><path d="M6 12a2.5 2.5 0 0 1 5 0v2"/><path d="M8 18v2.8h8V18"/>',
+sp_running:'<path d="M3 16.4h11l5.6 1.7a1.6 1.6 0 0 1-.4 3.1H4.2A1.2 1.2 0 0 1 3 20z"/><path d="M3 16.4V8.6l3.2.8 1.6 3.1 4.5 1.7 2.7 2.2"/><path d="M9.6 12.3l1.3-1.7M12 13.4l1.3-1.7"/>',
+sp_swimming:'<path d="M2.5 16.5c1.6 0 1.6 1.3 3.2 1.3s1.6-1.3 3.2-1.3 1.6 1.3 3.2 1.3 1.6-1.3 3.2-1.3 1.6 1.3 3.2 1.3 1.6-1.3 3.2-1.3"/><path d="M2.5 20.5c1.6 0 1.6 1.3 3.2 1.3s1.6-1.3 3.2-1.3 1.6 1.3 3.2 1.3 1.6-1.3 3.2-1.3 1.6 1.3 3.2 1.3 1.6-1.3 3.2-1.3"/><circle cx="16.5" cy="6.5" r="2.2"/><path d="M5 13l4.5-4.5 3 2.5 3-2"/>',
+sp_golf:'<path d="M8 21V3l9 4-9 4"/><ellipse cx="9" cy="20.3" rx="5" ry="1.4"/>',
+sp_cycling:'<circle cx="5.8" cy="16.5" r="3.7"/><circle cx="18.2" cy="16.5" r="3.7"/><path d="M5.8 16.5 9.5 9h6l2.7 7.5M9.5 9l2.5 7.5H5.8M15.5 9l-1-3h2.5"/>',
+sp_fitness:'<path d="M6.5 6.5v11M17.5 6.5v11M3.5 9.5v5M20.5 9.5v5M6.5 12h11"/>',
+sp_football:'<circle cx="12" cy="12" r="9"/><path d="m12 7.2 4.4 3.2-1.7 5.2H9.3l-1.7-5.2z"/><path d="M12 3v4.2M20.6 9.6l-4.2.8M17.9 19.9l-3.2-4.3M6.1 19.9l3.2-4.3M3.4 9.6l4.2.8"/>',
+};
+const gicon=g=>GICON[g]?'<svg class="gi" viewBox="0 0 24 24" aria-hidden="true" focusable="false">'+GICON[g]+'</svg>':'';
+const SPORT_KW=[["rugby",/rugby|rygbi|\bURC\b|scarlets|ospreys/i],["football",/football|soccer|pêl-droed|futsal|\bA?FC\b|premier league|welsh cup|cymru (?:premier|south|north)|\bardal\b/i],["cricket",/cricket|criced/i],["equestrian",/horse|equestrian|show ?jump|pony|riding|bloodhound/i],["boxing",/boxing|\bbox\b|fight night|kickbox|martial|\bmma\b/i],["running",/\brun\b|running|marathon|parkrun|\b\d+k\b|fun run|\bdash\b|triathlon|duathlon/i],["swimming",/swim|aqua/i],["golf",/golf/i],["cycling",/cycl|bike|sportive/i],["fitness",/fitness|workout|\bgym\b|yoga|pilates|zumba|bootcamp/i]];
+const eicon=e=>{const g=e.group;if(g!=="sport")return gicon(g);const t=[e.category,e.title,e.summary].filter(Boolean).join(" ");const m=SPORT_KW.find(([,r])=>r.test(t));return gicon(m?"sp_"+m[0]:"sport")};
+const DAYS=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+const MONTHS=["January","February","March","April","May","June","July","August","September","October","November","December"];
+const PER_DAY=8;
+const $=s=>document.querySelector(s);
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));const safeUrl=u=>{u=String(u??"").trim();return /^https?:\/\//i.test(u)?u:"#"};
+function store(k,v){try{if(v===undefined)return JSON.parse(localStorage.getItem(k));localStorage.setItem(k,JSON.stringify(v))}catch(e){return null}}
+
+function today(){const p=new Intl.DateTimeFormat("en-GB",{timeZone:"Europe/London",year:"numeric",month:"2-digit",day:"2-digit"}).formatToParts(new Date());const g=t=>p.find(x=>x.type===t).value;return `${g("year")}-${g("month")}-${g("day")}`}
+const toD=s=>{const[y,m,d]=s.split("-").map(Number);return new Date(Date.UTC(y,m-1,d))};
+const add=(s,n)=>{const d=toD(s);d.setUTCDate(d.getUTCDate()+n);return d.toISOString().slice(0,10)};
+const longDay=s=>{const d=toD(s);return `${DAYS[d.getUTCDay()]} ${d.getUTCDate()} ${MONTHS[d.getUTCMonth()]}`};
+const shortDay=s=>{const d=toD(s);return `${d.getUTCDate()} ${MONTHS[d.getUTCMonth()]}`};
+function time12(t){if(!t)return"";let[h,m]=t.split(":").map(Number);const ap=h>=12?"pm":"am";h=h%12||12;return m?`${h}.${String(m).padStart(2,"0")}${ap}`:`${h}${ap}`}
+function venue(e){let v=String(e.venue||"");const t=", "+e.town;return v.endsWith(t)?v.slice(0,-t.length):v}
+const isFree=e=>/^free\b/i.test(e.price||"");
+function endOf(e){let [h,m]=e.time.split(":").map(Number);let d2=e.date;h+=2;if(h>=24){h-=24;d2=add(e.date,1)}return [d2,`${String(h).padStart(2,"0")}:${String(m).padStart(2,"0")}`]}
+function calLinks(e){
+  const run=e.end_date&&e.end_date>e.date, ts=e.time&&!run, c=s=>s.replace(/[-:]/g,"");
+  const [d2,t2]=ts?endOf(e):[add(e.end_date||e.date,1),""];
+  const where=encodeURIComponent(`${e.venue}, ${e.town}`), what=encodeURIComponent(e.title), more=encodeURIComponent((e.summary||"")+"\n"+(e.url||""));
+  const g=`https://calendar.google.com/calendar/render?action=TEMPLATE&text=${what}&dates=${ts?`${c(e.date)}T${c(e.time)}00/${c(d2)}T${c(t2)}00&ctz=Europe/London`:`${c(e.date)}/${c(d2)}`}&location=${where}&details=${more}`;
+  const o=`https://outlook.live.com/calendar/0/deeplink/compose?path=/calendar/action/compose&rru=addevent&subject=${what}&startdt=${ts?`${e.date}T${e.time}:00`:e.date}&enddt=${ts?`${d2}T${t2}:00`:d2}${ts?"":"&allday=true"}&location=${where}&body=${more}`;
+  return [g,o]}
+
+const TODAY=today();
+const st={tab:store("npt-bb-tab")||"this",town:store("npt-bb-town")||"All",kind:store("npt-bb-kind")||"All",big:!!store("npt-bb-big"),free:false,open:new Set()};
+if(st.kind!=="All"&&!KIND[st.kind])st.kind="All";
+
+function card(e,opts={}){
+  const run=e.end_date&&e.end_date>e.date;
+  const when=opts.noDay?(e.time?time12(e.time):""):
+    run?`${shortDay(e.date)} to ${shortDay(e.end_date)}`:`${longDay(e.date)}${e.time?", "+time12(e.time):""}`;
+  const price=e.price?(isFree(e)?`<span class="free">Free</span>`:esc(e.price)):"";
+  const thanetGigs=e.url&&/brownbearsw\.com/.test(e.url);
+  return `<article class="card">
+    <div class="kind">${eicon(e)}${esc(KIND[e.group]||"Event")}</div>${e.highlight?`<span class="book">★ Book early</span>`:""}${e.via?`<span class="via">${esc(e.via)}</span>`:""}
+    ${when?`<div class="when">${esc(when)}</div>`:""}
+    <div class="what">${esc(e.title)}</div>${e.flag?`<p class="flag">⚠ ${esc(e.flag)}</p>`:""}
+    <p class="row"><b>Where:</b> ${esc(venue(e))}, ${esc(e.town)}</p>
+    ${price?`<p class="row"><b>Price:</b> ${price}</p>`:""}
+    ${e.summary?`<p class="row">${esc(e.summary)}</p>`:""}
+    ${thanetGigs?`<p class="row"></p>`:""}
+    <details class="cal"><summary class="calbtn">📅 Add to my calendar</summary><div class="calmenu">${(([g,o])=>`<a class="calopt" href="${esc(safeUrl(g))}" target="_blank" rel="noopener">Google Calendar</a><a class="calopt" href="${esc(safeUrl(o))}" target="_blank" rel="noopener">Outlook calendar</a><p class="addr" style="margin:0">On an iPhone? Either works in Safari, or use the Google Calendar app.</p>`)(calLinks(e))}</div></details>
+    ${e.url?`<div><a class="go" href="${esc(safeUrl(e.url))}" target="_blank" rel="noopener">Open the event's page ›<span class="sr"> for ${esc(e.title)}</span></a><button class="copy-link" type="button" data-copy="${esc(e.url)}">Link not opening? Copy it</button></div>`:""}
+  </article>`}
+
+function render(){
+  document.documentElement.classList.toggle("big",st.big);
+  $("#textBtn").setAttribute("aria-pressed",st.big);
+  $("#textBtn").textContent=st.big?"Make the writing smaller":"Make the writing bigger";
+  document.querySelectorAll("[data-tab]").forEach(b=>b.setAttribute("aria-pressed",b.dataset.tab===st.tab));
+  $("#towns").innerHTML=["All",...TOWNS].map(t=>`<button class="big-btn" data-town="${t}" aria-pressed="${st.town===t}">${t==="All"?"Everywhere":t}</button>`).join("");
+  $("#kinds").innerHTML=["All",...Object.keys(KIND)].map(k=>`<button class="big-btn" data-kind="${k}" aria-pressed="${st.kind===k}">${k==="All"?"Everything":gicon(k)+KIND[k]}</button>`).join("");
+  $("#freeBtn").setAttribute("aria-pressed",st.free);
+  if(!DATA){$("#main").innerHTML=`<div class="empty">The listings are being updated. Please try again later.</div>`;return}
+  $("#upd").textContent=`Last refreshed ${longDay(DATA.updated)}.`;
+  const age=(toD(TODAY)-toD(DATA.updated))/864e5;
+  $("#old").hidden=age<=10; $("#old").textContent="These listings are more than a week old, so some events may have changed.";
+  const ev=DATA.events.filter(e=>(e.end_date||e.date)>=TODAY&&(st.town==="All"||e.town===st.town)&&(st.kind==="All"||e.group===st.kind)&&(!st.free||isFree(e)));
+  let html="",n=0;
+  if(st.tab==="big"){
+    const hl=ev.filter(e=>e.highlight&&e.date>=TODAY).sort((a,b)=>a.date.localeCompare(b.date));n=hl.length;
+    const by={};hl.forEach(e=>{const k=e.date.slice(0,7);(by[k]=by[k]||[]).push(e)});
+    html=Object.keys(by).sort().map(k=>`<section class="day"><h2>${MONTHS[Number(k.slice(5))-1]}</h2>${by[k].map(e=>card(e)).join("")}</section>`).join("");
+    if(!hl.length)html=`<div class="empty">No big dates found for these choices. Try “Everything” or “Everywhere”.</div>`;
+  } else {
+    const start=st.tab==="this"?TODAY:add(TODAY,7), end=add(start,6);
+    const inWin=ev.filter(e=>(e.end_date||e.date)>=start&&e.date<=end);n=inWin.length;
+    const runs=inWin.filter(e=>e.end_date&&e.end_date>e.date);
+    const days={};inWin.filter(e=>!runs.includes(e)).forEach(e=>(days[e.date]=days[e.date]||[]).push(e));
+    html=`<p style="margin-top:1.5rem;font-weight:700">${esc(longDay(start))} to ${esc(longDay(end))}</p>`;
+    html+=Object.keys(days).sort().map(d=>{const list=days[d].sort((a,b)=>(a.time||"99").localeCompare(b.time||"99"));const open=st.open.has(d);
+      return `<section class="day"><h2>${d===TODAY?"Today, ":""}${esc(longDay(d))}</h2>${(open?list:list.slice(0,PER_DAY)).map(e=>card(e,{noDay:true})).join("")}${list.length>PER_DAY?`<button class="more" data-day="${d}">${open?"Show fewer":`Show ${list.length-PER_DAY} more on ${DAYS[toD(d).getUTCDay()]}`}</button>`:""}</section>`}).join("");
+    if(runs.length){const open=st.open.has("runs");html+=`<section class="runs"><h2>Exhibitions and shows on all week</h2>${(open?runs:runs.slice(0,3)).map(e=>card(e)).join("")}${runs.length>3?`<button class="more" data-day="runs">${open?"Show fewer":`Show all ${runs.length}`}</button>`:""}</section>`}
+    if(!Object.keys(days).length&&!runs.length)html+=`<div class="empty">Nothing listed for these choices on these dates. Try “Everything” or “Everywhere”.</div>`;
+  }
+  $("#showing").textContent=`${n} event${n===1?"":"s"} · ${st.kind==="All"?"everything":KIND[st.kind].toLowerCase()}${st.free?" (free only)":""} · ${st.town==="All"?"everywhere":st.town} · ${st.tab==="this"?"this week":st.tab==="next"?"next week":"big dates to book"}`;
+  $("#main").innerHTML=html;
+}
+
+document.addEventListener("click",ev=>{
+  const b=ev.target.closest("button");if(!b)return;
+  const kb=ev.detail===0, refocus=sel=>{if(kb){const n=document.querySelector(sel);n&&n.focus()}};
+  if(b.dataset.copy){const u=b.dataset.copy;
+    const show=()=>{let p=b.nextElementSibling;if(!p||!p.classList.contains("addr")){p=document.createElement("p");p.className="addr";b.after(p)}p.textContent="Copy this address into your web browser: "+u;b.textContent="Address shown below"};
+    try{navigator.clipboard.writeText(u).then(()=>{b.textContent="Copied ✓ – now paste it into your browser"},show)}catch(e){show()}
+    return}
+  if(b.dataset.tab){st.tab=b.dataset.tab;store("npt-bb-tab",st.tab);st.open.clear();render();refocus(`[data-tab="${st.tab}"]`);return}
+  if(b.dataset.kind){st.kind=b.dataset.kind;store("npt-bb-kind",st.kind);render();refocus(`[data-kind="${st.kind}"]`);return}
+  if(b.dataset.town){st.town=b.dataset.town;store("npt-bb-town",st.town);render();refocus(`[data-town="${st.town}"]`);return}
+  if(b.dataset.day){const d=b.dataset.day;st.open.has(d)?st.open.delete(d):st.open.add(d);render();refocus(`[data-day="${d}"]`);return}
+  if(b.id==="freeBtn"){st.free=!st.free;render();refocus("#freeBtn");return}
+  if(b.id==="textBtn"){st.big=!st.big;store("npt-bb-big",st.big);render();$("#textBtn").focus();return}
+  if(b.id==="totop"){scrollTo(0,0);$("#textBtn").focus({preventScroll:true});return}
+});
+addEventListener("scroll",()=>{$("#totop").hidden=scrollY<900},{passive:true});
+render();
+})();
+</script>
+
+
+
+
+
+
+

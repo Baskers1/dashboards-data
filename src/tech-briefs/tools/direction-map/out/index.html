@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tech direction map</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* Plan: cool grey page, white panels, one blue for "trend continues", one orange for "turn or shock",
+   grey for dated milestones. Layout: summary tiles, three threads, animated timeline, area cards, plot, table. */
+:root {
+  color-scheme: light;
+  --bg: #f2f4f7;
+  --surface: #fcfcfb;
+  --ink: #12161d;
+  --muted: #586174;
+  --faint: #7d8698;
+  --line: #dbe0e8;
+  --line2: #eceff4;
+  --c-continue: #2a78d6;
+  --c-turn: #eb6834;
+  --c-mile: #6a7385;
+  --c-nv: #7b4fc4;
+  --c-amd: #1c8a6e;
+  --shadow: 0 1px 2px rgba(15, 20, 30, .06);
+  --font-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #0e1116; --surface: #1a1a19; --ink: #eceff4; --muted: #a3adbd; --faint: #7f899b;
+    --line: #2c333f; --line2: #232932; --c-continue: #3987e5; --c-turn: #d95926; --c-mile: #98a2b3; --c-nv: #9577dd; --c-amd: #2a9d80; --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #0e1116; --surface: #1a1a19; --ink: #eceff4; --muted: #a3adbd; --faint: #7f899b;
+  --line: #2c333f; --line2: #232932; --c-continue: #3987e5; --c-turn: #d95926; --c-mile: #98a2b3; --c-nv: #9577dd; --c-amd: #2a9d80; --shadow: none;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body { background: var(--bg); color: var(--ink); font: 400 15px/1.5 var(--font-body); -webkit-text-size-adjust: 100%; }
+.page { max-width: 1180px; margin: 0 auto; padding: 24px 16px 64px; display: flex; flex-direction: column; gap: 28px; }
+h1 { font-size: clamp(28px, 4.4vw, 40px); line-height: 1.08; margin: 4px 0 0; font-weight: 600; letter-spacing: -.015em; text-wrap: balance; }
+h2 { font-size: 20px; line-height: 1.25; margin: 0; font-weight: 600; text-wrap: balance; }
+h3 { font-size: 15.5px; line-height: 1.3; margin: 0; font-weight: 600; }
+p { margin: 0; }
+.eyebrow { font: 500 12.5px var(--font-mono); color: var(--muted); letter-spacing: .02em; }
+.sub { color: var(--muted); max-width: 70ch; margin-top: 10px; }
+.note { margin-top: 14px; border: 1px solid var(--line); background: var(--surface); border-radius: 8px; padding: 10px 14px; color: var(--muted); font-size: 13.5px; max-width: 90ch; }
+.note strong { color: var(--ink); }
+.head2 { display: flex; flex-direction: column; gap: 4px; margin-bottom: 12px; }
+.head2 p { color: var(--muted); max-width: 72ch; font-size: 14px; }
+
+.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; }
+.kpi { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; box-shadow: var(--shadow); }
+.kpi b { display: block; font: 500 32px/1.1 var(--font-mono); font-variant-numeric: tabular-nums; margin-bottom: 4px; }
+.kpi span { color: var(--muted); font-size: 13.5px; display: block; }
+
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px; box-shadow: var(--shadow); }
+
+/* update panel */
+.upd table { min-width: 0; }
+.upd td, .upd th { font-size: 13.5px; }
+.upd td:first-child { min-width: 240px; }
+.upd .tblwrap { max-height: none; }
+@media (max-width: 700px) {
+  .upd .tblwrap { border: 0; overflow: visible; }
+  .upd table, .upd tbody, .upd tr, .upd td { display: block; width: 100%; }
+  .upd thead { display: none; }
+  .upd tr { border: 1px solid var(--line); border-radius: 8px; padding: 6px 10px; margin-bottom: 10px; }
+  .upd td { border: 0; padding: 5px 0; min-width: 0 !important; }
+  .upd td[data-l]::before { content: attr(data-l); display: block; font: 500 11.5px var(--font-mono); color: var(--muted); }
+  .upd #pxtable tr { display: table-row; border: 0; padding: 0; margin: 0; }
+  .upd #pxtable, .upd #pxtable tbody { display: table; }
+  .upd #pxtable td, .upd #pxtable th { display: table-cell; width: auto; padding: 8px 10px; }
+  .upd #pxtable thead { display: table-header-group; }
+  .upd #pxtable tbody { display: table-row-group; }
+}
+.pxwrap svg { display: block; max-width: 100%; height: auto; }
+.px-l { font: 500 12px var(--font-body); }
+.pxlegend { display: flex; flex-wrap: wrap; gap: 14px; margin: 0 0 8px; }
+.upd details { margin-top: 10px; }
+.upd summary { cursor: pointer; font-weight: 500; font-size: 14px; }
+.zero { font: 500 13px var(--font-mono); color: var(--muted); }
+
+/* threads */
+.threads { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 12px; }
+.thread { display: flex; flex-direction: column; gap: 10px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px; box-shadow: var(--shadow); }
+.thread.on { border-color: var(--c-continue); box-shadow: 0 0 0 2px var(--c-continue); }
+.thread .story { color: var(--muted); font-size: 14px; }
+.thread .meta { font: 500 12.5px var(--font-mono); color: var(--muted); }
+.thread ul { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 6px; font-size: 13.5px; }
+.thread li b { font-weight: 600; }
+.thread li small { color: var(--faint); font-size: 12px; display: block; }
+.btn { font: 500 13.5px var(--font-body); color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 7px 12px; cursor: pointer; min-height: 36px; }
+.btn:hover { border-color: var(--faint); }
+.btn:focus-visible, .pin:focus-visible, select:focus-visible, input:focus-visible { outline: 2px solid var(--c-continue); outline-offset: 2px; }
+.btn.primary { background: var(--ink); color: var(--surface); border-color: var(--ink); }
+.thread .btn { margin-top: auto; align-self: flex-start; }
+.chip { display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--c-continue); border-radius: 999px; padding: 4px 6px 4px 12px; font-size: 13px; background: var(--surface); }
+.chip button { border: 0; background: var(--line2); color: var(--ink); border-radius: 999px; width: 22px; height: 22px; cursor: pointer; font-size: 13px; line-height: 1; }
+
+/* timeline controls */
+.controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; margin-bottom: 12px; }
+.scrub { position: relative; flex: 1 1 260px; min-width: 180px; height: 48px; cursor: ew-resize; touch-action: none; user-select: none; -webkit-user-select: none; border-radius: 8px; }
+.scrub:focus-visible { outline: 2px solid var(--c-continue); outline-offset: 2px; }
+.scrub-track { position: absolute; left: 11px; right: 11px; top: 11px; height: 8px; border-radius: 999px; background: var(--line); overflow: hidden; }
+.scrub-fill { height: 100%; width: 0; background: var(--c-continue); }
+.scrub-thumb { position: absolute; top: 4px; width: 22px; height: 22px; margin-left: -11px; border-radius: 50%; background: var(--surface); border: 3px solid var(--ink); box-shadow: 0 1px 4px rgba(0,0,0,.25); left: 11px; transition: transform .12s; }
+.scrub.drag .scrub-thumb, .scrub:hover .scrub-thumb { transform: scale(1.15); }
+.smark { position: absolute; top: 4px; width: 0; height: 22px; border-left: 2px solid var(--faint); margin-left: -1px; pointer-events: none; opacity: .7; }
+.smark span { position: absolute; top: 25px; left: 0; transform: translateX(-50%); font: 500 10.5px var(--font-mono); color: var(--muted); white-space: nowrap; border: 0; }
+.now { font: 500 15px var(--font-mono); min-width: 11ch; font-variant-numeric: tabular-nums; }
+.readout { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 10px; margin-bottom: 12px; }
+.readout div { border: 1px solid var(--line); border-radius: 8px; padding: 8px 12px; background: var(--bg); font-size: 13px; color: var(--muted); }
+.readout b { display: block; font: 500 20px/1.2 var(--font-mono); color: var(--ink); font-variant-numeric: tabular-nums; }
+.readout .wide b { font: 500 14px/1.35 var(--font-body); }
+.legend { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 10px; align-items: center; }
+.legend .lab { color: var(--muted); font-size: 13px; margin-right: 4px; }
+.tagbtn { display: inline-flex; align-items: center; gap: 7px; font: 500 13px var(--font-body); color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 5px 12px 5px 9px; cursor: pointer; }
+.tagbtn[aria-pressed="false"] { opacity: .45; text-decoration: line-through; }
+.tagbtn:focus-visible { outline: 2px solid var(--c-continue); outline-offset: 2px; }
+.key { display: inline-flex; align-items: center; gap: 6px; color: var(--muted); font-size: 12.5px; }
+.chartwrap { overflow-x: auto; }
+.chartwrap svg { display: block; max-width: none; cursor: ew-resize; touch-action: pan-y; }
+.chartwrap svg .pin, .chartwrap svg .mk { cursor: default; }
+.dots svg { display: block; max-width: 100%; height: auto; }
+
+/* svg */
+.lane { fill: transparent; }
+.lane.alt { fill: var(--line2); }
+.lane.hl { fill: color-mix(in srgb, var(--c-continue) 14%, transparent); }
+.lane-label { font: 500 11.5px var(--font-body); fill: var(--muted); }
+.axis-t { font: 500 11px var(--font-body); fill: var(--faint); }
+.hz-line { stroke: var(--faint); stroke-dasharray: 3 4; stroke-width: 1; }
+.hz-label { font: 600 11px var(--font-body); fill: var(--muted); }
+.grid { stroke: var(--line); stroke-width: 1; }
+.mk { transition: opacity .25s; }
+.mk .shape { fill: var(--surface); stroke-width: 2; transition: fill .3s; }
+.tag-c .shape { stroke: var(--c-continue); }
+.tag-r .shape { stroke: var(--c-turn); }
+.tag-m .shape { stroke: var(--c-mile); }
+.tag-c.due .shape { fill: var(--c-continue); }
+.tag-r.due .shape { fill: var(--c-turn); }
+.tag-m.due .shape { fill: var(--c-mile); }
+.dim { opacity: .14; }
+.ring { fill: none; stroke-width: 2; transform-box: fill-box; transform-origin: center; animation: ring .9s ease-out forwards; }
+.tag-c .ring { stroke: var(--c-continue); } .tag-r .ring { stroke: var(--c-turn); } .tag-m .ring { stroke: var(--c-mile); }
+@keyframes ring { from { transform: scale(1); opacity: .9; } to { transform: scale(3.2); opacity: 0; } }
+.pin { cursor: default; }
+.pin circle { fill: var(--surface); stroke: var(--ink); stroke-width: 1.5; transition: fill .3s; }
+.pin.assumed circle { stroke-dasharray: 3 2; }
+.pin.passed circle { fill: var(--ink); }
+.pin text { font: 600 10px var(--font-mono); fill: var(--ink); text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+.pin.passed text { fill: var(--surface); }
+.today-line { stroke: var(--ink); stroke-width: 1; stroke-dasharray: 2 3; opacity: .7; }
+.today-t { fill: var(--ink); font-weight: 600; }
+.cursor line { stroke: var(--ink); stroke-width: 1.5; }
+.cursor circle { fill: var(--ink); }
+.cursor .grab { fill: transparent; }
+.elapsed { fill: var(--c-continue); opacity: .07; }
+.rl { font: 500 11px var(--font-mono); fill: var(--faint); }
+.rl.due { fill: var(--ink); font-weight: 500; }
+.axis-n { font: 500 10.5px var(--font-mono); fill: var(--faint); }
+.band { fill: color-mix(in srgb, var(--c-mile) 12%, transparent); }
+.band-t { font: 500 11px var(--font-body); fill: var(--muted); }
+.col-t { font: 600 12px var(--font-body); fill: var(--ink); }
+.col-s { font: 400 11.5px var(--font-body); fill: var(--muted); }
+
+/* area cards */
+.areas { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(340px, 100%), 1fr)); gap: 14px; }
+.area { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px; display: flex; flex-direction: column; gap: 10px; box-shadow: var(--shadow); }
+.area h3 { display: flex; gap: 10px; align-items: baseline; }
+.area .n { font: 500 13px var(--font-mono); color: var(--muted); border: 1px solid var(--line); border-radius: 6px; padding: 1px 7px; }
+.area .lead { font-size: 14px; color: var(--ink); }
+.area .counts { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 12.5px; color: var(--muted); }
+.area .counts span { display: inline-flex; align-items: center; gap: 6px; }
+.area .wrong { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line2); padding-top: 8px; margin-top: auto; }
+.area .wrong b { color: var(--ink); font-weight: 600; }
+
+/* table */
+.tools { display: flex; flex-wrap: wrap; gap: 10px 12px; align-items: center; margin-bottom: 10px; }
+.tools label { font-size: 13px; color: var(--muted); display: inline-flex; gap: 6px; align-items: center; }
+select { font: 400 13.5px var(--font-body); color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 6px 8px; min-height: 34px; max-width: 100%; }
+.tblwrap { overflow: auto; max-height: 620px; border: 1px solid var(--line); border-radius: 8px; }
+table { border-collapse: collapse; width: 100%; min-width: 760px; font-size: 13.5px; }
+th { position: sticky; top: 0; background: var(--bg); text-align: left; font-weight: 600; padding: 8px 10px; border-bottom: 1px solid var(--line); z-index: 1; }
+td { padding: 8px 10px; border-bottom: 1px solid var(--line2); vertical-align: top; }
+td.p { font: 500 13px var(--font-mono); text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+td.ty { white-space: nowrap; }
+td.ty svg { vertical-align: -3px; margin-right: 6px; }
+tr.dim { opacity: .3; }
+.evlist { margin: 12px 0 0; }
+.evlist summary { cursor: pointer; font-weight: 500; font-size: 14px; }
+.evlist ol { list-style: none; margin: 10px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(340px, 100%), 1fr)); gap: 6px 18px; font-size: 13.5px; }
+.evlist li { display: flex; gap: 10px; }
+.evlist li .en { font: 600 11px var(--font-mono); border: 1.5px solid var(--ink); border-radius: 999px; min-width: 22px; height: 22px; display: inline-flex; align-items: center; justify-content: center; flex: none; }
+.evlist li.assumed .en { border-style: dashed; }
+.evlist li.passed .en { background: var(--ink); color: var(--surface); }
+.evlist li small { display: block; color: var(--muted); font-size: 12.5px; }
+.foot { color: var(--muted); font-size: 13px; max-width: 90ch; display: flex; flex-direction: column; gap: 6px; }
+#tip { position: fixed; z-index: 50; max-width: 320px; background: var(--ink); color: var(--surface); padding: 9px 11px; border-radius: 8px; font-size: 12.5px; line-height: 1.4; pointer-events: none; box-shadow: 0 6px 18px rgba(0,0,0,.25); display: none; }
+#tip .k { opacity: .75; font-size: 11.5px; margin-bottom: 2px; }
+#tip .t { font-weight: 500; }
+#tip .p { margin-top: 4px; font-family: var(--font-mono); font-size: 12px; }
+#tip .r { margin-top: 2px; opacity: .8; font-size: 11.5px; }
+@media (prefers-reduced-motion: reduce) {
+  .mk, .mk .shape, .pin circle { transition: none; }
+  .ring { display: none; }
+}
+@media (max-width: 560px) { .page { gap: 22px; } .panel, .area, .thread { padding: 14px; } }
+</style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <p class="eyebrow">Tech market watch · report dated 11 Nov 2026 · updated 27 Nov 2026</p>
+    <h1>Tech direction map</h1>
+    <p class="sub">Ten areas of the technology market, 63 dated forecasts and the paths they could take over the next 13 months. Press play to watch each horizon come due.</p>
+    <p class="note"><strong>Not financial advice.</strong> Automated research for information only. The probabilities are my own judgement from the 11 Nov 2026 report, and only 23 of the 48 brief figures I checked matched primary sources, so every call rests on primary data and has a rule for scoring it.</p>
+    <p class="note" id="status"><strong>Updated 27 Nov 2026.</strong> I read the 14 daily briefs from the evening of 20 Nov to the morning of 27 Nov, and the weekly summary for 16 to 22 Nov. Two more forecasts were scored on 27 Nov, both correct: the EU's AI omnibus is in the Official Journal, and IonQ's purchase of Elisity has closed. Five of the 63 forecasts are now scored, all correct. One more was checked and left unscored. I changed none of the 63 probabilities, so they can be scored fairly against what was said on 11 Nov. The new evidence is in <a href="#h-upd">What changed since 11 Nov</a>. <span id="status-next"></span></p>
+  </header>
+
+  <section class="kpis" id="kpis" aria-label="Summary figures"></section>
+
+  <section class="panel upd" aria-labelledby="h-upd" id="upd">
+    <div class="head2">
+      <h2 id="h-upd">What changed since 11 Nov</h2>
+      <p>Two forecasts were scored on 27 Nov from official documents. Both events had in fact happened before 11 Nov, so they show gaps in what I had read then more than they test the forecasts. The briefs from 20 to 27 Nov mostly cover a sharp fall and rebound in chip shares, wider credit spreads, and Nvidia's change of chief executive. Nothing below moves a probability: it either scores a forecast, does not bear on a forecast's deadline, or is a share price, which none of the 63 forecasts is about.</p>
+    </div>
+    <p class="zero" style="margin-bottom:12px">Probabilities changed: 0 of 63 · Forecasts due: 0 of 63 · Next test: EU AI Act watermarking grace period ends, 2 Dec (the omnibus that sets this date is now confirmed in force)</p>
+    <h3 style="margin-bottom:6px">Chip shares since the last brief I had read</h3>
+    <div class="pxlegend" id="pxlegend"></div>
+    <div class="pxwrap" id="px"></div>
+    <details><summary>View the chart as a table</summary><div class="tblwrap" style="margin-top:8px"><table id="pxtable"></table></div></details>
+    <h3 style="margin:18px 0 6px">What the new evidence touches</h3>
+    <p style="color:var(--muted);font-size:13.5px;margin-bottom:8px">Rows dated 18 Nov, 20 Nov or 27 Nov say which pages I opened myself on that day. Other figures are quoted from the daily briefs of 9 to 27 Nov, which name their sources; I did not re-open those pages myself. "Primary" means the source type.</p>
+    <div class="tblwrap"><table>
+      <thead><tr><th>What happened</th><th>Evidence</th><th>Areas</th><th>Effect on my calls</th></tr></thead>
+      <tbody>
+        <tr><td data-l="What happened">27 Nov: The EU's "Digital Omnibus on AI" is in the Official Journal. It is Regulation (EU) 2026/1744, dated 8 July 2026 and published on 24 July 2026. It amends the AI Act.</td><td data-l="Evidence">Primary, opened on 27 Nov: the regulation's page on EUR-Lex, read through a page-fetch helper. The title, number and publication date at the top were read word for word. The articles further down came back as a summary, not word for word. A law-firm note of 4 Aug (tier 3) pointed me to the page.</td><td data-l="Areas">5</td><td data-l="Effect on my calls">Forecast scored correct: "the EU omnibus is confirmed as published in the Official Journal" (85%). It was published before 11 Nov; on 11 Nov I had not checked, and said so. The 2 Dec watermarking date in the calendar no longer depends on an "if". The 12-month forecast that high-risk duties are set for 2 Dec 2027 or later (85%) is not scored yet: the summary says 2 Dec 2027, but I did not read that article word for word. No probability changed.</td></tr>
+        <tr><td data-l="What happened">27 Nov: IonQ completed its purchase of Elisity on 3 Nov 2026. IonQ paid in shares: about 32.2 million at closing, with up to about 4.3 million more depending on results to January 2028.</td><td data-l="Evidence">Primary, opened on 27 Nov: IonQ's 8-K filed with the SEC on 5 Nov 2026, item 2.01, read through a page-fetch helper. The SEC's filing index, which I read directly, lists that 8-K with the same date and item. A direct request for the filing text was refused, so the helper's reading is the only one.</td><td data-l="Areas">8</td><td data-l="Effect on my calls">Forecast scored correct: "IonQ's Elisity acquisition has closed" (40%). The deal closed eight days before the forecast was made. I did not know that on 11 Nov, so the 40% reflects a gap in my reading, not a real test. No probability changed.</td></tr>
+        <tr><td data-l="What happened">27 Nov: Chip shares fell hard on 20 Nov and bounced on 23 Nov. Yahoo shows Nvidia at 125.53 on 20 Nov, 165.05 on 23 Nov and 149.30 on 25 Nov. AMD closed at 406.03 on 25 Nov, close to its low for the month. The global fund closed at 147.54. US markets were shut on 26 Nov.</td><td data-l="Evidence">Yahoo closes from the repository's price files (tier 3). The briefs could not confirm Nvidia's closes of 20 and 23 Nov from a second source and treat them as unverified. News headlines link the fall to the new US chip rule and to worries about AI valuations: tier 3, reported, not verified; I opened none of those articles.</td><td data-l="Areas">1, 2</td><td data-l="Effect on my calls">No change. None of my forecasts is about share prices. The cause of the fall is not established.</td></tr>
+        <tr><td data-l="What happened">27 Nov: Credit spreads widened for a third week. The extra yield on high-yield debt reached 3.76% on 20 Nov and was 3.72% on 24 Nov, up from 3.47% on 18 Nov. The briefs call this unusual against the past year. The US 10-year yield eased to 4.85% on 25 Nov, from 5.04% on 19 Nov.</td><td data-l="Evidence">FRED and the US Treasury (primary), quoted from the briefs of 23 to 27 Nov, not re-opened.</td><td data-l="Areas">1</td><td data-l="Effect on my calls">No change. Wider spreads make debt-funded building dearer, so the "financing or policy shock" thread still needs watching. No financing has been reported as pulled, and my searches this morning found no new AI financing of $10bn or more dated after 11 Nov. My 15% for a failed financing stands.</td></tr>
+        <tr><td data-l="What happened">27 Nov: Nvidia's own release of 12 Nov confirms that Jensen Huang resigned as chief executive and left the board. Colette Kress is interim chief executive while the board searches for a successor. No permanent chief executive has been named.</td><td data-l="Evidence">Nvidia's release of 12 Nov (primary), quoted from the brief of 27 Nov, not re-opened. That brief read the company page in full.</td><td data-l="Areas">1, 2</td><td data-l="Effect on my calls">No change. None of the 63 forecasts is about Nvidia's leadership. It stays a risk to watch.</td></tr>
+        <tr><td data-l="What happened">27 Nov: Weekly check of official sources for the thinly covered areas. All seven were read: EIA (power), CISA (cyber), the Federal Register for the FCC (space) and for chip rules (AI policy), IFR (robotics), NIST (quantum) and Waymo (vehicles). Nothing found scores a forecast.</td><td data-l="Evidence">Primary, opened by me on 27 Nov. EIA: still the outlook released 10 Nov, with US power generation up 2.7% in 2026; the next is due 8 Dec. CISA: the list released 25 Nov has 19 entries added since 20 Nov, among them flaws in an email-filtering service (N-able MailAssure), Cisco Expressway and a Juniper router product now owned by HPE. Federal Register, chip rules: one new rule, on 25 Nov, adds seven entities in Malaysia, Singapore and Thailand to the US Entity List; I read its summary only. Federal Register, FCC: eight documents since 13 Nov mention satellites, none about direct-to-device service or the EchoStar licences. IFR: newest release is still 12 Nov, with no 2026 installation figure. NIST: newest item is 19 Nov, on web-encryption guidance, with no draft HQC standard. Waymo: one new post, on 22 Nov, pausing rides in the San Francisco Bay Area for severe weather and resuming them from 25 Nov; no new city and no weekly rides figure.</td><td data-l="Areas">3, 5–10</td><td data-l="Effect on my calls">No change. The EIA figure sits inside the 2.0% to 3.5% range of the power forecast (85%), which is scored from the 8 Dec outlook. The CISA forecast was already scored correct on 18 Nov. The Entity List additions come a week after the chip rule that named the same three countries; they do not amend the January 2026 China chip rule, so the 6-month forecast on that rule (35%) is not scored. The Waymo new-city forecast (65%) and the NIST forecast (40%) stay open.</td></tr>
+        <tr><td data-l="What happened">20 Nov: The US Commerce Department published a new rule on advanced chips on 19 Nov. It took effect the same day. It requires a licence to ship advanced chips to overseas data centres that supply large amounts of computing to companies based in China, Macau or other arms-embargoed countries. It adds a licence requirement for Indonesia, Malaysia, Singapore, Thailand and Brazil. It formally withdraws the unused 2025 "AI diffusion" rule.</td><td data-l="Evidence">Primary, opened on 20 Nov: Federal Register document 2026-23529, "Addressing Remote Access to Advanced Semiconductors", an interim final rule from the Bureau of Industry and Security. I read the summary, the dates and parts of the full text. The text names the People's Republic of China. On 18 Nov this was a news report only; it is now in the Federal Register.</td><td data-l="Areas">2, 5</td><td data-l="Effect on my calls">Forecast scored correct: "the US issues a new or amended rule on advanced-chip exports to China" (20%). My reading: the rule is aimed at chips used for companies based in China, even where the chips are shipped to another country. The rule also rewrites the section that holds the January 2026 review policy for China; I did not compare the old and new wording, so the 6-month forecast on that rule (35%) is not scored yet. The rule took effect at once, before public comment, which is close to the "wrong if" test for the shock thread. No probability changed.</td></tr>
+        <tr><td data-l="What happened">20 Nov: The Fed's minutes of its 27 to 28 Oct meeting, published 18 Nov, show a survey that expected a rate rise in December and another in March 2027. The minutes also say AI-related debt has grown fast, often through complex financing, and is concentrated in a few firms.</td><td data-l="Evidence">Federal Reserve minutes (primary), quoted from the brief of 20 Nov, not re-opened. That brief read part of the page word for word and the rest as a summary.</td><td data-l="Areas">All</td><td data-l="Effect on my calls">No change. None of the 63 forecasts is about the Fed's decision. Dearer money and the Fed's remark on AI debt both bear on the "financing or policy shock" thread. The briefs cut their own call that the Fed holds in December from 70% to 35%. My 15% for a failed financing stands.</td></tr>
+        <tr><td data-l="What happened">20 Nov: Shares fell further after Nvidia's results. Nvidia closed at 145.98 on 19 Nov, down from 155.46 on 17 Nov. AMD closed at 489.19 and the global fund at 147.17. The extra yield on high-yield debt rose to 3.47% on 18 Nov, from 3.34% on 16 Nov. The US 10-year yield was 5.04% on 19 Nov.</td><td data-l="Evidence">Yahoo closes from the repository's price files (tier 3). Yields and spreads from the US Treasury and FRED (primary), quoted from the briefs of 19 and 20 Nov, not re-opened.</td><td data-l="Areas">1, 2</td><td data-l="Effect on my calls">No change. None of my forecasts is about share prices. The spread has widened for a second week, so the shock thread still needs watching. No financing has been reported as pulled.</td></tr>
+        <tr><td data-l="What happened">20 Nov: Reports say the code editor Cursor confirmed a breach. An access key exposed at a supplier let an attacker place a harmful copy of an AI coding extension in Cursor's extension store on 29 Oct, for about 11 hours. Cursor gave its detailed account on 13 Nov.</td><td data-l="Evidence">Tier 3, reported, not verified: two security news sites, opened on 20 Nov through a page-fetch helper. I did not find or open Cursor's own statement.</td><td data-l="Areas">7</td><td data-l="Effect on my calls">Not scored. The forecast "another breach or supply-chain incident involving AI developer tools is publicly reported" (75%) needs the vendor's own post, and the incident itself dates from before 11 Nov. A later run checks again.</td></tr>
+        <tr><td data-l="What happened">20 Nov: Weekly check of official sources for the thinly covered areas. All seven were read: EIA (power), CISA (cyber), the Federal Register for the FCC (space) and for chip rules (AI policy), IFR (robotics), NIST (quantum) and Waymo (vehicles). Apart from the chip rule above, nothing found scores a forecast.</td><td data-l="Evidence">Primary, opened by me on 20 Nov. EIA: the outlook released 10 Nov expects US power generation to grow 2.7% in 2026; the next is due 8 Dec. CISA: the list released 18 Nov has seven entries added since 11 Nov; none since 13 Nov is a firewall, VPN or email-gateway flaw; one, added 18 Nov, is in LiteLLM, a tool used to build AI software. Federal Register: five FCC documents since 11 Nov mention satellites, none about direct-to-device service or the EchoStar licences. IFR: newest release is still 12 Nov, on robot density, with no 2026 installation figure. NIST: newest item is 16 Nov, with no draft HQC standard. Waymo: newest blog post is still 10 Nov, with no new city and no weekly rides figure.</td><td data-l="Areas">3, 5–10</td><td data-l="Effect on my calls">No change. The EIA figure sits inside the 2.0% to 3.5% range of the power forecast (85%), which is scored from the 8 Dec outlook. The Waymo new-city forecast (65%) and the NIST forecast (40%) stay open.</td></tr>
+        <tr><td data-l="What happened">18 Nov: Nvidia reported revenue of $115.8bn for the quarter that ended 25 Oct 2026. Its own outlook was $108.0bn.</td><td data-l="Evidence">Primary, opened on 18 Nov: Nvidia's results release of 17 Nov on its newsroom site, read through a page-fetch helper. The income statement shows 115,844 in $ millions. The matching SEC filing (8-K of 17 Nov) exists but sec.gov refused the request, so I did not read it.</td><td data-l="Areas">1, 2</td><td data-l="Effect on my calls">Forecast scored correct: "at or above $108.0bn" (85%). The briefs' own call, "above $108.0bn" (60%), also came true; the briefs have not yet recorded it. Both are shown side by side below. No probability changed.</td></tr>
+        <tr><td data-l="What happened">18 Nov: Nvidia expects about $130.0bn of revenue next quarter, plus or minus 3%. That quarter has an extra week, and the outlook assumes no data-centre chip revenue from China. Data-centre revenue this quarter was $107.6bn.</td><td data-l="Evidence">Primary, the same Nvidia release, opened on 18 Nov.</td><td data-l="Areas">1, 2, 4</td><td data-l="Effect on my calls">No change. It fits continued heavy spending on AI capacity. No forecast is about Nvidia's guidance.</td></tr>
+        <tr><td data-l="What happened">18 Nov: CISA added a Check Point flaw to its list of exploited flaws on 13 Nov. CISA's entry names Check Point Firewall and Security Gateway among the affected products.</td><td data-l="Evidence">Primary, opened on 18 Nov: CISA's Known Exploited Vulnerabilities data file, released 17 Nov, entry CVE-2026-123039.</td><td data-l="Areas">7</td><td data-l="Effect on my calls">Forecast scored correct: "CISA adds at least one more firewall, VPN or email-gateway flaw" (90%). No probability changed.</td></tr>
+        <tr><td data-l="What happened">18 Nov: Nvidia's chief executive, Jensen Huang, resigned on 12 Nov. The finance chief, Colette Kress, is interim chief executive. The results release of 17 Nov names her in that role.</td><td data-l="Evidence">Nvidia's release of 12 Nov, quoted from the brief of 16 Nov, not re-opened. The interim title is in the 17 Nov results release, which I opened on 18 Nov (primary).</td><td data-l="Areas">1, 2</td><td data-l="Effect on my calls">No change. None of the 63 forecasts is about Nvidia's leadership. It is a risk to watch, alongside the Board investigation in the row dated 8 to 10 Nov below.</td></tr>
+        <tr><td data-l="What happened">18 Nov: News reports say the US Commerce Department tightened limits on remote access to advanced AI chips. No such rule is in the Federal Register yet.</td><td data-l="Evidence">News reports are tier 3: reported, not verified. Federal Register, primary, opened on 18 Nov: the only Bureau of Industry and Security document since 7 Nov is the 9 Nov extension already listed below.</td><td data-l="Areas">5</td><td data-l="Effect on my calls">Not scored. The forecast "the US issues a new or amended rule on advanced-chip exports to China" (20%) is scored only from the Federal Register. A later run checks again.</td></tr>
+        <tr><td data-l="What happened">18 Nov: Share prices fell again. Nvidia closed at 155.46 on 17 Nov, before its results came out. The US 10-year yield was 5.10% on 17 Nov. The extra yield on high-yield debt rose to 3.34% on 16 Nov, from 3.20% on 12 Nov.</td><td data-l="Evidence">Yahoo closes (tier 3). Yields and spreads from the US Treasury and FRED (primary), quoted from the briefs of 17 and 18 Nov, not re-opened.</td><td data-l="Areas">1, 2</td><td data-l="Effect on my calls">No change. The spread has turned back up, so the "financing or policy shock" thread still needs watching. My 15% for a failed financing stands.</td></tr>
+        <tr><td data-l="What happened">14 Nov: Weekly check of official sources for the thinly covered areas. Read: the Federal Register (AI policy), IFR (robotics), NIST (quantum) and Waymo (vehicles). Read but out of date: EIA (power). Could not be read: CISA (cyber) and the FCC (space). Nothing found bears on a forecast.</td><td data-l="Evidence">Primary, opened by me on 14 Nov. Federal Register: no export-control rule published since 11 Nov; the latest, on 9 Nov, extends a pause on controls for affiliates of listed companies to 10 Jan 2027. IFR: its latest release (12 Nov) is about robot density; its figure for 2025 is still more than 600,000 robots installed. NIST: no draft HQC standard in its news list. Waymo: newest blog post is 10 Nov, with no new city. EIA: the page returned was the May 2026 outlook, so I did not use it. CISA and the FCC: both pages refused the request.</td><td data-l="Areas">3, 5–10</td><td data-l="Effect on my calls">No change. The CISA forecast (90%) and the space forecasts could not be checked this week; a later run tries again.</td></tr>
+        <tr><td data-l="What happened">Nvidia's Board opened an independent investigation (8 Nov) and hired outside counsel (10 Nov), after news reports about its chief executive.</td><td data-l="Evidence">Nvidia's own statements (primary). Press wording about a "foreign intelligence effort" is not verified.</td><td data-l="Areas">1</td><td data-l="Effect on my calls">No change. It cannot alter revenue for the quarter that ended 25 Oct. It is a risk to the guidance and the share price.</td></tr>
+        <tr><td data-l="What happened">Nvidia's results are confirmed for 17 Nov, 5:00 pm US Eastern (22:00 London).</td><td data-l="Evidence">investor.nvidia.com events page, read 13 Nov (primary).</td><td data-l="Areas">1</td><td data-l="Effect on my calls">Date confirmed. My 85% for "at or above $108.0bn" stands. The briefs' own estimate for "above $108.0bn" is 60%, so we differ and I am showing it.</td></tr>
+        <tr><td data-l="What happened">The December Fed meeting is 8–9 Dec.</td><td data-l="Evidence">federalreserve.gov, read 10 Nov (primary). Later reads came back cut short.</td><td data-l="Areas">All</td><td data-l="Effect on my calls">Calendar entry is no longer tentative.</td></tr>
+        <tr><td data-l="What happened">The US 10-year yield reached 5.10% on 12 Nov (4.84% on 5 Nov). The Fed held on 28 Oct with two votes to raise. October inflation was +0.4% on the month (core +0.3%). Payrolls rose 165,000 in October.</td><td data-l="Evidence">FRED, the Fed and BLS (primary).</td><td data-l="Areas">1</td><td data-l="Effect on my calls">No change. Higher yields make the build-out dearer to finance, so the "financing or policy shock" thread is worth watching. My 15% for a failed financing stands.</td></tr>
+        <tr><td data-l="What happened">Credit spreads narrowed: high-yield 3.20% on 12 Nov, from 3.48% on 5 Nov.</td><td data-l="Evidence">FRED (primary).</td><td data-l="Areas">1</td><td data-l="Effect on my calls">Points away from the shock thread: no financing stress is visible yet.</td></tr>
+        <tr><td data-l="What happened">Chip shares fell hard (chart above). Cause not verified.</td><td data-l="Evidence">Yahoo daily closes (tier 3).</td><td data-l="Areas">1, 2</td><td data-l="Effect on my calls">None of my forecasts is about share prices. The "wrong if" tests for these areas have not triggered.</td></tr>
+        <tr><td data-l="What happened">Microsoft spent $39.4bn on property and equipment in the quarter to 30 Sep. Microsoft has $364.6bn and Meta $355.7bn of leases that have not started yet.</td><td data-l="Evidence">Company quarterly filings (primary). The first figure leaves out finance leases.</td><td data-l="Areas">1, 4</td><td data-l="Effect on my calls">Fits "none of the big four cuts its capex guide" (95%). No change.</td></tr>
+        <tr><td data-l="What happened">Since 9 Nov the briefs read primary sources directly. Before that, one brief wrongly doubted the 6 Nov jobs report.</td><td data-l="Evidence">BLS release USDL-26-1632.</td><td data-l="Areas">All</td><td data-l="Effect on my calls">Better evidence from here. The briefs' own record is still three calls and no verified outcomes.</td></tr>
+        <tr><td data-l="What happened">Areas 3 and 5 to 10 (power, policy, robotics, cyber, quantum, vehicles, space) had no new evidence. Areas 2 and 4 got only share prices and Microsoft's filing.</td><td data-l="Evidence">Absence from the briefs. TSMC and Rolls-Royce were not read.</td><td data-l="Areas">2–10</td><td data-l="Effect on my calls">Unchanged.</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+  <section class="panel upd" aria-labelledby="h-score" id="score">
+    <div class="head2">
+      <h2 id="h-score">Scorecard</h2>
+      <p>A forecast is marked only from its primary source, such as a company results release or an official data page. News reports never decide a score. "Unscored" means the primary source could not be read yet.</p>
+    </div>
+    <p class="zero" style="margin-bottom:12px">Correct: 5 · Wrong: 0 · Unscored: 1 · Not yet due: 57 of 63</p>
+    <div class="tblwrap"><table>
+      <thead><tr><th>Forecast</th><th>Probability on 11 Nov</th><th>Result</th><th>What the source showed</th></tr></thead>
+      <tbody>
+        <tr><td data-l="Forecast">Nvidia reports Q3 FY27 revenue at or above its $108.0bn outlook on 17 Nov. (area 1, AI spend and financing)</td><td data-l="Probability on 11 Nov">85%</td><td data-l="Result"><strong>Correct</strong>, 18 Nov 2026</td><td data-l="What the source showed">Nvidia's results release of 17 Nov 2026 reports revenue of $115.8bn for the quarter that ended 25 Oct 2026 (115,844 in $ millions in the income statement). That is above the $108.0bn outlook. <a href="https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-third-quarter-fiscal-2027" rel="noopener noreferrer">Source</a></td></tr>
+        <tr><td data-l="Forecast">CISA adds at least one more firewall, VPN or email-gateway flaw to its exploited list. (area 7, Cybersecurity)</td><td data-l="Probability on 11 Nov">90%</td><td data-l="Result"><strong>Correct</strong>, 18 Nov 2026</td><td data-l="What the source showed">CISA's exploited-flaws list, released 17 Nov 2026, shows CVE-2026-123039 added on 13 Nov 2026. CISA's description names Check Point Firewall and Security Gateway. <a href="https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json" rel="noopener noreferrer">Source</a></td></tr>
+        <tr><td data-l="Forecast">The US issues a new or amended rule on advanced-chip exports to China. (area 5, Policy and export rules)</td><td data-l="Probability on 11 Nov">20%</td><td data-l="Result"><strong>Correct</strong>, 20 Nov 2026</td><td data-l="What the source showed">The Federal Register of 19 Nov 2026 carries an interim final rule from the Bureau of Industry and Security, "Addressing Remote Access to Advanced Semiconductors" (document 2026-23529), effective 19 Nov 2026. It adds licence requirements for advanced chips sent to overseas data centres that serve companies based in China, Macau or other Country Group D:5 places. The text names the People's Republic of China. <a href="https://www.federalregister.gov/documents/2026/11/19/2026-23529/addressing-remote-access-to-advanced-semiconductors" rel="noopener noreferrer">Source</a></td></tr>
+        <tr><td data-l="Forecast">The EU omnibus is confirmed as published in the Official Journal (verify first; status unclear). (area 5, Policy and export rules)</td><td data-l="Probability on 11 Nov">85%</td><td data-l="Result"><strong>Correct</strong>, 27 Nov 2026</td><td data-l="What the source showed">The Official Journal of the EU, L series, carries Regulation (EU) 2026/1744 of 8 July 2026, the "Digital Omnibus on AI", published 24 Jul 2026. Title, number and date were read from the top of the EUR-Lex page on 27 Nov 2026. Publication came before the forecast was made on 11 Nov. <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202601744" rel="noopener noreferrer">Source</a></td></tr>
+        <tr><td data-l="Forecast">IonQ's Elisity acquisition has closed. (area 8, Quantum)</td><td data-l="Probability on 11 Nov">40%</td><td data-l="Result"><strong>Correct</strong>, 27 Nov 2026</td><td data-l="What the source showed">IonQ's 8-K filed 5 Nov 2026, item 2.01, says IonQ completed the acquisition of all shares of Elisity, Inc. on 3 Nov 2026, for about 32.2 million IonQ shares at closing. The deal closed before the forecast was made on 11 Nov. <a href="https://www.sec.gov/Archives/edgar/data/1824920/000119312526449779/ionq-20261103.htm" rel="noopener noreferrer">Source</a></td></tr>
+        <tr><td data-l="Forecast">EU Annex III high-risk obligations are formally set for 2 Dec 2027 or later. (area 5, Policy and export rules)</td><td data-l="Probability on 11 Nov">85%</td><td data-l="Result"><strong>Unscored</strong>, 27 Nov 2026</td><td data-l="What the source showed">Regulation (EU) 2026/1744 was opened on EUR-Lex on 27 Nov 2026, but the article that sets the start date for Annex III high-risk duties came back as a summary, not word for word. The summary says 2 Dec 2027. A later run reads the article itself before scoring.</td></tr>
+      </tbody>
+    </table></div>
+    <h3 style="margin:18px 0 6px">Nvidia Q3 FY27 revenue: the map and the daily briefs</h3>
+    <p style="color:var(--muted);font-size:13.5px;margin-bottom:8px">Nvidia reported $115.8bn on 17 Nov 2026 (its own results release, opened 18 Nov). Its outlook was $108.0bn. The two forecasts differed only if revenue had been exactly $108.0bn. Both came true. The briefs recorded their result on the evening of 18 Nov.</p>
+    <div class="tblwrap"><table>
+      <thead><tr><th>Whose forecast</th><th>What it said</th><th>Probability</th><th>Result</th></tr></thead>
+      <tbody>
+        <tr><td data-l="Whose forecast">This map (forecast made 11 Nov)</td><td data-l="What it said">Revenue at or above $108.0bn</td><td data-l="Probability">85%</td><td data-l="Result">Correct: $115.8bn</td></tr>
+        <tr><td data-l="Whose forecast">Daily briefs (prediction P13, made 10 Nov)</td><td data-l="What it said">Revenue above $108.0bn</td><td data-l="Probability">60%</td><td data-l="Result">Came true: $115.8bn. Recorded by the briefs on 18 Nov</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <section aria-labelledby="h-threads">
+    <div class="head2">
+      <h2 id="h-threads">Three ways the story can bend</h2>
+      <p>These can overlap, so all three can be partly true at once. Pick one to highlight its calls in every chart below.</p>
+    </div>
+    <div class="threads" id="threads"></div>
+  </section>
+
+  <section class="panel" aria-labelledby="h-tl">
+    <div class="head2">
+      <h2 id="h-tl">The next 13 months, call by call</h2>
+      <p>Each mark is one forecast, placed at the deadline it is scored against. Larger marks are higher probability. Marks fill in as their deadline passes. Drag the bar below, or drag across the chart, to rewind or fast-forward. Numbered pins are dated events; a dashed pin has an approximate date.</p>
+    </div>
+    <div class="controls">
+      <button class="btn primary" id="play" type="button">Play</button>
+      <button class="btn" id="restart" type="button">Restart</button>
+      <button class="btn" id="speed" type="button" aria-label="Playback speed">Speed 1×</button>
+      <div class="scrub" id="scrub" role="slider" tabindex="0" aria-label="Date on the timeline. Drag, or use the arrow keys, to rewind or fast-forward" aria-valuemin="0" aria-valuemax="1000" aria-valuenow="0" aria-valuetext="11 Nov 2026">
+        <div class="scrub-track"><div class="scrub-fill" id="scrubfill"></div></div>
+        <div id="scrubmarks"></div>
+        <div class="scrub-thumb" id="scrubthumb"></div>
+      </div>
+      <span class="now" id="nowdate">11 Nov 2026</span>
+    </div>
+    <div class="readout" aria-live="off">
+      <div>Forecasts due for scoring<b id="r-due">0 of 63</b></div>
+      <div>Dated events passed<b id="r-ev">0 of 18</b></div>
+      <div class="wide">Next test<b id="r-next"></b></div>
+      <div class="wide">Latest horizon reached<b id="r-just"></b></div>
+    </div>
+    <div class="legend" id="legend"><span class="lab">Show:</span></div>
+    <div class="chartwrap" id="tl"></div>
+    <details class="evlist">
+      <summary>All 18 dated events</summary>
+      <ol id="evlist"></ol>
+    </details>
+  </section>
+
+  <section aria-labelledby="h-areas">
+    <div class="head2">
+      <h2 id="h-areas">Direction of travel by area</h2>
+      <p>Each dot is one forecast, placed by its probability. The shaded band is the 40 to 60% coin-flip zone. Dots fill in as the timeline above reaches that horizon.</p>
+    </div>
+    <div class="areas" id="areas"></div>
+  </section>
+
+  <section class="panel" aria-labelledby="h-plot">
+    <div class="head2">
+      <h2 id="h-plot">Where I'm sure and where I'm not</h2>
+      <p>All 63 forecasts by horizon and probability. A column of dots near the top means I expect the current trend to hold; dots in the shaded band are the genuine coin-flips to watch.</p>
+    </div>
+    <div class="chartwrap" id="plot"></div>
+  </section>
+
+  <section class="panel" aria-labelledby="h-tbl">
+    <div class="head2">
+      <h2 id="h-tbl">All 63 forecasts</h2>
+      <p>The same data as the charts, with each forecast's scoring rule.</p>
+    </div>
+    <div class="tools">
+      <label>Area <select id="tbl-area"></select></label>
+      <label>Horizon <select id="tbl-hz"><option value="">All</option><option value="1m">1 month</option><option value="6m">6 months</option><option value="12m">12 months</option></select></label>
+      <label>Type <select id="tbl-tag"><option value="">All</option></select></label>
+      <label>Order <select id="tbl-sort"><option value="report">Report order</option><option value="hi">Highest probability first</option><option value="lo">Lowest probability first</option></select></label>
+      <span id="tbl-count" class="key"></span>
+      <span id="filterchip" class="chip" hidden><span></span><button type="button" id="clearthread" aria-label="Clear highlight">×</button></span>
+    </div>
+    <div class="tblwrap"><table>
+      <thead><tr><th>Area</th><th>Horizon</th><th>Forecast</th><th style="text-align:right">Probability</th><th>Type</th><th>Resolves on</th></tr></thead>
+      <tbody id="tbl"></tbody>
+    </table></div>
+  </section>
+
+  <footer class="foot">
+    <p><strong>How to read this.</strong> Probability is how likely I think the forecast is to come true by its deadline. "Trend continues" means the current direction holds, even when that direction is bad news such as more exploited flaws. "Turn or shock" means a reversal or a break. "Dated milestone" means a scheduled or regulatory step.</p>
+    <p>Source: Tech market watch report, 11 Nov 2026. Every probability, date and scoring rule is copied from it. The three types and the three threads are my grouping of its rows and add no new probabilities. Deadlines: 1 month is 11 Dec 2026, 6 months is May 2027, 12 months is Nov 2027.</p>
+  </footer>
+</div>
+<div id="tip" role="tooltip"></div>
+<script type="application/json" id="data">{"start": "2026-11-11", "end": "2027-12-15", "horizons": {"1m": {"label": "1 month", "short": "1 mo", "deadline": "2026-12-11", "by": "11 Dec 2026"}, "6m": {"label": "6 months", "short": "6 mo", "deadline": "2027-05-11", "by": "May 2027"}, "12m": {"label": "12 months", "short": "12 mo", "deadline": "2027-11-11", "by": "Nov 2027"}}, "tags": {"c": {"name": "Trend continues"}, "r": {"name": "Turn or shock"}, "m": {"name": "Dated milestone"}}, "areas": [{"n": 1, "name": "AI infrastructure spending and its financing", "short": "AI spend and financing", "lead": "The big four's 2026 capex guides add up to about $720–740bn and 2027 is guided higher while free cash flow turns negative, so how the build-out is financed is the thing to watch.", "wrong": "A big-four company cuts its guide while its cloud growth is still above 30%, or two or more large financings fail in the same quarter."}, {"n": 2, "name": "Memory, chips and advanced packaging", "short": "Chips and memory", "lead": "Chip sales are roughly doubling on a memory price boom; the first sign of a turn is falling NAND spot prices while TSMC and ASML still guide up.", "wrong": "SIA's three-month average falls two months in a row, or TSMC's monthly revenue growth drops below 20% year on year."}, {"n": 3, "name": "Power, grid and nuclear for compute", "short": "Power and nuclear", "lead": "Power supply is the binding limit on AI capacity, and almost all of the new nuclear supply being signed arrives from 2028, so near-term news is about deals and permits, not megawatts.", "wrong": "IEA, Gartner or EIA revise data-centre demand down, or utilities see large-load applications withdrawn in volume."}, {"n": 4, "name": "AI revenue against AI spend", "short": "AI revenue vs spend", "lead": "Cloud revenue is growing fast enough to justify the spending for now, but the AI labs' own revenue figures have no primary source.", "wrong": "Cloud growth falls below 25% while capex keeps rising, or reported backlogs are cut."}, {"n": 5, "name": "Policy, export controls and AI regulation", "short": "Policy and export rules", "lead": "Chip export rules and EU AI Act dates are the policy levers that can change the other nine areas fastest, and both are currently in a holding pattern.", "wrong": "Emergency export restrictions arrive outside the normal rule-making pattern, or the EU omnibus is rejected."}, {"n": 6, "name": "Robotics and physical AI", "short": "Robotics", "lead": "Industrial robots are a proven, growing market led by China; humanoids are still a funding story with little delivery data.", "wrong": "Funding rounds dry up before any maker shows delivery numbers, or IFR's 2026 installs fall year on year."}, {"n": 7, "name": "Cybersecurity in the AI era", "short": "Cybersecurity", "lead": "The briefs stopped covering cyber after 19 Oct, so this is the area where my picture is thinnest; the primary sources show continued exploitation of edge devices and AI tooling.", "wrong": "Exploited-flaw additions drop sharply for two months, or the NCSC count falls below 204."}, {"n": 8, "name": "Quantum computing and post-quantum security", "short": "Quantum", "lead": "Hardware progress is real but still years from breaking today's encryption, so the nearer-term story is funding, deals and the migration to new cryptography.", "wrong": "IBM or Google move a 2029 target later, or quantum valuations fall sharply after a failed milestone."}, {"n": 9, "name": "Autonomous vehicles", "short": "Autonomous vehicles", "lead": "Waymo is scaling, rules are arriving on a 2027–2028 clock, and almost every number here comes from secondary reporting, so treat this area as lower confidence.", "wrong": "A serious incident leads a regulator to suspend a large fleet, or Waymo misses its end-2026 ride target by a wide margin."}, {"n": 10, "name": "Space and direct-to-device satellites", "short": "Space and satellites", "lead": "The regulatory approval has landed, but the spectrum that makes it useful does not transfer until about 30 Nov 2027, so 2027 is a build year, not a revenue year.", "wrong": "The FCC's deferred bands are refused or the EchoStar transfer slips beyond 2028."}], "forecasts": [{"id": "f1_0", "a": 1, "hz": "1m", "text": "None of the big four cuts its 2026 capex guide.", "p": 95, "pl": "95%", "res": "Company statements and filings", "tag": "c"}, {"id": "f1_1", "a": 1, "hz": "1m", "text": "Nvidia reports Q3 FY27 revenue at or above its $108.0bn outlook on 17 Nov.", "p": 85, "pl": "85%", "res": "Nvidia results release", "tag": "c"}, {"id": "f1_2", "a": 1, "hz": "1m", "text": "A new AI-related debt or financing deal of $10bn or more is publicly reported.", "p": 80, "pl": "80%", "res": "Press release or filing", "tag": "c"}, {"id": "f1_3", "a": 1, "hz": "6m", "text": "The four companies' own stated 2027 capex adds up to more than $850bn after their Q1 2027 results.", "p": 60, "pl": "60%", "res": "Sum of company statements, late Apr 2027", "tag": "c"}, {"id": "f1_4", "a": 1, "hz": "6m", "text": "A pulled or failed financing of $5bn or more tied to AI capacity is reported.", "p": 15, "pl": "15%", "res": "Filing or two major outlets", "tag": "r"}, {"id": "f1_5", "a": 1, "hz": "12m", "text": "Big-four capex in the first three quarters of 2027 is above the same quarters of 2026.", "p": 85, "pl": "85%", "res": "Q3 2027 results, late Oct 2027", "tag": "c"}, {"id": "f1_6", "a": 1, "hz": "12m", "text": "A write-down of $5bn or more on AI assets at Oracle, CoreWeave or a big-four company.", "p": 12, "pl": "12%", "res": "Results or filings", "tag": "r"}, {"id": "f2_0", "a": 2, "hz": "1m", "text": "TSMC's November revenue (due about 10 Dec) is up 40% or more year on year.", "p": 85, "pl": "85%", "res": "TSMC monthly revenue release", "tag": "c"}, {"id": "f2_1", "a": 2, "hz": "1m", "text": "WSTS's autumn forecast (usually early December; date not confirmed) keeps 2026 sales above $1.5tn.", "p": 80, "pl": "80%", "res": "WSTS release", "tag": "c"}, {"id": "f2_2", "a": 2, "hz": "1m", "text": "NAND spot prices are lower on 11 Dec than on 28 Oct.", "p": 60, "pl": "60%", "res": "TrendForce spot-price page", "tag": "r"}, {"id": "f2_3", "a": 2, "hz": "6m", "text": "DRAM contract prices still rise quarter on quarter in Q2 2027.", "p": 55, "pl": "55%", "res": "TrendForce", "tag": "c"}, {"id": "f2_4", "a": 2, "hz": "6m", "text": "NAND contract prices are flat or lower in Q1 2027.", "p": 55, "pl": "55%", "res": "TrendForce", "tag": "r"}, {"id": "f2_5", "a": 2, "hz": "12m", "text": "WSTS's spring 2027 forecast keeps 2027 sales at $1.9tn or more.", "p": 60, "pl": "60%", "res": "WSTS release, about June 2027", "tag": "c"}, {"id": "f2_6", "a": 2, "hz": "12m", "text": "DRAM contract prices fall quarter on quarter in at least one quarter of 2027.", "p": 55, "pl": "55%", "res": "TrendForce", "tag": "r"}, {"id": "f2_7", "a": 2, "hz": "12m", "text": "SIA's July 2027 sales are above July 2026's $146.8bn.", "p": 85, "pl": "85%", "res": "SIA release, about Sep 2027", "tag": "c"}, {"id": "f3_0", "a": 3, "hz": "1m", "text": "EIA's 8 Dec outlook keeps 2026 US power generation growth between 2.0% and 3.5% (now 2.7%).", "p": 85, "pl": "85%", "res": "EIA Short-Term Energy Outlook", "tag": "c"}, {"id": "f3_1", "a": 3, "hz": "1m", "text": "A big cloud company announces another data-centre power deal of 500 MW or more.", "p": 75, "pl": "75%", "res": "Press release", "tag": "c"}, {"id": "f3_2", "a": 3, "hz": "1m", "text": "Ofgem publishes final data-centre connection decisions.", "p": 25, "pl": "25%", "res": "Ofgem website", "tag": "m"}, {"id": "f3_3", "a": 3, "hz": "6m", "text": "Palisades restarts and sends power to the grid.", "p": 50, "pl": "50%", "res": "NRC or Holtec statement", "tag": "m"}, {"id": "f3_4", "a": 3, "hz": "6m", "text": "FERC accepts PJM's SoftBank study-agreement filing.", "p": 85, "pl": "85%", "res": "FERC docket", "tag": "m"}, {"id": "f3_5", "a": 3, "hz": "12m", "text": "Palisades is operating.", "p": 75, "pl": "75%", "res": "NRC or Holtec statement", "tag": "m"}, {"id": "f3_6", "a": 3, "hz": "12m", "text": "Ofgem has published its final data-centre connection reforms.", "p": 80, "pl": "80%", "res": "Ofgem website", "tag": "m"}, {"id": "f3_7", "a": 3, "hz": "12m", "text": "The first Constellation uprate megawatts for Google are delivered.", "p": 10, "pl": "10%", "res": "Constellation statement", "tag": "m"}, {"id": "f4_0", "a": 4, "hz": "1m", "text": "Oracle's fiscal Q2 FY27 results (usually mid-December; date not found) show remaining performance obligations above $664bn.", "p": 80, "pl": "80%", "res": "Oracle results release", "tag": "c"}, {"id": "f4_1", "a": 4, "hz": "1m", "text": "OpenAI or Anthropic publishes an official revenue figure.", "p": 15, "pl": "15%", "res": "Company statement", "tag": "m"}, {"id": "f4_2", "a": 4, "hz": "6m", "text": "Azure growth for Jan–Mar 2027 (reported late April) is 40% or more.", "p": 75, "pl": "75%", "res": "Microsoft results", "tag": "c"}, {"id": "f4_3", "a": 4, "hz": "6m", "text": "Google Cloud growth for Jan–Mar 2027 is 60% or more.", "p": 70, "pl": "70%", "res": "Alphabet results", "tag": "c"}, {"id": "f4_4", "a": 4, "hz": "6m", "text": "AWS growth for Jan–Mar 2027 is 30% or more.", "p": 75, "pl": "75%", "res": "Amazon results", "tag": "c"}, {"id": "f4_5", "a": 4, "hz": "12m", "text": "OpenAI or Anthropic confirms annualised revenue of $75bn or more in its own statement or filing.", "p": 35, "pl": "35%", "res": "Company statement or filing", "tag": "c"}, {"id": "f4_6", "a": 4, "hz": "12m", "text": "OpenAI or Anthropic files publicly for an IPO.", "p": 30, "pl": "30%", "res": "SEC filing", "tag": "m"}, {"id": "f5_0", "a": 5, "hz": "1m", "text": "The US issues a new or amended rule on advanced-chip exports to China.", "p": 20, "pl": "20%", "res": "Federal Register", "tag": "r"}, {"id": "f5_1", "a": 5, "hz": "1m", "text": "The EU omnibus is confirmed as published in the Official Journal (verify first; status unclear).", "p": 85, "pl": "85%", "res": "Official Journal of the EU", "tag": "m"}, {"id": "f5_2", "a": 5, "hz": "6m", "text": "The US tightens or loosens the Jan 2026 China chip rule.", "p": 35, "pl": "35%", "res": "Federal Register", "tag": "r"}, {"id": "f5_3", "a": 5, "hz": "6m", "text": "The UK Cyber Security and Resilience Bill receives Royal Assent.", "p": 40, "pl": "40%", "res": "Parliament bills page", "tag": "m"}, {"id": "f5_4", "a": 5, "hz": "12m", "text": "EU Annex III high-risk obligations are formally set for 2 Dec 2027 or later.", "p": 85, "pl": "85%", "res": "Official Journal of the EU", "tag": "m"}, {"id": "f5_5", "a": 5, "hz": "12m", "text": "The US ends the 15% revenue-share arrangement or replaces it with a different fee.", "p": 25, "pl": "25%", "res": "US government statement or rule", "tag": "r"}, {"id": "f6_0", "a": 6, "hz": "1m", "text": "Another physical-AI or humanoid funding round of $100M or more is announced.", "p": 80, "pl": "80%", "res": "Company release", "tag": "c"}, {"id": "f6_1", "a": 6, "hz": "6m", "text": "Hyundai names the site of its US robot plant.", "p": 40, "pl": "40%", "res": "Hyundai release", "tag": "m"}, {"id": "f6_2", "a": 6, "hz": "6m", "text": "A humanoid maker publishes audited delivery figures of 1,000 units or more for 2026.", "p": 55, "pl": "55%", "res": "Annual results or filing", "tag": "c"}, {"id": "f6_3", "a": 6, "hz": "12m", "text": "IFR reports 650,000 or more industrial robots installed worldwide in 2026.", "p": 50, "pl": "50%", "res": "IFR World Robotics 2027, about Sep 2027", "tag": "c"}, {"id": "f6_4", "a": 6, "hz": "12m", "text": "More than 10,000 humanoids are in paid commercial use, not pilots, by company statements.", "p": 25, "pl": "25%", "res": "Company statements", "tag": "c"}, {"id": "f7_0", "a": 7, "hz": "1m", "text": "CISA adds at least one more firewall, VPN or email-gateway flaw to its exploited list.", "p": 90, "pl": "90%", "res": "CISA catalogue", "tag": "c"}, {"id": "f7_1", "a": 7, "hz": "1m", "text": "Another breach or supply-chain incident involving AI developer tools is publicly reported.", "p": 75, "pl": "75%", "res": "Vendor post or two major outlets", "tag": "c"}, {"id": "f7_2", "a": 7, "hz": "6m", "text": "One organisation in the UK, EU or US reports losses above $100m from a single cyber incident.", "p": 65, "pl": "65%", "res": "Company filing or results", "tag": "c"}, {"id": "f7_3", "a": 7, "hz": "6m", "text": "The UK Cyber Security and Resilience Bill receives Royal Assent.", "p": 40, "pl": "40%", "res": "Parliament bills page", "tag": "m"}, {"id": "f7_4", "a": 7, "hz": "12m", "text": "The next NCSC Annual Review counts 204 or more nationally significant incidents.", "p": 70, "pl": "70%", "res": "NCSC Annual Review", "tag": "c"}, {"id": "f8_0", "a": 8, "hz": "1m", "text": "IBM announces a new processor or a quantum-advantage claim at its 10 Dec Quantum Day.", "p": 70, "pl": "70%", "res": "IBM announcement", "tag": "c"}, {"id": "f8_1", "a": 8, "hz": "1m", "text": "IonQ's Elisity acquisition has closed.", "p": 40, "pl": "40%", "res": "IonQ 8-K", "tag": "m"}, {"id": "f8_2", "a": 8, "hz": "6m", "text": "IBM or Google publicly claims a verified quantum advantage on a useful task.", "p": 40, "pl": "40%", "res": "Company paper or announcement", "tag": "c"}, {"id": "f8_3", "a": 8, "hz": "6m", "text": "Another private quantum round of $300M or more is announced.", "p": 60, "pl": "60%", "res": "Company release", "tag": "c"}, {"id": "f8_4", "a": 8, "hz": "6m", "text": "NIST publishes the draft HQC standard.", "p": 40, "pl": "40%", "res": "NIST site", "tag": "m"}, {"id": "f8_5", "a": 8, "hz": "12m", "text": "IBM's public roadmap still dates Starling to 2029.", "p": 80, "pl": "80%", "res": "IBM roadmap page", "tag": "c"}, {"id": "f8_6", "a": 8, "hz": "12m", "text": "RSA-2048 is publicly factored by a quantum computer.", "p": 0.5, "pl": "under 1%", "res": "Peer-reviewed or NIST statement", "tag": "r"}, {"id": "f9_0", "a": 9, "hz": "1m", "text": "Waymo opens public rides in at least one new city.", "p": 65, "pl": "65%", "res": "Waymo announcement", "tag": "c"}, {"id": "f9_1", "a": 9, "hz": "6m", "text": "UK Act sections 78–81 take effect on 7 Jan 2027.", "p": 95, "pl": "95%", "res": "SI 2026/731", "tag": "m"}, {"id": "f9_2", "a": 9, "hz": "6m", "text": "Waymo states that it has reached 1 million paid rides a week.", "p": 55, "pl": "55%", "res": "Waymo statement", "tag": "c"}, {"id": "f9_3", "a": 9, "hz": "6m", "text": "Tesla offers unsupervised paid rides in three or more metro areas.", "p": 35, "pl": "35%", "res": "Tesla statement or results", "tag": "c"}, {"id": "f9_4", "a": 9, "hz": "12m", "text": "The UK core authorisation sections (1–3) have a commencement date.", "p": 40, "pl": "40%", "res": "legislation.gov.uk", "tag": "m"}, {"id": "f9_5", "a": 9, "hz": "12m", "text": "NHTSA finalises its new AV safety requirements.", "p": 10, "pl": "10%", "res": "Federal Register", "tag": "m"}, {"id": "f10_0", "a": 10, "hz": "1m", "text": "A UK network launches commercial direct-to-device service.", "p": 10, "pl": "10%", "res": "Operator announcement", "tag": "m"}, {"id": "f10_1", "a": 10, "hz": "6m", "text": "SpaceX launches its first second-generation direct-to-device satellite.", "p": 35, "pl": "35%", "res": "SpaceX or FCC filing", "tag": "m"}, {"id": "f10_2", "a": 10, "hz": "12m", "text": "The EchoStar trust-licence transfer to SpaceX completes by 31 Dec 2027.", "p": 70, "pl": "70%", "res": "FCC or company filing", "tag": "m"}, {"id": "f10_3", "a": 10, "hz": "12m", "text": "SpaceX offers commercial direct-to-device service on the EchoStar spectrum by end 2027.", "p": 35, "pl": "35%", "res": "SpaceX announcement", "tag": "m"}], "events": [{"n": 1, "iso": "2026-11-17", "dateText": "17 Nov 2026", "text": "Nvidia Q3 FY27 results call", "areas": [1, 2], "areaText": "1, 2", "basis": "Found (Nvidia release)", "approx": false}, {"n": 2, "iso": "2026-12-02", "dateText": "2 Dec 2026", "text": "EU AI Act watermarking grace period ends, if the omnibus applies as proposed", "areas": [5], "areaText": "5", "basis": "Found (law-firm summary)", "approx": false}, {"n": 3, "iso": "2026-12-03", "dateText": "Early Dec 2026", "text": "WSTS autumn forecast", "areas": [2], "areaText": "2", "basis": "Usual timing", "approx": true}, {"n": 4, "iso": "2026-12-08", "dateText": "8 Dec 2026", "text": "EIA Short-Term Energy Outlook", "areas": [3], "areaText": "3", "basis": "Found (EIA)", "approx": false}, {"n": 5, "iso": "2026-12-08", "dateText": "8–9 Dec 2026", "text": "US Federal Reserve meeting with projections", "areas": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], "areaText": "all areas", "basis": "Found (Fed calendar, tentative)", "approx": false}, {"n": 6, "iso": "2026-12-10", "dateText": "About 10 Dec 2026", "text": "TSMC November revenue (October's came out on 10 Nov)", "areas": [2], "areaText": "2", "basis": "Usual timing", "approx": true}, {"n": 7, "iso": "2026-12-10", "dateText": "10 Dec 2026", "text": "IBM Quantum Day", "areas": [8], "areaText": "8", "basis": "Found (earnings-call transcript; year inferred)", "approx": false}, {"n": 8, "iso": "2026-12-15", "dateText": "Mid-Dec 2026", "text": "Oracle fiscal Q2 FY27 results", "areas": [1, 4], "areaText": "1, 4", "basis": "Usual timing", "approx": true}, {"n": 9, "iso": "2026-12-31", "dateText": "By 31 Dec 2026", "text": "Waymo's 1 million weekly rides target; IonQ's Elisity deal expected to close", "areas": [8, 9], "areaText": "8, 9", "basis": "Found (Electrek; IonQ 8-K)", "approx": false}, {"n": 10, "iso": "2027-01-07", "dateText": "7 Jan 2027", "text": "UK Automated Vehicles Act sections 78–81 take effect", "areas": [9], "areaText": "9", "basis": "Found (SI 2026/731 via trackers)", "approx": false}, {"n": 11, "iso": "2027-01-26", "dateText": "26–27 Jan 2027", "text": "US Federal Reserve meeting", "areas": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], "areaText": "all areas", "basis": "Found (Fed calendar)", "approx": false}, {"n": 12, "iso": "2027-02-15", "dateText": "Early 2027", "text": "Edinburgh national supercomputer due online", "areas": [5], "areaText": "5", "basis": "Found (UK compute roadmap)", "approx": true}, {"n": 13, "iso": "2027-03-31", "dateText": "By Mar 2027", "text": "Palisades power contract start, per Holtec's CEO", "areas": [3], "areaText": "3", "basis": "Found (trade press)", "approx": false}, {"n": 14, "iso": "2027-04-28", "dateText": "Late Apr 2027", "text": "Q1 2027 results from Alphabet, Microsoft, Amazon and Meta", "areas": [1, 4], "areaText": "1, 4", "basis": "Usual timing", "approx": true}, {"n": 15, "iso": "2027-06-10", "dateText": "About Jun 2027", "text": "WSTS spring forecast", "areas": [2], "areaText": "2", "basis": "Usual timing", "approx": true}, {"n": 16, "iso": "2027-09-15", "dateText": "About Sep 2027", "text": "IFR World Robotics 2027; SIA July 2027 sales", "areas": [2, 6], "areaText": "2, 6", "basis": "Usual timing", "approx": true}, {"n": 17, "iso": "2027-11-30", "dateText": "30 Nov 2027", "text": "EchoStar trust-licence transfer to SpaceX expected", "areas": [10], "areaText": "10", "basis": "Found (trade press)", "approx": false}, {"n": 18, "iso": "2027-12-02", "dateText": "2 Dec 2027", "text": "Proposed EU high-risk AI (Annex III) start date, just past 12 months", "areas": [5], "areaText": "5", "basis": "Found (law-firm summary)", "approx": false}], "threads": [{"id": "holds", "name": "Build-out keeps compounding", "story": "Capex guides rise again, cloud revenue keeps pace and chip sales stay above 2026. Most of my calls on spending, chips and cloud revenue assume this path.", "members": ["f1_0", "f1_1", "f1_2", "f1_3", "f1_5", "f2_0", "f2_1", "f2_3", "f2_5", "f2_7", "f3_0", "f3_1", "f4_0", "f4_2", "f4_3", "f4_4", "f6_0"], "signposts": [{"area": 1, "label": "Wrong if", "text": "A big-four company cuts its guide while its cloud growth is still above 30%, or two or more large financings fail in the same quarter."}, {"area": 4, "label": "Wrong if", "text": "Cloud growth falls below 25% while capex keeps rising, or reported backlogs are cut."}]}, {"id": "turn", "name": "Chip prices turn first", "story": "Memory prices roll over while spending still rises. NAND spot prices already fell in late October, and earlier memory booms ended in oversupply within 12 to 24 months.", "members": ["f2_2", "f2_4", "f2_6"], "signposts": [{"area": 2, "label": "Wrong if", "text": "SIA's three-month average falls two months in a row, or TSMC's monthly revenue growth drops below 20% year on year."}, {"area": 2, "label": "Base rate", "text": "Earlier memory booms in 2017–19 and 2021–23 turned into oversupply within 12–24 months."}]}, {"id": "shock", "name": "Financing or policy shock", "story": "A pulled financing, an AI-asset write-down or a new US chip rule breaks the chain. My probabilities for these are low ({range}), so they are watch items, not base cases.", "members": ["f1_4", "f1_6", "f5_0", "f5_2", "f5_5"], "signposts": [{"area": 5, "label": "Wrong if", "text": "Emergency export restrictions arrive outside the normal rule-making pattern, or the EU omnibus is rejected."}, {"area": 1, "label": "Base rate", "text": "Debt-funded build-outs such as telecom in 1999–2001 stalled after several quarters of negative free cash flow."}]}]}</script>
+<script>
+(() => {
+"use strict";
+const D = JSON.parse(document.getElementById("data").textContent);
+const NS = "http://www.w3.org/2000/svg";
+const reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const DAY = 86400000;
+const parse = iso => Date.parse(iso + "T00:00:00Z");
+const T0 = parse(D.start), T1 = parse(D.end);
+const HZ = D.horizons; Object.keys(HZ).forEach(k => { HZ[k].ms = parse(HZ[k].deadline); });
+const HK = ["1m", "6m", "12m"];
+const TAGS = D.tags, TAGK = ["c", "r", "m"];
+const AREAS = D.areas, F = D.forecasts, EV = D.events, THREADS = D.threads;
+EV.forEach(e => { e.t = parse(e.iso); });
+const FM = {}; F.forEach(f => { FM[f.id] = f; });
+THREADS.forEach(t => { t.set = new Set(t.members); });
+const S = { thread: null, off: new Set() };
+
+const $ = (s, r) => (r || document).querySelector(s);
+const $$ = (s, r) => Array.from((r || document).querySelectorAll(s));
+function svg(tag, attrs, parent) {
+  const e = document.createElementNS(NS, tag);
+  for (const k in attrs) e.setAttribute(k, attrs[k]);
+  if (parent) parent.appendChild(e);
+  return e;
+}
+function node(tag, cls, text) {
+  const e = document.createElement(tag);
+  if (cls) e.className = cls;
+  if (text != null) e.textContent = text;
+  return e;
+}
+const fmtDate = t => new Date(t).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" });
+const fmtP = p => (p < 1 ? "under 1%" : p + "%");
+function rangeOf(list) {
+  const v = list.map(f => f.p), a = Math.min.apply(null, v), b = Math.max.apply(null, v);
+  const la = a < 1 ? "<1" : String(a);
+  return a === b ? (a < 1 ? "<1%" : a + "%") : la + "–" + b + "%";
+}
+const visible = f => (!S.thread || S.thread.set.has(f.id)) && !S.off.has(f.tag);
+
+/* one mark per forecast: circle = trend continues, triangle = turn or shock, diamond = dated milestone */
+function shape(tag, r, parent) {
+  const g = svg("g", { "class": "mk tag-" + tag }, parent);
+  if (tag === "c") svg("circle", { r: r, "class": "shape" }, g);
+  else if (tag === "r") { const a = r * 1.25; svg("path", { d: "M0," + (-a) + "L" + (a * .95) + "," + (a * .75) + "L" + (-a * .95) + "," + (a * .75) + "Z", "class": "shape" }, g); }
+  else { const d = r * 1.3; svg("path", { d: "M0," + (-d) + "L" + d + ",0L0," + d + "L" + (-d) + ",0Z", "class": "shape" }, g); }
+  return g;
+}
+function icon(tag, size) {
+  const s = svg("svg", { width: size, height: size, viewBox: "0 0 " + size + " " + size, "aria-hidden": "true" });
+  const g = shape(tag, size * .3, s); g.setAttribute("transform", "translate(" + size / 2 + "," + size / 2 + ")"); g.classList.add("due");
+  return s;
+}
+
+/* ---------- summary tiles ---------- */
+function buildKpis() {
+  const wrap = $("#kpis");
+  const due1 = F.filter(f => f.hz === "1m").length;
+  const coin = F.filter(f => f.p >= 40 && f.p <= 60).length;
+  const items = [
+    [String(F.length), "dated forecasts across " + AREAS.length + " areas"],
+    [String(due1), "come due by " + HZ["1m"].by],
+    [String(coin), "coin-flip calls, between 40% and 60%"],
+    [String(EV.length), "dated events to watch, first is " + EV[0].text.replace(/ results call$/, " results") + " on " + EV[0].dateText.replace(/ 2026$/, "")]
+  ];
+  items.forEach(it => { const k = node("div", "kpi"); k.append(node("b", null, it[0]), node("span", null, it[1])); wrap.append(k); });
+}
+
+/* ---------- threads ---------- */
+function buildThreads() {
+  const wrap = $("#threads");
+  THREADS.forEach(t => {
+    const ms = F.filter(f => t.set.has(f.id));
+    const card = node("article", "thread"); card.dataset.thread = t.id;
+    card.append(node("h3", null, t.name));
+    card.append(node("p", "story", t.story.replace("{range}", rangeOf(ms))));
+    card.append(node("p", "meta", ms.length + " calls · " + rangeOf(ms) + " probability"));
+    const ul = node("ul");
+    t.signposts.forEach(s => {
+      const li = node("li");
+      const b = node("b", null, s.label + ": ");
+      li.append(b, document.createTextNode(s.text));
+      const sm = node("small", null, "Area " + s.area + ", " + AREAS[s.area - 1].short);
+      li.append(sm); ul.append(li);
+    });
+    card.append(ul);
+    const btn = node("button", "btn thread-btn", "Show on charts"); btn.type = "button"; btn.setAttribute("aria-pressed", "false");
+    btn.addEventListener("click", () => { S.thread = (S.thread && S.thread.id === t.id) ? null : t; applyFilters(); });
+    card.append(btn);
+    wrap.append(card);
+  });
+}
+
+/* ---------- legend (also the type filter) ---------- */
+function buildLegend() {
+  const wrap = $("#legend");
+  TAGK.forEach(k => {
+    const n = F.filter(f => f.tag === k).length;
+    const b = node("button", "tagbtn"); b.type = "button"; b.dataset.tag = k; b.setAttribute("aria-pressed", "true");
+    b.append(icon(k, 18), document.createTextNode(TAGS[k].name + " (" + n + ")"));
+    b.addEventListener("click", () => { if (S.off.has(k)) S.off.delete(k); else S.off.add(k); applyFilters(); });
+    wrap.append(b);
+  });
+  const pinKey = node("span", "key"); const ps = svg("svg", { width: 20, height: 20, viewBox: "0 0 20 20", "aria-hidden": "true" });
+  svg("circle", { cx: 10, cy: 10, r: 8, fill: "none", stroke: "currentColor", "stroke-width": 1.5, "stroke-dasharray": "3 2" }, ps);
+  pinKey.append(ps, document.createTextNode("Dated event (dashed: approximate date)"));
+  wrap.append(pinKey);
+}
+
+/* ---------- timeline ---------- */
+let tl = null;
+const UI = { hz: {}, ev: {} };
+let curFrac = 0;
+const curMs = () => T0 + curFrac * (T1 - T0);
+
+function buildTimeline() {
+  const wrap = $("#tl");
+  const W = Math.max(340, Math.floor(wrap.clientWidth || 340));
+  wrap.textContent = ""; UI.hz = {}; UI.ev = {};
+  const L = 12, R = 12, laneH = 50, narrow = W < 640;
+  const x = t => L + (t - T0) / (T1 - T0) * (W - L - R);
+  const pins = EV.map((e, i) => ({ e: e, i: i, x: Math.min(W - R - 9, Math.max(L + 9, x(e.t))) })).sort((a, b) => a.x - b.x || a.i - b.i);
+  const last = []; pins.forEach(p => { let r = 0; while (last[r] !== undefined && p.x - last[r] < 20) r++; last[r] = p.x; p.row = r; });
+  const calTop = 46, calH = 26 + last.length * 20, lanesTop = calTop + calH + 6, H = lanesTop + AREAS.length * laneH + 6;
+  const s = svg("svg", { viewBox: "0 0 " + W + " " + H, width: W, height: H, role: "img", "aria-label": "Timeline from 11 Nov 2026 to Dec 2027 showing 63 forecasts by deadline in ten area lanes and 18 dated events. The table below lists every forecast." }, wrap);
+
+  AREAS.forEach((a, i) => { svg("rect", { x: 0, y: lanesTop + i * laneH, width: W, height: laneH, "class": "lane" + (i % 2 ? " alt" : ""), "data-area": a.n }, s); });
+  const elapsed = svg("rect", { x: L, y: 18, width: 0, height: H - 18, "class": "elapsed" }, s);
+
+  // month ticks
+  svg("line", { x1: L, x2: W - R, y1: 24, y2: 24, "class": "grid" }, s);
+  if (!narrow) { const st = svg("text", { x: L, y: 38, "class": "axis-t" }, s); st.textContent = "11 Nov"; }
+  for (let m = 0; m <= 12; m++) {
+    const t = Date.UTC(2026, 11 + m, 1); if (t > T1) break;
+    const xx = x(t);
+    svg("line", { x1: xx, x2: xx, y1: 24, y2: 29, "class": "grid" }, s);
+    svg("line", { x1: xx, x2: xx, y1: lanesTop, y2: H, "class": "grid", opacity: .5 }, s);
+    const d = new Date(t), mon = d.toLocaleDateString("en-GB", { month: "short", timeZone: "UTC" });
+    const showLab = narrow ? (d.getUTCMonth() % 3 === 0) : true;
+    if (showLab) { const tt = svg("text", { x: xx, y: 38, "text-anchor": "middle", "class": "axis-t" }, s); tt.textContent = (d.getUTCMonth() === 0 ? "Jan " + d.getUTCFullYear() : mon); }
+  }
+  // horizon deadlines
+  HK.forEach(k => {
+    const xx = x(HZ[k].ms);
+    svg("line", { x1: xx, x2: xx, y1: 15, y2: H - 4, "class": "hz-line" }, s);
+    const anchor = xx < 90 ? "start" : (xx > W - 120 ? "end" : "middle");
+    const lt = svg("text", { x: anchor === "start" ? xx - 2 : (anchor === "end" ? xx + 2 : xx), y: 11, "text-anchor": anchor, "class": "hz-label" }, s);
+    lt.textContent = narrow ? HZ[k].short : HZ[k].label + " · by " + HZ[k].by;
+  });
+
+  // calendar
+  const cl = svg("text", { x: L, y: calTop + 13, "class": "lane-label" }, s); cl.textContent = "Dated events";
+  pins.forEach(p => {
+    const e = p.e;
+    const g = svg("g", { "class": "pin" + (e.approx ? " assumed" : ""), transform: "translate(" + p.x + "," + (calTop + 30 + p.row * 20) + ")", "data-ev": p.i, tabindex: 0, role: "img", "aria-label": "Event " + e.n + ", " + e.dateText + ": " + e.text }, s);
+    svg("circle", { r: 9 }, g);
+    const t = svg("text", {}, g); t.textContent = e.n;
+  });
+
+  // lanes and marks
+  AREAS.forEach((a, i) => {
+    const top = lanesTop + i * laneH;
+    const lt = svg("text", { x: L, y: top + 14, "class": "lane-label" }, s); lt.textContent = a.n + "  " + a.short;
+    HK.forEach(k => {
+      const list = F.filter(f => f.a === a.n && f.hz === k).sort((p, q) => TAGK.indexOf(p.tag) - TAGK.indexOf(q.tag) || q.p - p.p);
+      const rs = list.map(f => 3.5 + Math.max(f.p, 1) / 100 * 5);
+      const widths = rs.map(r => 2 * r * 1.3 + 4), total = widths.reduce((u, v) => u + v, 0);
+      let start = x(HZ[k].ms) - total / 2; start = Math.max(L + 2, Math.min(W - R - 2 - total, start));
+      let cx = start;
+      list.forEach((f, j) => {
+        const c = cx + widths[j] / 2; cx += widths[j];
+        const g = shape(f.tag, rs[j], s);
+        g.setAttribute("transform", "translate(" + c + "," + (top + 34) + ")");
+        g.dataset.fid = f.id; g.dataset.h = k;
+      });
+    });
+  });
+
+  // today marker (real date, clamped to the window)
+  const nowT = Math.min(T1, Math.max(T0, Date.now()));
+  const tx = x(nowT);
+  svg("line", { x1: tx, x2: tx, y1: 18, y2: H - 4, "class": "today-line" }, s);
+  const tlab = svg("text", { x: tx + 4, y: lanesTop - 4, "class": "axis-t today-t" }, s); tlab.textContent = "Today";
+  // cursor
+  const cursor = svg("g", { "class": "cursor" }, s);
+  svg("line", { x1: 0, x2: 0, y1: 16, y2: H - 4 }, cursor);
+  svg("circle", { cx: 0, cy: 16, r: 5 }, cursor);
+  svg("circle", { cx: 0, cy: 16, r: 14, "class": "grab" }, cursor);
+  let dragging = false;
+  const fromChart = e => { const r = s.getBoundingClientRect(); const px = (e.clientX - r.left) * (W / r.width); return Math.max(0, Math.min(1, (px - L) / (W - L - R))); };
+  s.addEventListener("pointerdown", e => { if (e.target.closest && e.target.closest(".pin, .mk")) return; dragging = true; try { s.setPointerCapture(e.pointerId); } catch (_) {} seek(fromChart(e)); });
+  s.addEventListener("pointermove", e => { if (dragging) seek(fromChart(e)); });
+  const stop = e => { dragging = false; try { s.releasePointerCapture(e.pointerId); } catch (_) {} };
+  s.addEventListener("pointerup", stop); s.addEventListener("pointercancel", stop);
+  tl = { x: x, cursor: cursor, elapsed: elapsed, L: L };
+  applyFilters(); updateUI(curMs(), true);
+}
+
+function ring(n) {
+  const r = svg("circle", { r: 7, "class": "ring" }, n);
+  r.addEventListener("animationend", () => r.remove());
+}
+
+function updateUI(t, silent) {
+  if (tl) {
+    const xx = tl.x(t);
+    tl.cursor.setAttribute("transform", "translate(" + xx + ",0)");
+    tl.elapsed.setAttribute("width", Math.max(0, xx - tl.L));
+  }
+  HK.forEach(k => {
+    const due = t >= HZ[k].ms;
+    if (UI.hz[k] !== due) {
+      UI.hz[k] = due;
+      $$('[data-h="' + k + '"]').forEach(n => {
+        n.classList.toggle("due", due);
+        if (due && !silent && !reduce && n.dataset.fid && n.closest("#tl")) ring(n);
+      });
+    }
+  });
+  EV.forEach((e, i) => {
+    const passed = t >= e.t;
+    if (UI.ev[i] !== passed) {
+      UI.ev[i] = passed;
+      $$('[data-ev="' + i + '"]').forEach(n => n.classList.toggle("passed", passed));
+      $$('.evlist li[data-ev="' + i + '"]').forEach(n => n.classList.toggle("passed", passed));
+    }
+  });
+  const dueN = F.filter(f => t >= HZ[f.hz].ms).length, evN = EV.filter(e => t >= e.t).length;
+  $("#r-due").textContent = dueN + " of " + F.length;
+  $("#r-ev").textContent = evN + " of " + EV.length;
+  $("#nowdate").textContent = fmtDate(t);
+  const nx = EV.filter(e => e.t > t).sort((a, b) => a.t - b.t)[0];
+  if (nx) { const days = Math.ceil((nx.t - t) / DAY); $("#r-next").textContent = nx.text + ", " + nx.dateText + " (in " + days + (days === 1 ? " day)" : " days)"); }
+  else $("#r-next").textContent = "No dated events left in this window";
+  const reached = HK.filter(k => t >= HZ[k].ms);
+  if (reached.length) { const k = reached[reached.length - 1]; $("#r-just").textContent = HZ[k].label + " (" + HZ[k].by + "): " + F.filter(f => f.hz === k).length + " calls to score"; }
+  else $("#r-just").textContent = "None yet. First is 1 month, " + HZ["1m"].by;
+  const f = curFrac;
+  $("#scrubthumb").style.left = "calc(11px + (100% - 22px) * " + f + ")";
+  $("#scrubfill").style.width = (f * 100) + "%";
+  const sc = $("#scrub"); sc.setAttribute("aria-valuenow", String(Math.round(f * 1000))); sc.setAttribute("aria-valuetext", fmtDate(t));
+}
+
+/* ---------- status ---------- */
+(function () {
+  const now = Date.now(), nx = EV.filter(e => e.t > now).sort((a, b) => a.t - b.t)[0];
+  const el = document.getElementById("status-next"); if (!el) return;
+  if (nx) { const d = Math.ceil((nx.t - now) / DAY); el.textContent = "Next test: " + nx.text + ", " + nx.dateText + " (in " + d + (d === 1 ? " day" : " days") + "). First deadline: 11 Dec 2026."; }
+})();
+
+/* ---------- playback ---------- */
+let playing = false, raf = 0, lastTs = 0, speed = 1, interacted = false;
+const DURATION = 26000;
+function frame(ts) {
+  if (!playing) return;
+  const dt = Math.min(100, ts - lastTs); lastTs = ts;
+  curFrac = Math.min(1, curFrac + dt / DURATION * speed);
+  updateUI(curMs(), false);
+  if (curFrac >= 1) { pause(true); return; }
+  raf = requestAnimationFrame(frame);
+}
+function play() { if (curFrac >= 1) { curFrac = 0; updateUI(curMs(), true); } playing = true; lastTs = performance.now(); $("#play").textContent = "Pause"; raf = requestAnimationFrame(frame); }
+function pause(done) { playing = false; cancelAnimationFrame(raf); $("#play").textContent = done ? "Replay" : "Play"; }
+function seek(f) { interacted = true; if (playing) pause(false); curFrac = f; updateUI(curMs(), true); }
+function setupControls() {
+  $("#play").addEventListener("click", () => { interacted = true; if (playing) pause(false); else play(); });
+  $("#restart").addEventListener("click", () => { interacted = true; pause(false); curFrac = 0; updateUI(curMs(), true); play(); });
+  $("#speed").addEventListener("click", () => { interacted = true; speed = speed === 1 ? 2 : (speed === 2 ? 4 : 1); $("#speed").textContent = "Speed " + speed + "×"; });
+  const sc = $("#scrub");
+  HK.forEach(k => {
+    const m = node("div", "smark"); const fr = (HZ[k].ms - T0) / (T1 - T0);
+    m.style.left = "calc(11px + (100% - 22px) * " + fr + ")"; m.append(node("span", null, HZ[k].short)); $("#scrubmarks").append(m);
+  });
+  const fromX = x => { const r = sc.getBoundingClientRect(); return Math.max(0, Math.min(1, (x - r.left - 11) / Math.max(1, r.width - 22))); };
+  let down = false;
+  sc.addEventListener("pointerdown", e => { e.preventDefault(); down = true; sc.classList.add("drag"); try { sc.setPointerCapture(e.pointerId); } catch (_) {} sc.focus(); seek(fromX(e.clientX)); });
+  sc.addEventListener("pointermove", e => { if (down) seek(fromX(e.clientX)); });
+  const end = e => { down = false; sc.classList.remove("drag"); try { sc.releasePointerCapture(e.pointerId); } catch (_) {} };
+  sc.addEventListener("pointerup", end); sc.addEventListener("pointercancel", end);
+  sc.addEventListener("keydown", e => {
+    const step = { ArrowLeft: -1 / 57, ArrowDown: -1 / 57, ArrowRight: 1 / 57, ArrowUp: 1 / 57, PageDown: -.08, PageUp: .08 }[e.key];
+    if (step !== undefined) { e.preventDefault(); seek(Math.max(0, Math.min(1, curFrac + step))); }
+    else if (e.key === "Home") { e.preventDefault(); seek(0); }
+    else if (e.key === "End") { e.preventDefault(); seek(1); }
+  });
+  if (!reduce) setTimeout(() => { if (!interacted && document.visibilityState === "visible") { curFrac = 0; play(); } }, 1400);
+}
+
+/* ---------- area cards ---------- */
+function buildCards() {
+  const wrap = $("#areas"); wrap.textContent = "";
+  const pending = [];
+  AREAS.forEach(a => {
+    const card = node("article", "area");
+    const h = node("h3"); h.append(node("span", "n", String(a.n)), document.createTextNode(a.name)); card.append(h);
+    card.append(node("p", "lead", a.lead));
+    const box = node("div", "dots"); card.append(box);
+    const counts = node("div", "counts");
+    TAGK.forEach(k => {
+      const ms = F.filter(f => f.a === a.n && f.tag === k); if (!ms.length) return;
+      const sp = node("span"); sp.append(icon(k, 14), document.createTextNode(ms.length + " " + TAGS[k].name.toLowerCase() + " (" + rangeOf(ms) + ")")); counts.append(sp);
+    });
+    card.append(counts);
+    const w = node("p", "wrong"); w.append(node("b", null, "Wrong if: "), document.createTextNode(a.wrong)); card.append(w);
+    wrap.append(card);
+    pending.push([box, a]);
+  });
+  pending.forEach(p => drawDots(p[0], p[1]));
+  UI.hz = {}; updateUI(curMs(), true);
+}
+function drawDots(box, a) {
+  const W = Math.max(260, Math.floor(box.clientWidth || 300)), rowH = 30, lab = 44, X0 = lab + 10, X1 = W - 12, H = 3 * rowH + 26;
+  const px = p => X0 + (X1 - X0) * (Math.max(p, 0.5) / 100);
+  const s = svg("svg", { viewBox: "0 0 " + W + " " + H, width: W, height: H, role: "img", "aria-label": a.name + ": forecasts by horizon and probability. See the table below for the full list." }, box);
+  svg("rect", { x: px(40), y: 2, width: px(60) - px(40), height: 3 * rowH, "class": "band" }, s);
+  [0, 50, 100].forEach(p => {
+    svg("line", { x1: px(p), x2: px(p), y1: 2, y2: 3 * rowH + 4, "class": "grid" }, s);
+    const t = svg("text", { x: px(p), y: 3 * rowH + 18, "text-anchor": p === 0 ? "start" : (p === 100 ? "end" : "middle"), "class": "axis-n" }, s); t.textContent = p + "%";
+  });
+  HK.forEach((k, i) => {
+    const cy = 2 + i * rowH + rowH / 2;
+    svg("line", { x1: X0, x2: X1, y1: cy, y2: cy, "class": "grid", opacity: .6 }, s);
+    const t = svg("text", { x: 0, y: cy + 4, "class": "rl", "data-h": k }, s); t.textContent = HZ[k].short;
+    const list = F.filter(f => f.a === a.n && f.hz === k).sort((p, q) => p.p - q.p);
+    const placed = [];
+    list.forEach(f => {
+      const cx = px(f.p); let dy = 0;
+      for (let q = 0; q < 8; q++) {
+        dy = q === 0 ? 0 : (q % 2 ? 1 : -1) * Math.ceil(q / 2) * 6;
+        if (placed.every(o => Math.hypot(o.x - cx, o.y - (cy + dy)) >= 12)) break;
+      }
+      placed.push({ x: cx, y: cy + dy });
+      const g = shape(f.tag, 5.2, s); g.setAttribute("transform", "translate(" + cx + "," + (cy + dy) + ")");
+      g.dataset.fid = f.id; g.dataset.h = k;
+    });
+  });
+}
+
+/* ---------- confidence plot ---------- */
+function buildPlot() {
+  const wrap = $("#plot"); wrap.textContent = "";
+  const W = Math.max(320, Math.floor(wrap.clientWidth || 320)), H = 380, m = { l: 46, r: 12, t: 50, b: 18 };
+  const iw = W - m.l - m.r, ih = H - m.t - m.b;
+  const y = p => m.t + ih * (1 - Math.max(p, 0.5) / 100), cx = i => m.l + iw * (i + .5) / 3;
+  const s = svg("svg", { viewBox: "0 0 " + W + " " + H, width: W, height: H, role: "img", "aria-label": "Dot plot of all 63 forecasts. Horizontal axis is horizon, vertical axis is probability from 0 to 100 percent. The table below lists every forecast." }, wrap);
+  svg("rect", { x: m.l, y: y(60), width: iw, height: y(40) - y(60), "class": "band" }, s);
+  const bt = svg("text", { x: m.l + 6, y: y(60) + 14, "class": "band-t" }, s); bt.textContent = "Coin-flip zone, 40 to 60%";
+  [0, 25, 50, 75, 100].forEach(p => {
+    svg("line", { x1: m.l, x2: W - m.r, y1: y(p), y2: y(p), "class": "grid", opacity: p === 50 ? 1 : .6 }, s);
+    const t = svg("text", { x: m.l - 8, y: y(p) + 4, "text-anchor": "end", "class": "axis-n" }, s); t.textContent = p + "%";
+  });
+  HK.forEach((k, i) => {
+    const list = F.filter(f => f.hz === k).sort((p, q) => q.p - p.p);
+    const inZone = list.filter(f => f.p >= 40 && f.p <= 60).length;
+    const t1 = svg("text", { x: cx(i), y: 18, "text-anchor": "middle", "class": "col-t" }, s); t1.textContent = HZ[k].label + " · by " + HZ[k].by;
+    const t2 = svg("text", { x: cx(i), y: 35, "text-anchor": "middle", "class": "col-s" }, s); t2.textContent = list.length + " calls, " + inZone + " in the coin-flip zone";
+    const placed = [];
+    list.forEach(f => {
+      const yy = y(f.p); let off = 0;
+      for (let q = 0; q < 60; q++) {
+        off = q === 0 ? 0 : (q % 2 ? 1 : -1) * Math.ceil(q / 2) * 12;
+        if (placed.every(o => Math.hypot(o.x - (cx(i) + off), o.y - yy) >= 13)) break;
+      }
+      placed.push({ x: cx(i) + off, y: yy });
+      const g = shape(f.tag, 5.6, s); g.classList.add("due");
+      g.setAttribute("transform", "translate(" + (cx(i) + off) + "," + yy + ")"); g.dataset.fid = f.id;
+    });
+  });
+  applyFilters();
+}
+
+/* ---------- table ---------- */
+function buildTableControls() {
+  const sa = $("#tbl-area"); sa.append(new Option("All", ""));
+  AREAS.forEach(a => sa.append(new Option(a.n + ". " + a.short, String(a.n))));
+  const st = $("#tbl-tag"); TAGK.forEach(k => st.append(new Option(TAGS[k].name, k)));
+  ["#tbl-area", "#tbl-hz", "#tbl-tag", "#tbl-sort"].forEach(id => $(id).addEventListener("change", renderTable));
+}
+function renderTable() {
+  const fa = $("#tbl-area").value, fh = $("#tbl-hz").value, ft = $("#tbl-tag").value, so = $("#tbl-sort").value;
+  let rows = F.filter(f => (!fa || String(f.a) === fa) && (!fh || f.hz === fh) && (!ft || f.tag === ft));
+  if (so === "hi") rows = rows.slice().sort((p, q) => q.p - p.p);
+  else if (so === "lo") rows = rows.slice().sort((p, q) => p.p - q.p);
+  const body = $("#tbl"); body.textContent = "";
+  rows.forEach(f => {
+    const tr = node("tr"); tr.dataset.fid = f.id;
+    const a = AREAS[f.a - 1];
+    tr.append(node("td", null, a.n + ". " + a.short), node("td", null, HZ[f.hz].label), node("td", null, f.text), node("td", "p", f.pl));
+    const ty = node("td", "ty"); ty.append(icon(f.tag, 16), document.createTextNode(TAGS[f.tag].name)); tr.append(ty);
+    tr.append(node("td", null, f.res));
+    body.append(tr);
+  });
+  $("#tbl-count").textContent = "Showing " + rows.length + " of " + F.length;
+  applyFilters();
+}
+
+/* ---------- events list ---------- */
+function buildEvList() {
+  const ol = $("#evlist");
+  EV.forEach((e, i) => {
+    const li = node("li", e.approx ? "assumed" : ""); li.dataset.ev = i;
+    li.append(node("span", "en", String(e.n)));
+    const d = node("div"); d.append(document.createTextNode(e.text));
+    d.append(node("small", null, e.dateText + (e.approx ? " (approximate)" : "") + " · " + e.areaText + " · " + e.basis));
+    li.append(d); ol.append(li);
+  });
+}
+
+/* ---------- filters ---------- */
+function applyFilters() {
+  $$("[data-fid]").forEach(n => n.classList.toggle("dim", !visible(FM[n.dataset.fid])));
+  $$(".thread").forEach(n => {
+    const on = !!(S.thread && S.thread.id === n.dataset.thread);
+    n.classList.toggle("on", on);
+    const b = $(".thread-btn", n); b.setAttribute("aria-pressed", on ? "true" : "false"); b.textContent = on ? "Highlighted. Click to clear" : "Show on charts";
+  });
+  $$(".tagbtn").forEach(b => b.setAttribute("aria-pressed", S.off.has(b.dataset.tag) ? "false" : "true"));
+  const chip = $("#filterchip"); chip.hidden = !S.thread;
+  if (S.thread) $("span", chip).textContent = "Highlighting: " + S.thread.name;
+}
+
+/* ---------- tooltip ---------- */
+const tip = $("#tip");
+function tipContent(t) {
+  tip.textContent = "";
+  if (t.dataset.fid) {
+    const f = FM[t.dataset.fid], a = AREAS[f.a - 1];
+    tip.append(node("div", "k", a.n + ". " + a.short + " · " + HZ[f.hz].label + ", by " + HZ[f.hz].by), node("div", "t", f.text),
+      node("div", "p", f.pl + " · " + TAGS[f.tag].name), node("div", "r", "Resolves on: " + f.res));
+  } else {
+    const e = EV[Number(t.dataset.ev)];
+    tip.append(node("div", "k", "Event " + e.n + " · " + e.dateText + (e.approx ? " (approximate)" : "")), node("div", "t", e.text),
+      node("div", "r", "Areas: " + e.areaText), node("div", "r", "Date basis: " + e.basis));
+  }
+}
+function highlightLanes(t) {
+  const ids = (t && t.dataset.ev !== undefined) ? EV[Number(t.dataset.ev)].areas : [];
+  $$(".lane").forEach(l => l.classList.toggle("hl", ids.indexOf(Number(l.dataset.area)) >= 0));
+}
+function showTip(t) {
+  tipContent(t); tip.style.display = "block";
+  const r = t.getBoundingClientRect(), w = tip.offsetWidth, h = tip.offsetHeight;
+  let left = r.left + r.width / 2 - w / 2; left = Math.max(8, Math.min(window.innerWidth - w - 8, left));
+  let top = r.top - h - 10; if (top < 8) top = r.bottom + 10;
+  tip.style.left = left + "px"; tip.style.top = top + "px";
+  highlightLanes(t);
+}
+function hideTip() { tip.style.display = "none"; highlightLanes(null); }
+const SEL = "svg [data-fid], [data-ev]";
+document.addEventListener("pointerover", e => { const t = e.target.closest && e.target.closest(SEL); if (t) showTip(t); });
+document.addEventListener("pointerout", e => { const t = e.target.closest && e.target.closest(SEL); if (t) hideTip(); });
+document.addEventListener("click", e => { const t = e.target.closest && e.target.closest(SEL); if (t) showTip(t); else hideTip(); });
+document.addEventListener("focusin", e => { const t = e.target.closest && e.target.closest("[data-ev]"); if (t) showTip(t); });
+document.addEventListener("focusout", hideTip);
+document.addEventListener("keydown", e => { if (e.key === "Escape") hideTip(); });
+window.addEventListener("scroll", hideTip, { passive: true });
+
+/* ---------- since 11 Nov: prices ---------- */
+const PXD = ["4 Nov","5 Nov","6 Nov","9 Nov","10 Nov","11 Nov","12 Nov","13 Nov","16 Nov","17 Nov","18 Nov","19 Nov","20 Nov","23 Nov","24 Nov","25 Nov"];
+const PX = [
+  { id: "nv", name: "Nvidia", color: "var(--c-nv)", dash: "", v: [200.13, 181.6, 186.64, 178.67, 168.89, 173.73, 166.19, 162.85, 156.14, 155.46, 150.96, 145.98, 125.53, 165.05, 155.38, 149.3] },
+  { id: "amd", name: "AMD", color: "var(--c-amd)", dash: "", v: [488.78, 404.4, 449.04, 508.58, 515.21, 552.9, 585.3, 534.06, 504.28, 503.41, 530.14, 489.19, 424.39, 453.46, 413.27, 406.03] },
+  { id: "vt", name: "Global shares (VT)", color: "var(--muted)", dash: "5 4", v: [157.81, 151.38, 151.73, 155.68, 154.94, 156.71, 155.75, 155.3, 152.36, 150.65, 149.93, 147.17, 142.08, 148.21, 147.56, 147.54] }
+];
+function buildPrices() {
+  const box = $("#px"); box.textContent = "";
+  const W = Math.max(300, Math.floor(box.clientWidth || 300)), narrow = W < 520, H = narrow ? 230 : 270;
+  const L = 36, R = narrow ? 74 : 150, T = 14, B = 28;
+  const idx = PX.map(p => p.v.map(x => x / p.v[0] * 100));
+  const lo = 50, hi = 125;
+  const x = i => L + i / (PXD.length - 1) * (W - L - R), y = v => T + (hi - v) / (hi - lo) * (H - T - B);
+  const s = svg("svg", { viewBox: "0 0 " + W + " " + H, width: W, height: H, role: "img", "aria-label": "Nvidia, AMD and a global share fund indexed to 100 at the 4 November close, to 25 November. Nvidia ends at 75, after a low of 63 on 20 November and a jump to 82 on 23 November. AMD ends at 83, level with its low, after a high of 120. The global fund ends at 93 after a low of 90 on 20 November. The daily briefs could not confirm Nvidia's closes of 20 and 23 November from a second source. The table below lists every value." }, box);
+  [50, 100, 125].forEach(v => {
+    svg("line", { x1: L, x2: W - R, y1: y(v), y2: y(v), "class": "grid", opacity: v === 100 ? 1 : .5 }, s);
+    const t = svg("text", { x: L - 6, y: y(v) + 4, "text-anchor": "end", "class": "axis-t" }, s); t.textContent = v;
+  });
+  PXD.forEach((d, i) => { if (narrow && i % 2 === 1) return; const t = svg("text", { x: x(i), y: H - 8, "text-anchor": "middle", "class": "axis-t" }, s); t.textContent = d; });
+  PX.forEach((p, k) => {
+    const pts = idx[k].map((v, i) => x(i) + "," + y(v)).join(" ");
+    svg("polyline", { points: pts, fill: "none", stroke: p.color, "stroke-width": 2, "stroke-dasharray": p.dash, "stroke-linejoin": "round", "stroke-linecap": "round" }, s);
+    if (p.id !== "vt") idx[k].forEach((v, i) => {
+      const c = p.id === "nv" ? svg("circle", { cx: x(i), cy: y(v), r: 3.5, fill: p.color, stroke: "var(--surface)", "stroke-width": 2 }, s)
+        : svg("rect", { x: x(i) - 3.5, y: y(v) - 3.5, width: 7, height: 7, fill: p.color, stroke: "var(--surface)", "stroke-width": 2, transform: "rotate(45 " + x(i) + " " + y(v) + ")" }, s);
+      const tt = svg("title", {}, c); tt.textContent = p.name + ", " + PXD[i] + ": " + p.v[i].toFixed(2) + " (index " + v.toFixed(1) + ")";
+    });
+  });
+  // end labels, nudged apart
+  const ends = PX.map((p, k) => ({ p: p, k: k, y: y(idx[k][idx[k].length - 1]) })).sort((a, b) => a.y - b.y);
+  for (let i = 1; i < ends.length; i++) if (ends[i].y - ends[i - 1].y < 15) ends[i].y = ends[i - 1].y + 15;
+  ends.forEach(e => {
+    const v = idx[e.k][idx[e.k].length - 1], t = svg("text", { x: W - R + 8, y: e.y + 4, "class": "px-l", fill: "var(--ink)" }, s);
+    t.textContent = (narrow ? e.p.name.split(" ")[0] : e.p.name) + " " + Math.round(v);
+  });
+}
+function buildPriceTable() {
+  const tb = $("#pxtable"); tb.textContent = "";
+  const h = node("tr"); ["Close"].concat(PX.map(p => p.name + " (US$)")).forEach(c => h.append(node("th", "", c))); tb.append(node("thead", "")); tb.firstChild.append(h);
+  const body = node("tbody"); PXD.forEach((d, i) => { const r = node("tr"); r.append(node("td", "", d)); PX.forEach(p => r.append(node("td", "p", p.v[i].toFixed(2) + " (" + Math.round(p.v[i] / p.v[0] * 100) + ")"))); body.append(r); }); tb.append(body);
+  const cap = node("caption", "", "Daily closes, Yahoo (tier 3). Number in brackets: index, 4 Nov close = 100."); cap.style.cssText = "text-align:left;color:var(--muted);font-size:12.5px;padding:6px 10px;caption-side:bottom";
+  tb.prepend(cap);
+}
+function buildPxLegend() {
+  const lg = $("#pxlegend"); lg.textContent = "";
+  PX.forEach(p => {
+    const k = node("span", "key"); const sv = svg("svg", { width: 28, height: 10, "aria-hidden": "true" }, k);
+    svg("line", { x1: 0, x2: 28, y1: 5, y2: 5, stroke: p.color, "stroke-width": 2, "stroke-dasharray": p.dash }, sv);
+    k.append(document.createTextNode(p.name + (p.id === "vt" ? " · reference" : ""))); lg.append(k);
+  });
+  lg.append(node("span", "key", "Index, 4 Nov close = 100. Yahoo closes (tier 3). Cause of the falls not verified."));
+}
+
+/* ---------- start ---------- */
+buildKpis(); buildThreads(); buildLegend(); buildEvList(); buildTableControls(); setupControls();
+$("#clearthread").addEventListener("click", () => { S.thread = null; applyFilters(); });
+buildTimeline(); buildCards(); buildPlot(); renderTable(); buildPxLegend(); buildPrices(); buildPriceTable();
+const widths = {};
+function watch(id, fn) {
+  const el = $(id); widths[id] = el.clientWidth;
+  if (!window.ResizeObserver) return;
+  new ResizeObserver(() => { const w = el.clientWidth; if (Math.abs(w - widths[id]) > 2) { widths[id] = w; fn(); } }).observe(el);
+}
+watch("#tl", buildTimeline); watch("#areas", () => { buildCards(); updateUI(curMs(), true); }); watch("#plot", buildPlot); watch("#px", buildPrices);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+{
+ "max_age_hours": 6,
+ "mode": "page_script",
+ "weather_module": "ammanford/weather/refresh_weather.py",
+ "var_names": {"CYW": "W"}
+}

@@ -1,0 +1,5 @@
+{
+ "max_age_hours": 6,
+ "mode": "page_script",
+ "weather_module": "neath-port-talbot/weather/refresh_weather.py"
+}

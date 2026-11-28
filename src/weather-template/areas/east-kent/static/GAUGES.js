@@ -1,0 +1,1 @@
+{"1003SO":{n:"Great Stour at West Gate Gardens, Canterbury",lo:0.232,hi:0.95,max:1.472},"E3826":{n:"Great Stour at Fordwich",lo:1.341,hi:2.75,max:3.14},"E3810":{n:"River Stour at Sandwich Quay",tidal:1,max:3.348}}

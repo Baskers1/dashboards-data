@@ -1,0 +1,59 @@
+{
+ "title": "West Herts · Weather",
+ "h1_html": "West Herts · Weather",
+ "sections": [
+  "weather",
+  "air",
+  "rivers",
+  "floods",
+  "sewage",
+  "walks"
+ ],
+ "parts": [
+  "00-style.css",
+  "01-style.css",
+  "02-clockcss.css",
+  "08-layout.css",
+  "03-script.js",
+  "app.js",
+  "05-script.js",
+  "06-viz-css.css",
+  "07-viz-js.js"
+ ],
+ "static_blocks": [
+  "TABS",
+  "AREAS",
+  "WALKS",
+  "WSETS",
+  "COUNTY",
+  "AIRLL",
+  "SITE"
+ ],
+ "data_blocks": [
+  "LOCS",
+  "AIR",
+  "RIVERS",
+  "FLOODS",
+  "SPILLS"
+ ],
+ "about": {
+  "rivers": "<details class=\"about\"><summary>About this data</summary><p class=\"small\" style=\"margin:8px 0 0\">Readings every 15 minutes from the Environment Agency's flood monitoring service (Open Government Licence v3.0, beta service). Each station reports on its own scale in metres, so levels cannot be compared between stations. The shaded band on each chart is the Environment Agency's typical range for that station; the line is the last 24 hours. The Gade, Chess and Colne rise and fall quickly after heavy rain. This is a level reading, not a flood forecast. Check <a href=\"https://check-for-flooding.service.gov.uk/\" target=\"_blank\" rel=\"noopener\">GOV.UK Check for flooding</a> for official warnings.</p></details>",
+  "floods": "<details class=\"about\"><summary>About this data</summary><p class=\"small\" style=\"margin:8px 0 0\">Flood alerts and warnings published by the Environment Agency for places within 12 km of Croxley Green and Rickmansworth, where the Colne, Gade and Chess flow. Alerts and warnings change quickly, so check <a href=\"https://check-for-flooding.service.gov.uk/\" target=\"_blank\" rel=\"noopener\">GOV.UK Check for flooding</a> for the current position.</p></details>",
+  "sewage": "<details class=\"about\"><summary>About this data</summary><p class=\"sans\" style=\"margin:0 0 10px\">Thames Water publishes near-real-time data from the event duration monitors on its storm overflows. This section lists the monitored overflows that discharge to the Colne, Colne Brook, Chess and Misbourne around Croxley Green and Rickmansworth.</p>\n<div style=\"display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px\"><a class=\"btn\" style=\"text-decoration:none;background:var(--accent);color:var(--accent-fg);border-color:var(--accent)\" href=\"https://www.thameswater.co.uk/edm-map\" target=\"_blank\" rel=\"noopener\">Thames Water live map</a><a class=\"btn\" style=\"text-decoration:none\" href=\"https://www.streamwaterdata.co.uk/pages/storm-overflows-data\" target=\"_blank\" rel=\"noopener\">Stream Water Data hub</a><a class=\"btn\" style=\"text-decoration:none\" href=\"https://www.thameswater.co.uk/about-us/performance/river-health/frequently-asked-questions/information-about-monitors\" target=\"_blank\" rel=\"noopener\">About the monitors</a></div>\n<ul class=\"sans small\" style=\"margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:2px\">\n<li><b>Discharging:</b> the monitor reports that the overflow is operating now.</li>\n<li><b>Finished:</b> the monitor reported a discharge that has stopped. The list shows when it ended and how long it ran.</li>\n<li><b>Offline:</b> the monitor is not reporting, so its status is unknown.</li>\n</ul>\n<p class=\"small\" style=\"margin:8px 0 0\">Thames Water says its monitors are sensitive and can be set off by things such as a weed moving in front of the sensor, so a reading indicates a discharge rather than confirming one. The data does not measure water quality or volume, and a record here is not a swim-safety rating.</p>\n</details>",
+  "walks": "<details class=\"about\"><summary>About these walks</summary><p class=\"small\">Distances and times are approximate, and the links go to other websites whose routes may differ a little from the ones described here. The nearest stations are on the Metropolitan line (Croxley, Rickmansworth, Moor Park, Chorleywood, Chesham). Check Transport for London and Hertfordshire's Intalink for train and bus times before setting off. The small tiles beside each walk are simple illustrations of its type (waterside or fields and woods), not photographs of the route.</p></details>"
+ },
+ "photos": "files",
+ "null_blocks": [
+  "OUTLOOK"
+ ],
+ "code": {
+  "rivers": "code/rivers.js",
+  "sewage": "code/sewage.js",
+  "viz": "code/viz.js",
+  "vizcore": "parts/viz-core.js",
+  "vizcss": "parts/viz-core.css"
+ },
+ "extra": {
+  "weather": " The hour-by-hour chart fills in through the day as each hourly refresh adds the next hours."
+ }
+}

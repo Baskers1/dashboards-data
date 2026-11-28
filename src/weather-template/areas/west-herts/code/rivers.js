@@ -1,0 +1,19 @@
+function rvSpark(v,lo,hi){var mn=Math.min(lo,Math.min.apply(0,v)),mx=Math.max(hi,Math.max.apply(0,v)),pad=(mx-mn)*.06,a=mn-pad,b=mx+pad,W=260,H=40,Y=function(x){return H-2-(x-a)/(b-a)*(H-4)},d="";
+ v.forEach(function(x,i){d+=(i?"L":"M")+(i*W/(v.length-1)).toFixed(1)+" "+Y(x).toFixed(1)+" "});
+ return '<svg viewBox="0 0 '+W+' '+H+'" preserveAspectRatio="none" role="img" aria-label="Last 24 hours of level readings against the typical range"><rect x="0" y="'+Y(hi).toFixed(1)+'" width="'+W+'" height="'+(Y(lo)-Y(hi)).toFixed(1)+'" fill="var(--chip)"/><path d="'+d+'" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linejoin="round" vector-effect="non-scaling-stroke"/></svg>'}
+function floodActive(){return (FLOODS.items||[]).filter(function(x){return !/no longer in force/i.test(x[0])})}
+function renderFloodTop(){var el=$("floodtop");if(!el)return;var FA=floodActive();
+ if(!FA.length){el.hidden=true;el.innerHTML="";return}
+ var esc=function(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")},
+  warn=FA.some(function(x){return /warning/i.test(x[0])}),
+  h=FA.length>1?"Environment Agency flood alerts and warnings in force ("+FA.length+")":warn?"Environment Agency flood warning in force":"Environment Agency flood alert in force";
+ el.innerHTML='<h2 id="fth">'+h+'</h2><ul>'+FA.map(function(x){return '<li><b>'+esc(x[0])+'</b><br><span class="small">'+esc(x[1])+'</span></li>'}).join("")+'</ul><p class="small">Covers the area from Tring to Watford and the Chilterns, not just this town. Environment Agency data checked '+fmMs(FLOODS.asofMs)+(Date.now()-FLOODS.asofMs>108e5?' <b>and now out of date, so check GOV.UK</b>':'')+'. <a href="https://check-for-flooding.service.gov.uk/" target="_blank" rel="noopener">GOV.UK Check for flooding</a> has the full detail and area maps. <a class="jl" href="#fl">Flood Warnings section on this page</a>.</p>';
+ el.hidden=false;
+ el.querySelectorAll(".jl").forEach(function(a){a.onclick=function(e){var t=$(a.getAttribute("href").slice(1));if(!t)return;e.preventDefault();t.scrollIntoView()}})}
+function renderRivers(){var R=RIVERS,el=$("rivers");if(!el)return;
+ var o="",st=R.st.filter(function(s){return s.v&&s.v.length}).sort(function(a,b){return dist(LAT,LON,a.lat,a.lon)-dist(LAT,LON,b.lat,b.lon)});
+ st.forEach(function(s,ix){if(ix===2)o+='<details class="more"><summary>Show the other '+(st.length-2)+' stations</summary>';var v=s.v,now=v[v.length-1],mn=Math.min.apply(0,v),mx=Math.max.apply(0,v),inr=now>=s.lo&&now<=s.hi,d=dist(LAT,LON,s.lat,s.lon);
+  o+='<div class="rv"><div class="top"><div><b>'+s.r+', '+s.n+'</b><div class="small">'+d.toFixed(1)+' km from '+LOC.name+' · station '+s.id+'</div></div><div style="text-align:right"><span class="lv">'+now.toFixed(2)+' m</span><br><span class="tag '+(inr?"Within":"Outside")+'">'+(now<s.lo?"Below typical range":now>s.hi?"Above typical range":"Within typical range")+'</span></div></div>'+rvSpark(v,s.lo,s.hi)+'<div class="small">Typical range '+s.lo+'–'+s.hi+' m · last 24 hours '+mn.toFixed(2)+'–'+mx.toFixed(2)+' m · reading at '+fmMs(s.t)+'</div></div>'});
+ if(st.length>2)o+='</details>';el.innerHTML=o;
+ var F=FLOODS,f=$("floods"),FA=floodActive();
+ f.innerHTML=FA.length?'<b>Environment Agency flood alerts and warnings in force across the area this dashboard covers:</b><ul class="wq" style="list-style:none;margin:6px 0 0;padding:0;display:flex;flex-direction:column;gap:6px">'+FA.map(function(x){var e=function(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")};return '<li><span><b>'+e(x[0])+'</b><br><span class="small">'+e(x[1])+'</span></span></li>'}).join("")+'</ul>':'<b>No flood alerts or warnings are in force across the area this dashboard covers</b> <span class="small">(Environment Agency, checked '+fmMs(F.asofMs)+(Date.now()-F.asofMs>108e5?' <b>and now out of date, so check GOV.UK</b>':'')+').</span>'}

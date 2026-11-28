@@ -1,0 +1,1 @@
+{"Margate, The Bay":3,"Walpole Bay, Margate":3,"Botany Bay, Broadstairs":4,"Broadstairs, Viking Bay":3,"Ramsgate Sands":4,"Ramsgate Western Undercliffe":4,"Sandwich Bay":3,"Westbrook Bay, Margate":4,"Fulsam Rock, Margate":4,"Joss Bay, Broadstairs":4,"Stone Bay, Broadstairs":3,"Deal Castle":3}

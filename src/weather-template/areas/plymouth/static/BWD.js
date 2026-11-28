@@ -1,0 +1,1 @@
+{"Thurlestone South":4,"Thurlestone North":4,"Bantham":4,"Bigbury-on-Sea South":4,"Bigbury-on-Sea North":4,"Challaborough":4,"Coastguards Beach, Erme Estuary":1,"Mothecombe":3,"Wembury":3,"Bovisand":4,"Plymouth Hoe East":4,"Plymouth Hoe West":4,"Plymouth Firestone Bay":4,"Kingsand":3,"Cawsand":4,"Tregonhawke":4,"Sharrow":4,"Portwrinkle":4,"Downderry":4,"Seaton (Cornwall)":4}

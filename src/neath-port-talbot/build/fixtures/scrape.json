@@ -1,0 +1,471 @@
+{
+ "meta": {
+  "area": "neath-port-talbot",
+  "fetched_at": "2026-11-03T06:58:12Z",
+  "days": 90,
+  "sources_ok": [
+   "gwynhall",
+   "ticketsolve",
+   "npt-council",
+   "margam",
+   "wherecanwego"
+  ],
+  "sources_failed": [],
+  "counts": {}
+ },
+ "events": [
+  {
+   "id": "g1",
+   "title": "Test Panto: Jack and the Beanstalk",
+   "dates": [
+    "2026-12-12",
+    "2026-12-13",
+    "2026-12-14",
+    "2026-12-15",
+    "2026-12-16"
+   ],
+   "time": "19:00",
+   "venue": "Gwyn Hall",
+   "town": "Neath",
+   "url": "https://example.org/gwyn/panto",
+   "booking_url": null,
+   "price": "£14",
+   "category": "Pantomime",
+   "source": "gwynhall",
+   "source_kind": "venue"
+  },
+  {
+   "id": "g2",
+   "title": "Test Tribute Night",
+   "dates": [
+    "2026-11-06"
+   ],
+   "time": "19:30",
+   "venue": "Gwyn Hall",
+   "town": "Neath",
+   "url": "https://example.org/gwyn/tribute",
+   "booking_url": "https://example.org/gwyn/tribute/book",
+   "price": "£22",
+   "category": "Music",
+   "source": "gwynhall",
+   "source_kind": "venue"
+  },
+  {
+   "id": "g3",
+   "title": "Test Comedy Club",
+   "dates": [
+    "2026-11-13"
+   ],
+   "time": "20:00",
+   "venue": "Gwyn Hall",
+   "town": "Neath",
+   "url": "https://example.org/gwyn/comedy",
+   "booking_url": null,
+   "price": "£15",
+   "category": "Comedy",
+   "source": "gwynhall",
+   "source_kind": "venue"
+  },
+  {
+   "id": "g4",
+   "title": "Test Film: The Fake Reel",
+   "dates": [
+    "2026-11-04",
+    "2026-11-11"
+   ],
+   "time": "14:00",
+   "venue": "Gwyn Hall Cinema",
+   "town": "neath",
+   "url": "https://example.org/gwyn/film",
+   "booking_url": null,
+   "price": "£6.50",
+   "category": "Cinema",
+   "source": "gwynhall",
+   "source_kind": "venue"
+  },
+  {
+   "id": "t1",
+   "title": "Test Opera Gala",
+   "dates": [
+    "2026-11-20"
+   ],
+   "time": "19:30",
+   "venue": "Yr Aelwyd",
+   "town": "Port Talbot",
+   "url": "https://example.org/tickets/opera",
+   "booking_url": null,
+   "price": "£18",
+   "category": "Opera",
+   "source": "ticketsolve",
+   "source_kind": "venue"
+  },
+  {
+   "id": "t2",
+   "title": "Test Family Matinee",
+   "dates": [
+    "2026-11-21"
+   ],
+   "time": "14:00",
+   "venue": "Yr Aelwyd",
+   "town": "Port Talbot",
+   "url": "https://example.org/tickets/matinee",
+   "booking_url": null,
+   "price": "£10",
+   "category": "Family",
+   "source": "ticketsolve",
+   "source_kind": "venue"
+  },
+  {
+   "id": "t3",
+   "title": "Test Orangery Supper Talk",
+   "dates": [
+    "2026-11-27"
+   ],
+   "time": "18:30",
+   "venue": "The Orangery, Margam Park",
+   "town": "Margam",
+   "url": "https://example.org/tickets/supper",
+   "booking_url": null,
+   "price": "£25",
+   "category": "Talk",
+   "source": "ticketsolve",
+   "source_kind": "venue"
+  },
+  {
+   "id": "c1",
+   "title": "Test Library Craft Club",
+   "dates": [
+    "2026-11-05",
+    "2026-11-12",
+    "2026-11-19"
+   ],
+   "time": "10:30",
+   "venue": "Neath Library",
+   "town": "Neath",
+   "url": "https://example.org/council/craft",
+   "booking_url": null,
+   "price": "Free",
+   "category": "Workshop",
+   "source": "npt-council",
+   "source_kind": "council"
+  },
+  {
+   "id": "c2",
+   "title": "Test Story Time",
+   "dates": [
+    "2026-11-07"
+   ],
+   "time": "11:00",
+   "venue": "Port Talbot Library",
+   "town": "Taibach",
+   "url": "https://example.org/council/story",
+   "booking_url": null,
+   "price": "Free",
+   "category": "Children",
+   "source": "npt-council",
+   "source_kind": "council"
+  },
+  {
+   "id": "c3",
+   "title": "Test Seafront Fun Day",
+   "dates": [
+    "2026-11-14"
+   ],
+   "time": "11:00",
+   "venue": "Aberavon Seafront",
+   "town": "Aberavon Beach",
+   "url": "https://example.org/council/fun",
+   "booking_url": null,
+   "price": "Free",
+   "category": "Community",
+   "source": "npt-council",
+   "source_kind": "council"
+  },
+  {
+   "id": "c4",
+   "title": "Test Skewen Coffee Morning",
+   "dates": [
+    "2026-11-10"
+   ],
+   "time": "10:00",
+   "venue": "Skewen Community Hall",
+   "town": "Skewen",
+   "url": "https://example.org/council/coffee",
+   "booking_url": null,
+   "price": null,
+   "category": null,
+   "source": "npt-council",
+   "source_kind": "council"
+  },
+  {
+   "id": "c5",
+   "title": "Test Glynneath Walk",
+   "dates": [
+    "2026-11-08"
+   ],
+   "time": "10:00",
+   "venue": "Glynneath Library",
+   "town": "Glynneath",
+   "url": "https://example.org/council/walk",
+   "booking_url": null,
+   "price": "Free",
+   "category": "Walk",
+   "source": "npt-council",
+   "source_kind": "council"
+  },
+  {
+   "id": "c6",
+   "title": "Test Ystalyfera Remembrance",
+   "dates": [
+    "2026-11-08"
+   ],
+   "time": "10:50",
+   "venue": "War Memorial",
+   "town": "Ystalyfera",
+   "url": "https://example.org/council/rem",
+   "booking_url": null,
+   "price": "Free",
+   "category": null,
+   "source": "npt-council",
+   "source_kind": "council"
+  },
+  {
+   "id": "c7",
+   "title": "Test Pontardawe Market",
+   "dates": [
+    "2026-11-14"
+   ],
+   "time": "09:00",
+   "venue": "Pontardawe Town Centre",
+   "town": "Pontardawe, Neath Port Talbot",
+   "url": "https://example.org/council/market",
+   "booking_url": null,
+   "price": null,
+   "category": "Market",
+   "source": "npt-council",
+   "source_kind": "council"
+  },
+  {
+   "id": "c8",
+   "title": "Test Briton Ferry Quiz",
+   "dates": [
+    "2026-11-19"
+   ],
+   "time": "19:30",
+   "venue": "Briton Ferry Hall",
+   "town": "Briton Ferry",
+   "url": "https://example.org/council/quiz",
+   "booking_url": null,
+   "price": "£2",
+   "category": "Quiz",
+   "source": "npt-council",
+   "source_kind": "council"
+  },
+  {
+   "id": "c9",
+   "title": "Test Planning Committee",
+   "dates": [
+    "2026-11-24"
+   ],
+   "time": "14:00",
+   "venue": "Civic Centre",
+   "town": "Port Talbot",
+   "url": "https://example.org/council/planning",
+   "booking_url": null,
+   "price": null,
+   "category": "Council meeting",
+   "source": "npt-council",
+   "source_kind": "council"
+  },
+  {
+   "id": "m1",
+   "title": "Test Margam Light Trail",
+   "dates": [
+    "2026-11-20",
+    "2026-11-21",
+    "2026-11-22",
+    "2026-11-23",
+    "2026-11-24",
+    "2026-11-25",
+    "2026-11-26"
+   ],
+   "time": "17:00",
+   "venue": "Margam Country Park",
+   "town": "Margam",
+   "url": "https://example.org/margam/lights",
+   "booking_url": null,
+   "price": "£12",
+   "category": "Family",
+   "source": "margam",
+   "source_kind": "venue"
+  },
+  {
+   "id": "m2",
+   "title": "Test Christmas Market",
+   "dates": [
+    "2026-12-05",
+    "2026-12-06"
+   ],
+   "time": "10:00",
+   "venue": "Margam Country Park",
+   "town": "Margam",
+   "url": "https://example.org/margam/xmas",
+   "booking_url": null,
+   "price": null,
+   "category": "Market",
+   "source": "margam",
+   "source_kind": "venue"
+  },
+  {
+   "id": "m3",
+   "title": "Test Winter Exhibition",
+   "dates": [
+    "2026-11-02",
+    "2026-11-03",
+    "2026-11-04",
+    "2026-11-05",
+    "2026-11-06",
+    "2026-11-07",
+    "2026-11-08",
+    "2026-11-09"
+   ],
+   "time": null,
+   "venue": "Margam Castle",
+   "town": "Margam",
+   "url": "https://example.org/margam/exhib",
+   "booking_url": null,
+   "price": "Free",
+   "category": "Exhibition",
+   "source": "margam",
+   "source_kind": "venue"
+  },
+  {
+   "id": "w1",
+   "title": "Test Tribute Night",
+   "dates": [
+    "2026-11-06"
+   ],
+   "time": "19:30",
+   "venue": "Gwyn Hall, Neath",
+   "town": "Neath",
+   "url": "https://example.org/wcwg/dup",
+   "booking_url": null,
+   "price": null,
+   "category": "Music",
+   "source": "wherecanwego",
+   "source_kind": "aggregator"
+  },
+  {
+   "id": "w2",
+   "title": "Test Cwmafan Bonfire",
+   "dates": [
+    "2026-11-07"
+   ],
+   "time": "18:00",
+   "venue": "Cwmafan Rugby Club",
+   "town": "Cwmafan",
+   "url": "https://example.org/wcwg/bonfire",
+   "booking_url": null,
+   "price": "£3",
+   "category": "Family",
+   "source": "wherecanwego",
+   "source_kind": "aggregator"
+  },
+  {
+   "id": "w3",
+   "title": "Test Resolven Gig",
+   "dates": [
+    "2027-01-15"
+   ],
+   "time": "20:00",
+   "venue": "Resolven Hall",
+   "town": "Resolven",
+   "url": "https://example.org/wcwg/gig",
+   "booking_url": null,
+   "price": "£8",
+   "category": "Gig",
+   "source": "wherecanwego",
+   "source_kind": "aggregator"
+  },
+  {
+   "id": "w4",
+   "title": "Test Old Event",
+   "dates": [
+    "2026-10-01"
+   ],
+   "time": "19:00",
+   "venue": "Gwyn Hall",
+   "town": "Neath",
+   "url": "https://example.org/wcwg/old",
+   "booking_url": null,
+   "price": null,
+   "category": null,
+   "source": "wherecanwego",
+   "source_kind": "aggregator"
+  },
+  {
+   "id": "w5",
+   "title": "Test Bad Link Event",
+   "dates": [
+    "2026-11-15"
+   ],
+   "time": "19:00",
+   "venue": "Somewhere",
+   "town": "Neath",
+   "url": "javascript:alert(1)",
+   "booking_url": null,
+   "price": null,
+   "category": null,
+   "source": "wherecanwego",
+   "source_kind": "aggregator"
+  },
+  {
+   "id": "w6",
+   "title": "Test No Link Event",
+   "dates": [
+    "2026-11-15"
+   ],
+   "time": "19:00",
+   "venue": "Somewhere",
+   "town": "Neath",
+   "url": null,
+   "booking_url": null,
+   "price": null,
+   "category": null,
+   "source": "wherecanwego",
+   "source_kind": "aggregator"
+  },
+  {
+   "id": "w7",
+   "title": "Test Bad Date Event",
+   "dates": [
+    "15/11/2026"
+   ],
+   "time": "19:00",
+   "venue": "Somewhere",
+   "town": "Neath",
+   "url": "https://example.org/wcwg/baddate",
+   "booking_url": null,
+   "price": null,
+   "category": null,
+   "source": "wherecanwego",
+   "source_kind": "aggregator"
+  },
+  {
+   "id": "w8",
+   "title": "Test Pontardawe Choir Concert",
+   "dates": [
+    "2026-12-19"
+   ],
+   "time": "19:00",
+   "venue": "Pontardawe Arts Centre",
+   "town": "Pontardawe",
+   "url": "https://example.org/wcwg/choir",
+   "booking_url": null,
+   "price": "£10",
+   "category": "Concert",
+   "source": "wherecanwego",
+   "source_kind": "aggregator"
+  }
+ ]
+}

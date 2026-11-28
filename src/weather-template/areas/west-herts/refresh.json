@@ -1,0 +1,12 @@
+{
+ "max_age_hours": 6,
+ "weather_module": "west-herts/weather/refresh_weather.py",
+ "rivers": {
+  "2849TH": "river_gade_croxley",
+  "2859TH": "river_chess_rickmansworth",
+  "2862TH": "river_colne_moor_lane",
+  "2830TH": "river_colne_watford"
+ },
+ "floods": "flood_warnings",
+ "spills": {"source": "storm_overflows", "keep": "colne|chess|misbourne"}
+}

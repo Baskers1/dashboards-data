@@ -1,0 +1,25 @@
+/* East Kent: its 60+ accessibility styles (18px base text, 48px tap targets), without the blanket
+   15px rules that shrank the main temperature (review finding F2) */
+html{-webkit-text-size-adjust:100%}
+body{font-size:18px!important;line-height:1.6!important}
+p,li,td,th,dd,dt,label,input,select,textarea,button,summary{line-height:1.5}
+button,summary,[role=button],[role=tab],select,input:not([type=checkbox]):not([type=radio]),textarea{min-height:48px;min-width:44px;box-sizing:border-box}
+button,select,input,textarea{font-size:max(1rem,16px)}
+a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,[tabindex]:focus-visible,[role=button]:focus-visible,[role=tab]:focus-visible{outline:3px solid var(--accent,var(--focus,#0b57d0))!important;outline-offset:2px!important}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+a.skip.jl{min-height:48px!important;min-width:44px!important;display:inline-flex!important;align-items:center;justify-content:center;box-sizing:border-box}
+a.jl{min-height:48px!important;min-width:44px!important;display:inline-flex!important;align-items:center;justify-content:center;box-sizing:border-box}
+summary{min-height:48px!important;min-width:44px!important;display:inline-flex!important;align-items:center;justify-content:center;box-sizing:border-box}
+a.maplink{min-height:48px!important;min-width:44px!important;display:inline-flex!important;align-items:center;justify-content:center;box-sizing:border-box}
+a.btn{min-height:48px!important;min-width:44px!important;display:inline-flex!important;align-items:center;justify-content:center;box-sizing:border-box}
+button{min-height:48px!important;min-width:44px!important;display:inline-flex!important;align-items:center;justify-content:center;box-sizing:border-box}
+button.more{min-height:48px!important;min-width:44px!important;display:inline-flex!important;align-items:center;justify-content:center;box-sizing:border-box}
+p.small>a{display:inline-block;min-height:44px;line-height:44px;box-sizing:border-box;padding-block:0}
+/* East Kent: river gauge cards, six-tile Right now, flood alert banner */
+.glance.g6 .g:first-of-type{grid-column:auto}
+.gauges{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:8px}
+.gg{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 12px;font-family:system-ui,sans-serif;min-width:0}
+@media (min-width:760px){.glance.g6{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.floodtop.fa{border-color:var(--fair)}
+.floodtop.fa h2{color:var(--fair)}
+@media (min-width:1000px){.glance.g6{grid-template-columns:repeat(6,minmax(0,1fr))}}

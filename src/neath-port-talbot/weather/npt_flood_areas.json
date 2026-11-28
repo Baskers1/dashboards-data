@@ -1,0 +1,19 @@
+{
+ "_source": "DataMapWales WFS inspire-nrw:NRW_FLOOD_WARNING (fwis_code, fwa_name), filtered to Neath Port Talbot by hand, 4 Nov 2026. OGL: Contains Natural Resources Wales information.",
+ "areas": {
+  "102FWF111A": "River Neath at Pont Walby, Glyn-Neath",
+  "102FWF111B": "River Neath at Maes y Marchog and Bethel Road, Glyn-Neath",
+  "102FWF110A": "River Neath at Resolven",
+  "102FWF110B": "Clydach Brook at Resolven",
+  "102FWF112A": "River Neath at Aberdulais",
+  "102FWF112B": "River Neath at Neath",
+  "102FWT408A": "Tidal area at Briton Ferry",
+  "102FWT407A": "Tidal area at Baglan Moors and Aberavon",
+  "102FWF109B": "River Afan at Port Talbot",
+  "102FWF109A": "River Ffrwdwyllt at Taibach, Port Talbot",
+  "102FWF119A": "River Tawe at Ynysderw Road and Cwm-Du, Pontardawe",
+  "102FWF119B": "River Tawe at Industrial Estate and Upper Clydach, Pontardawe",
+  "102FWF118A": "River Tawe at Ystalyfera",
+  "102FWF121A": "River Tawe at Godre'r-graig"
+ }
+}

@@ -1,0 +1,1 @@
+{"tablabel": "West Herts", "land": "Fields & woods", "rng": "typical", "scene": "chilterns", "airnote": "There is no Defra station in these towns, so this is a regional picture. Borehamwood Meadow Park is the nearest station with current readings but does not measure ozone, so ozone comes from Hillingdon."}

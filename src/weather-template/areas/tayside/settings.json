@@ -1,0 +1,67 @@
+{
+ "title": "Tayside · Weather",
+ "h1_html": "Tayside · Weather",
+ "sections": [
+  "weather",
+  "air",
+  "tides",
+  "bathing",
+  "floods",
+  "rivers",
+  "sewage",
+  "walks"
+ ],
+ "parts": [
+  "00-style.css",
+  "01-style.css",
+  "02-clockcss.css",
+  "08-layout.css",
+  "03-script.js",
+  "app.js",
+  "05-script.js",
+  "06-viz-css.css",
+  "07-viz-js.js"
+ ],
+ "static_blocks": [
+  "TABS",
+  "AREAS",
+  "WALKS",
+  "WSETS",
+  "COUNTY",
+  "AIRLL",
+  "SITE",
+  "TIDEST",
+  "AQL"
+ ],
+ "data_blocks": [
+  "LOCS",
+  "AIR",
+  "RIVERS",
+  "FLOODS",
+  "SPILLS",
+  "TIDES",
+  "BATHING"
+ ],
+ "null_blocks": [
+  "OUTLOOK"
+ ],
+ "code": {
+  "rivers": "code/rivers.js",
+  "sewage": "code/sewage.js",
+  "vizcore": "code/viz.js",
+  "viz": "code/empty.js",
+  "vizcss": "code/viz.css",
+  "css": "code/area.css",
+  "extra": "code/coast.js"
+ },
+ "photos": "files",
+ "about": {
+  "tides": "<p class=\"small\" id=\"tidecredit\" style=\"margin:8px 0 0\">Tide times: <a href=\"https://www.tidetimes.org.uk/\" target=\"_blank\" rel=\"noopener\">TideTimes (tidetimes.org.uk)</a>, derived in part from UK Hydrographic Office data. For personal use only. Not for navigation.</p>",
+  "rivers": "<p class=\"small\" style=\"margin:8px 0 0\">Levels come from SEPA's water level service (provisional data, which SEPA says it cannot guarantee is current). Each station reports on its own scale in metres above its gauge datum, so levels cannot be compared between stations. SEPA's \"state\" compares the latest reading with the range previously recorded at that station. Station pages: <a href=\"https://waterlevels.sepa.org.uk/Station/14937\" target=\"_blank\" rel=\"noopener\">Tay at Ballathie</a>, <a href=\"https://waterlevels.sepa.org.uk/Station/14919\" target=\"_blank\" rel=\"noopener\">Dighty Water at Balmossie</a>.</p>",
+  "sewage": "<details class=\"about\"><summary>About this data</summary><p class=\"sans\" style=\"margin:0 0 10px\">Scottish Water publishes data from the event duration monitors on its storm overflows, and its overflow map updates hourly. This section lists the monitored overflows within about 20 km of the centre of the selected town, which mostly discharge to the Firth of Tay and the Dighty Water.</p>\n<div style=\"display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px\"><a class=\"btn\" style=\"text-decoration:none;background:var(--accent);color:var(--accent-fg);border-color:var(--accent)\" href=\"https://www.scottishwater.co.uk/Help-and-Resources/Open-Data/Overflow-Map-Data\" target=\"_blank\" rel=\"noopener\">Scottish Water overflow data</a></div>\n<ul class=\"sans small\" style=\"margin:0 0 10px;padding-left:1.1em;display:flex;flex-direction:column;gap:2px\">\n<li><b>Recent overflow:</b> Scottish Water's status for an overflow whose monitor recorded activity in the last 48 hours.</li>\n<li><b>No overflows:</b> the monitor reports no recent activity. Where an older event is in the feed, the list shows when it ended and how long it ran.</li>\n<li><b>No data available:</b> the monitor is not reporting, so its status is unknown.</li>\n</ul>\n<p class=\"small\" style=\"margin:8px 0 0\">Scottish Water says a status indicates that a monitor was activated and does not confirm that an overflow took place. The feed covers the last 48 hours and does not measure water quality. Area names are my shorthand from Scottish Water's asset names. Contains Scottish Water overflow map data.</p>\n</details>",
+  "walks": "<details class=\"about\"><summary>About these walks</summary><p class=\"small\">The Fife walks start across the Tay Road Bridge, so they suit a car or bus trip over the water. Distances and times are approximate (estimates are marked), and the links go to other websites whose routes may differ a little from the one described. ScotRail serves Dundee, Broughty Ferry, Monifieth, Barry Links and Carnoustie stations, and Xplore Dundee and Stagecoach run local buses. Check Traveline Scotland for times before setting off. The small tiles beside each walk are simple illustrations of its starting area, not photographs of the route.</p></details>"
+ },
+ "extra": {
+  "weather": " Source: Open-Meteo.com (CC BY 4.0). The hour-by-hour chart covers the full day."
+ }
+}

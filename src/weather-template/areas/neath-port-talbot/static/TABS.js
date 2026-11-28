@@ -1,0 +1,1 @@
+[["ne","Neath","neath","A"],["pt","Port Talbot","port-talbot","A"],["pd","Pontardawe","pontardawe","A"],["gl","Glynneath","glynneath","A"],["cw","Cwmafan","cwmafan","A"],["sk","Skewen","skewen","A"],["bf","Briton Ferry","briton-ferry","A"],["ry","Resolven","resolven","A"],["ba","Baglan","baglan","A"],["cy","Cymmer","cymmer","A"]]

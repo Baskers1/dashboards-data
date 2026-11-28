@@ -1,0 +1,1 @@
+{1:["Severe flood warning","dq4"],2:["Flood warning","dq3"],3:["Flood alert","dq2"],4:["Warning no longer in force","dq0"]}

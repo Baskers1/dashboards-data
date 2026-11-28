@@ -1,0 +1,334 @@
+{
+ "as_of": "2026-11-27",
+ "status_text": "I read the 14 daily briefs from the evening of 20 Nov to the morning of 27 Nov, and the weekly summary for 16 to 22 Nov. Two more forecasts were scored on 27 Nov, both correct: the EU's AI omnibus is in the Official Journal, and IonQ's purchase of Elisity has closed. Five of the 63 forecasts are now scored, all correct. One more was checked and left unscored. I changed none of the 63 probabilities, so they can be scored fairly against what was said on 11 Nov.",
+ "panel_intro": "Two forecasts were scored on 27 Nov from official documents. Both events had in fact happened before 11 Nov, so they show gaps in what I had read then more than they test the forecasts. The briefs from 20 to 27 Nov mostly cover a sharp fall and rebound in chip shares, wider credit spreads, and Nvidia's change of chief executive. Nothing below moves a probability: it either scores a forecast, does not bear on a forecast's deadline, or is a share price, which none of the 63 forecasts is about.",
+ "next_test": "EU AI Act watermarking grace period ends, 2 Dec (the omnibus that sets this date is now confirmed in force)",
+ "evidence_note": "Rows dated 18 Nov, 20 Nov or 27 Nov say which pages I opened myself on that day. Other figures are quoted from the daily briefs of 9 to 27 Nov, which name their sources; I did not re-open those pages myself. \"Primary\" means the source type.",
+ "changes": [
+  {
+   "what": "27 Nov: The EU's \"Digital Omnibus on AI\" is in the Official Journal. It is Regulation (EU) 2026/1744, dated 8 July 2026 and published on 24 July 2026. It amends the AI Act.",
+   "evidence": "Primary, opened on 27 Nov: the regulation's page on EUR-Lex, read through a page-fetch helper. The title, number and publication date at the top were read word for word. The articles further down came back as a summary, not word for word. A law-firm note of 4 Aug (tier 3) pointed me to the page.",
+   "areas": "5",
+   "effect": "Forecast scored correct: \"the EU omnibus is confirmed as published in the Official Journal\" (85%). It was published before 11 Nov; on 11 Nov I had not checked, and said so. The 2 Dec watermarking date in the calendar no longer depends on an \"if\". The 12-month forecast that high-risk duties are set for 2 Dec 2027 or later (85%) is not scored yet: the summary says 2 Dec 2027, but I did not read that article word for word. No probability changed."
+  },
+  {
+   "what": "27 Nov: IonQ completed its purchase of Elisity on 3 Nov 2026. IonQ paid in shares: about 32.2 million at closing, with up to about 4.3 million more depending on results to January 2028.",
+   "evidence": "Primary, opened on 27 Nov: IonQ's 8-K filed with the SEC on 5 Nov 2026, item 2.01, read through a page-fetch helper. The SEC's filing index, which I read directly, lists that 8-K with the same date and item. A direct request for the filing text was refused, so the helper's reading is the only one.",
+   "areas": "8",
+   "effect": "Forecast scored correct: \"IonQ's Elisity acquisition has closed\" (40%). The deal closed eight days before the forecast was made. I did not know that on 11 Nov, so the 40% reflects a gap in my reading, not a real test. No probability changed."
+  },
+  {
+   "what": "27 Nov: Chip shares fell hard on 20 Nov and bounced on 23 Nov. Yahoo shows Nvidia at 125.53 on 20 Nov, 165.05 on 23 Nov and 149.30 on 25 Nov. AMD closed at 406.03 on 25 Nov, close to its low for the month. The global fund closed at 147.54. US markets were shut on 26 Nov.",
+   "evidence": "Yahoo closes from the repository's price files (tier 3). The briefs could not confirm Nvidia's closes of 20 and 23 Nov from a second source and treat them as unverified. News headlines link the fall to the new US chip rule and to worries about AI valuations: tier 3, reported, not verified; I opened none of those articles.",
+   "areas": "1, 2",
+   "effect": "No change. None of my forecasts is about share prices. The cause of the fall is not established."
+  },
+  {
+   "what": "27 Nov: Credit spreads widened for a third week. The extra yield on high-yield debt reached 3.76% on 20 Nov and was 3.72% on 24 Nov, up from 3.47% on 18 Nov. The briefs call this unusual against the past year. The US 10-year yield eased to 4.85% on 25 Nov, from 5.04% on 19 Nov.",
+   "evidence": "FRED and the US Treasury (primary), quoted from the briefs of 23 to 27 Nov, not re-opened.",
+   "areas": "1",
+   "effect": "No change. Wider spreads make debt-funded building dearer, so the \"financing or policy shock\" thread still needs watching. No financing has been reported as pulled, and my searches this morning found no new AI financing of $10bn or more dated after 11 Nov. My 15% for a failed financing stands."
+  },
+  {
+   "what": "27 Nov: Nvidia's own release of 12 Nov confirms that Jensen Huang resigned as chief executive and left the board. Colette Kress is interim chief executive while the board searches for a successor. No permanent chief executive has been named.",
+   "evidence": "Nvidia's release of 12 Nov (primary), quoted from the brief of 27 Nov, not re-opened. That brief read the company page in full.",
+   "areas": "1, 2",
+   "effect": "No change. None of the 63 forecasts is about Nvidia's leadership. It stays a risk to watch."
+  },
+  {
+   "what": "27 Nov: Weekly check of official sources for the thinly covered areas. All seven were read: EIA (power), CISA (cyber), the Federal Register for the FCC (space) and for chip rules (AI policy), IFR (robotics), NIST (quantum) and Waymo (vehicles). Nothing found scores a forecast.",
+   "evidence": "Primary, opened by me on 27 Nov. EIA: still the outlook released 10 Nov, with US power generation up 2.7% in 2026; the next is due 8 Dec. CISA: the list released 25 Nov has 19 entries added since 20 Nov, among them flaws in an email-filtering service (N-able MailAssure), Cisco Expressway and a Juniper router product now owned by HPE. Federal Register, chip rules: one new rule, on 25 Nov, adds seven entities in Malaysia, Singapore and Thailand to the US Entity List; I read its summary only. Federal Register, FCC: eight documents since 13 Nov mention satellites, none about direct-to-device service or the EchoStar licences. IFR: newest release is still 12 Nov, with no 2026 installation figure. NIST: newest item is 19 Nov, on web-encryption guidance, with no draft HQC standard. Waymo: one new post, on 22 Nov, pausing rides in the San Francisco Bay Area for severe weather and resuming them from 25 Nov; no new city and no weekly rides figure.",
+   "areas": "3, 5–10",
+   "effect": "No change. The EIA figure sits inside the 2.0% to 3.5% range of the power forecast (85%), which is scored from the 8 Dec outlook. The CISA forecast was already scored correct on 18 Nov. The Entity List additions come a week after the chip rule that named the same three countries; they do not amend the January 2026 China chip rule, so the 6-month forecast on that rule (35%) is not scored. The Waymo new-city forecast (65%) and the NIST forecast (40%) stay open."
+  },
+  {
+   "what": "20 Nov: The US Commerce Department published a new rule on advanced chips on 19 Nov. It took effect the same day. It requires a licence to ship advanced chips to overseas data centres that supply large amounts of computing to companies based in China, Macau or other arms-embargoed countries. It adds a licence requirement for Indonesia, Malaysia, Singapore, Thailand and Brazil. It formally withdraws the unused 2025 \"AI diffusion\" rule.",
+   "evidence": "Primary, opened on 20 Nov: Federal Register document 2026-23529, \"Addressing Remote Access to Advanced Semiconductors\", an interim final rule from the Bureau of Industry and Security. I read the summary, the dates and parts of the full text. The text names the People's Republic of China. On 18 Nov this was a news report only; it is now in the Federal Register.",
+   "areas": "2, 5",
+   "effect": "Forecast scored correct: \"the US issues a new or amended rule on advanced-chip exports to China\" (20%). My reading: the rule is aimed at chips used for companies based in China, even where the chips are shipped to another country. The rule also rewrites the section that holds the January 2026 review policy for China; I did not compare the old and new wording, so the 6-month forecast on that rule (35%) is not scored yet. The rule took effect at once, before public comment, which is close to the \"wrong if\" test for the shock thread. No probability changed."
+  },
+  {
+   "what": "20 Nov: The Fed's minutes of its 27 to 28 Oct meeting, published 18 Nov, show a survey that expected a rate rise in December and another in March 2027. The minutes also say AI-related debt has grown fast, often through complex financing, and is concentrated in a few firms.",
+   "evidence": "Federal Reserve minutes (primary), quoted from the brief of 20 Nov, not re-opened. That brief read part of the page word for word and the rest as a summary.",
+   "areas": "All",
+   "effect": "No change. None of the 63 forecasts is about the Fed's decision. Dearer money and the Fed's remark on AI debt both bear on the \"financing or policy shock\" thread. The briefs cut their own call that the Fed holds in December from 70% to 35%. My 15% for a failed financing stands."
+  },
+  {
+   "what": "20 Nov: Shares fell further after Nvidia's results. Nvidia closed at 145.98 on 19 Nov, down from 155.46 on 17 Nov. AMD closed at 489.19 and the global fund at 147.17. The extra yield on high-yield debt rose to 3.47% on 18 Nov, from 3.34% on 16 Nov. The US 10-year yield was 5.04% on 19 Nov.",
+   "evidence": "Yahoo closes from the repository's price files (tier 3). Yields and spreads from the US Treasury and FRED (primary), quoted from the briefs of 19 and 20 Nov, not re-opened.",
+   "areas": "1, 2",
+   "effect": "No change. None of my forecasts is about share prices. The spread has widened for a second week, so the shock thread still needs watching. No financing has been reported as pulled."
+  },
+  {
+   "what": "20 Nov: Reports say the code editor Cursor confirmed a breach. An access key exposed at a supplier let an attacker place a harmful copy of an AI coding extension in Cursor's extension store on 29 Oct, for about 11 hours. Cursor gave its detailed account on 13 Nov.",
+   "evidence": "Tier 3, reported, not verified: two security news sites, opened on 20 Nov through a page-fetch helper. I did not find or open Cursor's own statement.",
+   "areas": "7",
+   "effect": "Not scored. The forecast \"another breach or supply-chain incident involving AI developer tools is publicly reported\" (75%) needs the vendor's own post, and the incident itself dates from before 11 Nov. A later run checks again."
+  },
+  {
+   "what": "20 Nov: Weekly check of official sources for the thinly covered areas. All seven were read: EIA (power), CISA (cyber), the Federal Register for the FCC (space) and for chip rules (AI policy), IFR (robotics), NIST (quantum) and Waymo (vehicles). Apart from the chip rule above, nothing found scores a forecast.",
+   "evidence": "Primary, opened by me on 20 Nov. EIA: the outlook released 10 Nov expects US power generation to grow 2.7% in 2026; the next is due 8 Dec. CISA: the list released 18 Nov has seven entries added since 11 Nov; none since 13 Nov is a firewall, VPN or email-gateway flaw; one, added 18 Nov, is in LiteLLM, a tool used to build AI software. Federal Register: five FCC documents since 11 Nov mention satellites, none about direct-to-device service or the EchoStar licences. IFR: newest release is still 12 Nov, on robot density, with no 2026 installation figure. NIST: newest item is 16 Nov, with no draft HQC standard. Waymo: newest blog post is still 10 Nov, with no new city and no weekly rides figure.",
+   "areas": "3, 5–10",
+   "effect": "No change. The EIA figure sits inside the 2.0% to 3.5% range of the power forecast (85%), which is scored from the 8 Dec outlook. The Waymo new-city forecast (65%) and the NIST forecast (40%) stay open."
+  },
+  {
+   "what": "18 Nov: Nvidia reported revenue of $115.8bn for the quarter that ended 25 Oct 2026. Its own outlook was $108.0bn.",
+   "evidence": "Primary, opened on 18 Nov: Nvidia's results release of 17 Nov on its newsroom site, read through a page-fetch helper. The income statement shows 115,844 in $ millions. The matching SEC filing (8-K of 17 Nov) exists but sec.gov refused the request, so I did not read it.",
+   "areas": "1, 2",
+   "effect": "Forecast scored correct: \"at or above $108.0bn\" (85%). The briefs' own call, \"above $108.0bn\" (60%), also came true; the briefs have not yet recorded it. Both are shown side by side below. No probability changed."
+  },
+  {
+   "what": "18 Nov: Nvidia expects about $130.0bn of revenue next quarter, plus or minus 3%. That quarter has an extra week, and the outlook assumes no data-centre chip revenue from China. Data-centre revenue this quarter was $107.6bn.",
+   "evidence": "Primary, the same Nvidia release, opened on 18 Nov.",
+   "areas": "1, 2, 4",
+   "effect": "No change. It fits continued heavy spending on AI capacity. No forecast is about Nvidia's guidance."
+  },
+  {
+   "what": "18 Nov: CISA added a Check Point flaw to its list of exploited flaws on 13 Nov. CISA's entry names Check Point Firewall and Security Gateway among the affected products.",
+   "evidence": "Primary, opened on 18 Nov: CISA's Known Exploited Vulnerabilities data file, released 17 Nov, entry CVE-2026-123039.",
+   "areas": "7",
+   "effect": "Forecast scored correct: \"CISA adds at least one more firewall, VPN or email-gateway flaw\" (90%). No probability changed."
+  },
+  {
+   "what": "18 Nov: Nvidia's chief executive, Jensen Huang, resigned on 12 Nov. The finance chief, Colette Kress, is interim chief executive. The results release of 17 Nov names her in that role.",
+   "evidence": "Nvidia's release of 12 Nov, quoted from the brief of 16 Nov, not re-opened. The interim title is in the 17 Nov results release, which I opened on 18 Nov (primary).",
+   "areas": "1, 2",
+   "effect": "No change. None of the 63 forecasts is about Nvidia's leadership. It is a risk to watch, alongside the Board investigation in the row dated 8 to 10 Nov below."
+  },
+  {
+   "what": "18 Nov: News reports say the US Commerce Department tightened limits on remote access to advanced AI chips. No such rule is in the Federal Register yet.",
+   "evidence": "News reports are tier 3: reported, not verified. Federal Register, primary, opened on 18 Nov: the only Bureau of Industry and Security document since 7 Nov is the 9 Nov extension already listed below.",
+   "areas": "5",
+   "effect": "Not scored. The forecast \"the US issues a new or amended rule on advanced-chip exports to China\" (20%) is scored only from the Federal Register. A later run checks again."
+  },
+  {
+   "what": "18 Nov: Share prices fell again. Nvidia closed at 155.46 on 17 Nov, before its results came out. The US 10-year yield was 5.10% on 17 Nov. The extra yield on high-yield debt rose to 3.34% on 16 Nov, from 3.20% on 12 Nov.",
+   "evidence": "Yahoo closes (tier 3). Yields and spreads from the US Treasury and FRED (primary), quoted from the briefs of 17 and 18 Nov, not re-opened.",
+   "areas": "1, 2",
+   "effect": "No change. The spread has turned back up, so the \"financing or policy shock\" thread still needs watching. My 15% for a failed financing stands."
+  },
+  {
+   "what": "14 Nov: Weekly check of official sources for the thinly covered areas. Read: the Federal Register (AI policy), IFR (robotics), NIST (quantum) and Waymo (vehicles). Read but out of date: EIA (power). Could not be read: CISA (cyber) and the FCC (space). Nothing found bears on a forecast.",
+   "evidence": "Primary, opened by me on 14 Nov. Federal Register: no export-control rule published since 11 Nov; the latest, on 9 Nov, extends a pause on controls for affiliates of listed companies to 10 Jan 2027. IFR: its latest release (12 Nov) is about robot density; its figure for 2025 is still more than 600,000 robots installed. NIST: no draft HQC standard in its news list. Waymo: newest blog post is 10 Nov, with no new city. EIA: the page returned was the May 2026 outlook, so I did not use it. CISA and the FCC: both pages refused the request.",
+   "areas": "3, 5–10",
+   "effect": "No change. The CISA forecast (90%) and the space forecasts could not be checked this week; a later run tries again."
+  },
+  {
+   "what": "Nvidia's Board opened an independent investigation (8 Nov) and hired outside counsel (10 Nov), after news reports about its chief executive.",
+   "evidence": "Nvidia's own statements (primary). Press wording about a \"foreign intelligence effort\" is not verified.",
+   "areas": "1",
+   "effect": "No change. It cannot alter revenue for the quarter that ended 25 Oct. It is a risk to the guidance and the share price."
+  },
+  {
+   "what": "Nvidia's results are confirmed for 17 Nov, 5:00 pm US Eastern (22:00 London).",
+   "evidence": "investor.nvidia.com events page, read 13 Nov (primary).",
+   "areas": "1",
+   "effect": "Date confirmed. My 85% for \"at or above $108.0bn\" stands. The briefs' own estimate for \"above $108.0bn\" is 60%, so we differ and I am showing it."
+  },
+  {
+   "what": "The December Fed meeting is 8–9 Dec.",
+   "evidence": "federalreserve.gov, read 10 Nov (primary). Later reads came back cut short.",
+   "areas": "All",
+   "effect": "Calendar entry is no longer tentative."
+  },
+  {
+   "what": "The US 10-year yield reached 5.10% on 12 Nov (4.84% on 5 Nov). The Fed held on 28 Oct with two votes to raise. October inflation was +0.4% on the month (core +0.3%). Payrolls rose 165,000 in October.",
+   "evidence": "FRED, the Fed and BLS (primary).",
+   "areas": "1",
+   "effect": "No change. Higher yields make the build-out dearer to finance, so the \"financing or policy shock\" thread is worth watching. My 15% for a failed financing stands."
+  },
+  {
+   "what": "Credit spreads narrowed: high-yield 3.20% on 12 Nov, from 3.48% on 5 Nov.",
+   "evidence": "FRED (primary).",
+   "areas": "1",
+   "effect": "Points away from the shock thread: no financing stress is visible yet."
+  },
+  {
+   "what": "Chip shares fell hard (chart above). Cause not verified.",
+   "evidence": "Yahoo daily closes (tier 3).",
+   "areas": "1, 2",
+   "effect": "None of my forecasts is about share prices. The \"wrong if\" tests for these areas have not triggered."
+  },
+  {
+   "what": "Microsoft spent $39.4bn on property and equipment in the quarter to 30 Sep. Microsoft has $364.6bn and Meta $355.7bn of leases that have not started yet.",
+   "evidence": "Company quarterly filings (primary). The first figure leaves out finance leases.",
+   "areas": "1, 4",
+   "effect": "Fits \"none of the big four cuts its capex guide\" (95%). No change."
+  },
+  {
+   "what": "Since 9 Nov the briefs read primary sources directly. Before that, one brief wrongly doubted the 6 Nov jobs report.",
+   "evidence": "BLS release USDL-26-1632.",
+   "areas": "All",
+   "effect": "Better evidence from here. The briefs' own record is still three calls and no verified outcomes."
+  },
+  {
+   "what": "Areas 3 and 5 to 10 (power, policy, robotics, cyber, quantum, vehicles, space) had no new evidence. Areas 2 and 4 got only share prices and Microsoft's filing.",
+   "evidence": "Absence from the briefs. TSMC and Rolls-Royce were not read.",
+   "areas": "2–10",
+   "effect": "Unchanged."
+  }
+ ],
+ "prices": {
+  "heading": "Chip shares since the last brief I had read",
+  "dates": [
+   "4 Nov",
+   "5 Nov",
+   "6 Nov",
+   "9 Nov",
+   "10 Nov",
+   "11 Nov",
+   "12 Nov",
+   "13 Nov",
+   "16 Nov",
+   "17 Nov",
+   "18 Nov",
+   "19 Nov",
+   "20 Nov",
+   "23 Nov",
+   "24 Nov",
+   "25 Nov"
+  ],
+  "series": [
+   {
+    "id": "nv",
+    "name": "Nvidia",
+    "color": "var(--c-nv)",
+    "dash": "",
+    "v": [
+     200.13,
+     181.6,
+     186.64,
+     178.67,
+     168.89,
+     173.73,
+     166.19,
+     162.85,
+     156.14,
+     155.46,
+     150.96,
+     145.98,
+     125.53,
+     165.05,
+     155.38,
+     149.3
+    ]
+   },
+   {
+    "id": "amd",
+    "name": "AMD",
+    "color": "var(--c-amd)",
+    "dash": "",
+    "v": [
+     488.78,
+     404.4,
+     449.04,
+     508.58,
+     515.21,
+     552.9,
+     585.3,
+     534.06,
+     504.28,
+     503.41,
+     530.14,
+     489.19,
+     424.39,
+     453.46,
+     413.27,
+     406.03
+    ]
+   },
+   {
+    "id": "vt",
+    "name": "Global shares (VT)",
+    "color": "var(--muted)",
+    "dash": "5 4",
+    "v": [
+     157.81,
+     151.38,
+     151.73,
+     155.68,
+     154.94,
+     156.71,
+     155.75,
+     155.3,
+     152.36,
+     150.65,
+     149.93,
+     147.17,
+     142.08,
+     148.21,
+     147.56,
+     147.54
+    ]
+   }
+  ],
+  "lo": 50,
+  "hi": 125,
+  "aria": "Nvidia, AMD and a global share fund indexed to 100 at the 4 November close, to 25 November. Nvidia ends at 75, after a low of 63 on 20 November and a jump to 82 on 23 November. AMD ends at 83, level with its low, after a high of 120. The global fund ends at 93 after a low of 90 on 20 November. The daily briefs could not confirm Nvidia's closes of 20 and 23 November from a second source. The table below lists every value.",
+  "legend_note": "Yahoo closes (tier 3). Cause of the falls not verified."
+ },
+ "scores": [
+  {
+   "id": "f1_1",
+   "result": "correct",
+   "on": "2026-11-18",
+   "note": "Nvidia's results release of 17 Nov 2026 reports revenue of $115.8bn for the quarter that ended 25 Oct 2026 (115,844 in $ millions in the income statement). That is above the $108.0bn outlook.",
+   "source": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-third-quarter-fiscal-2027"
+  },
+  {
+   "id": "f7_0",
+   "result": "correct",
+   "on": "2026-11-18",
+   "note": "CISA's exploited-flaws list, released 17 Nov 2026, shows CVE-2026-123039 added on 13 Nov 2026. CISA's description names Check Point Firewall and Security Gateway.",
+   "source": "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json"
+  },
+  {
+   "id": "f5_0",
+   "result": "correct",
+   "on": "2026-11-20",
+   "note": "The Federal Register of 19 Nov 2026 carries an interim final rule from the Bureau of Industry and Security, \"Addressing Remote Access to Advanced Semiconductors\" (document 2026-23529), effective 19 Nov 2026. It adds licence requirements for advanced chips sent to overseas data centres that serve companies based in China, Macau or other Country Group D:5 places. The text names the People's Republic of China.",
+   "source": "https://www.federalregister.gov/documents/2026/11/19/2026-23529/addressing-remote-access-to-advanced-semiconductors"
+  },
+  {
+   "id": "f5_1",
+   "result": "correct",
+   "on": "2026-11-27",
+   "note": "The Official Journal of the EU, L series, carries Regulation (EU) 2026/1744 of 8 July 2026, the \"Digital Omnibus on AI\", published 24 Jul 2026. Title, number and date were read from the top of the EUR-Lex page on 27 Nov 2026. Publication came before the forecast was made on 11 Nov.",
+   "source": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202601744"
+  },
+  {
+   "id": "f8_1",
+   "result": "correct",
+   "on": "2026-11-27",
+   "note": "IonQ's 8-K filed 5 Nov 2026, item 2.01, says IonQ completed the acquisition of all shares of Elisity, Inc. on 3 Nov 2026, for about 32.2 million IonQ shares at closing. The deal closed before the forecast was made on 11 Nov.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1824920/000119312526449779/ionq-20261103.htm"
+  },
+  {
+   "id": "f5_4",
+   "result": "unscored",
+   "on": "2026-11-27",
+   "note": "Regulation (EU) 2026/1744 was opened on EUR-Lex on 27 Nov 2026, but the article that sets the start date for Annex III high-risk duties came back as a summary, not word for word. The summary says 2 Dec 2027. A later run reads the article itself before scoring."
+  }
+ ],
+ "comparisons": [
+  {
+   "title": "Nvidia Q3 FY27 revenue: the map and the daily briefs",
+   "note": "Nvidia reported $115.8bn on 17 Nov 2026 (its own results release, opened 18 Nov). Its outlook was $108.0bn. The two forecasts differed only if revenue had been exactly $108.0bn. Both came true. The briefs recorded their result on the evening of 18 Nov.",
+   "rows": [
+    {
+     "who": "This map (forecast made 11 Nov)",
+     "statement": "Revenue at or above $108.0bn",
+     "probability": "85%",
+     "result": "Correct: $115.8bn"
+    },
+    {
+     "who": "Daily briefs (prediction P13, made 10 Nov)",
+     "statement": "Revenue above $108.0bn",
+     "probability": "60%",
+     "result": "Came true: $115.8bn. Recorded by the briefs on 18 Nov"
+    }
+   ]
+  }
+ ],
+ "suggestions": []
+}
